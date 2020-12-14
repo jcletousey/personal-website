@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Hello, I'm Jean-Charles
+permalink: "/{{ locale }}/index.html"
 ---
 I'm a web developer from Caen in France.
 
