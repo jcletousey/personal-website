@@ -11,6 +11,17 @@
 
   <header>
     <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">Jean-Charles Le Tousey</a>
+
+    <nav>
+      {% set navPages = collections["all_" + locale] | eleventyNavigation %}
+      <ul>
+      {% for entry in navPages %}
+        <li>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
   </header>
 
   <main id="main-content" tabindex="-1">
