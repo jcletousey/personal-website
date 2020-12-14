@@ -1,8 +1,10 @@
 {
     "fr": {
+        "goToHomepage": "Aller à la page d'accueil",
         "skipLink": "Aller directement au contenu"
     },
     "en": {
+        "goToHomepage": "Go to homepage",
         "skipLink": "Skip to content"
     }
 }
