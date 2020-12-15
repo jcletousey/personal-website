@@ -9,3 +9,8 @@
 - _cd_ into the project directory and run `npm install`
 - Once all the dependencies are installed run `npm start`
 - Open your browser at http://localhost:8080
+
+## Features
+- `sass` to manage CSS
+- Multilingual
+- Blog
