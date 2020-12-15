@@ -10,7 +10,7 @@
   <a href="#main-content">{{ header[locale].skipLink }}</a>
 
   <header>
-    <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">Jean-Charles Le Tousey</a>
+    <a href="/{{ locale }}/" aria-label="{{ header[locale].goToHomepage }}">{{ site.name }}</a>
 
     <nav>
       {% set navPages = collections["all_" + locale] | eleventyNavigation %}
