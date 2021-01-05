@@ -9,28 +9,30 @@
 <body>
   <a href="#main-content" class="visually-hidden">{{ header[locale].skipLink }}</a>
 
-  <header>
-    <a href="/{{ locale }}/" aria-label="{{ header[locale].goToHomepage }}">{{ site.name }}</a>
+  <header class="header" role="banner">
+    <a class="header__brand" href="/{{ locale }}/" aria-label="{{ header[locale].goToHomepage }}">{{ site.name }}</a>
 
-    <nav>
+    <nav class="header__nav" role="navigation">
       {% set navPages = collections["all_" + locale] | eleventyNavigation %}
-      <ul>
+      <ul class="nav__menu">
       {% for entry in navPages %}
-        <li>
+        <li class="nav__item">
           <a href="{{ entry.url | url }}">{{ entry.title }}</a>
         </li>
       {% endfor %}
       </ul>
     </nav>
 
-    {% for key, text in site.locales %}
-      {% if key != locale %}
-      <a href="/{{ key }}/" title="{{ text }}">{{ key | upper }}</a>
-      {% endif %}
-    {% endfor %}
+    <div class="header__languages">
+      {% for key, text in site.locales %}
+        {% if key != locale %}
+        <a href="/{{ key }}/" title="{{ text }}">{{ key | upper }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </header>
 
-  <main id="main-content" tabindex="-1">
+  <main id="main-content" tabindex="-1" role="main">
     <div class="container">
     <h1>{{ title }}</h1>
     {{ content | safe }}

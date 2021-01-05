@@ -30,4 +30,5 @@ a {
     color: var(--color-primary);
 }
 
-@import 'base/helpers'
+@import 'base/helpers';
+@import 'components/header';
