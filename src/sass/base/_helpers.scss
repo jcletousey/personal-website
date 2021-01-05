@@ -10,3 +10,11 @@
     width: 1px !important;
     white-space: nowrap !important;
 }
+
+.container {
+    max-width: 80ch;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0 auto;
+    width: 100%;
+}
