@@ -1,6 +1,15 @@
+html {
+    box-sizing: border-box;
+}
+
+ *,
+ ::before,
+ ::after {
+   box-sizing: inherit;
+ }
+
 body {
-    background-color: #2a7c89;
-    color: #fcf8ec;
+    margin: 0;
 
     background-color: #1b4f66;
     color: #e4bf45;
@@ -11,4 +20,5 @@ body {
 h1 {
     font-size: 4rem;
 }
+
 @import 'base/helpers'
