@@ -17,15 +17,17 @@ html {
 
 body {
     margin: 0;
-
-    background-color: #1b4f66;
-    color: #e4bf45;
-
+    background-color: var(--color-back);
+    color: var(--color-text);
     font-size: 1.2rem;
 }
 
 h1 {
     font-size: 4rem;
+}
+
+a {
+    color: var(--color-primary);
 }
 
 @import 'base/helpers'
