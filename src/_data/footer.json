@@ -1,0 +1,8 @@
+{
+    "fr": {
+        "eleventy": "Créé avec [Eleventy](https://www.11ty.dev/)."
+    },
+    "en": {
+        "eleventy": "Created with [Eleventy](https://www.11ty.dev/)."
+    }
+}

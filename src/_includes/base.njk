@@ -36,5 +36,11 @@
     {{ content | safe }}
     </div>
   </main>
+
+  <footer>
+    <div class="container">
+      {{ footer[locale].eleventy | renderMarkdown | safe }}
+    </div>
+  </footer>
 </body>
 </html>
