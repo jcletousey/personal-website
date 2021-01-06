@@ -22,6 +22,7 @@ body {
     margin: 0;
     background-color: var(--color-back);
     color: var(--color-text);
+    font-family: "Didact Gothic", sans-serif;
     font-size: 1.2rem;
 }
 
@@ -46,6 +47,7 @@ body::before {
 }
 
 h1 {
+    font-family: "Lobster", cursive;
     font-size: 4rem;
 }
 
@@ -54,4 +56,5 @@ a {
 }
 
 @import 'base/helpers';
+@import 'base/fonts';
 @import 'components/header';
