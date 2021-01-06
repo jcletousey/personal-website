@@ -46,6 +46,9 @@ body::before {
         10;
 }
 
+main:focus {
+    outline: none;
+}
 h1 {
     font-family: "Lobster", cursive;
     font-size: 4rem;
