@@ -1,0 +1,24 @@
+<header class="header" role="banner">
+  <a class="header__brand" href="/{{ locale }}/" aria-label="{{ header[locale].goToHomepage }}">
+    {{ site.name }}
+  </a>
+
+  <nav class="header__nav" role="navigation">
+    {% set navPages = collections["all_" + locale] | eleventyNavigation %}
+    <ul class="nav__menu">
+    {% for entry in navPages %}
+      <li class="nav__item">
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </nav>
+
+  <div class="header__languages">
+  {% for key, text in site.locales %}
+    {% if key != locale %}
+    <a href="/{{ key }}/" title="{{ text }}">{{ key | upper }}</a>
+    {% endif %}
+  {% endfor %}
+  </div>
+</header>
