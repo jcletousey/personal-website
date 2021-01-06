@@ -3,4 +3,4 @@ node_modules
 
 # Build
 dist
-src/css
+src/assets/css
