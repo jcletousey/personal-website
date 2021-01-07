@@ -1,0 +1,3 @@
+# Redirect people who speack french
+/      /fr/        302  Language=fr
+/      /en/        302

@@ -7,16 +7,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Assets management
-  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
+  eleventyConfig.addPassthroughCopy("./src/assets/css");
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
 
   // Collections
   for (const locale of locales) {
     eleventyConfig.addCollection("all_" + locale, function (collection) {
       return collection.getFilteredByGlob("./src/" + locale + "/pages/*.md");
-  });
+    });
 
     eleventyConfig.addCollection("posts_" + locale, function (collection) {
       return collection.getFilteredByGlob("./src/" + locale + "/blog/*.md");
