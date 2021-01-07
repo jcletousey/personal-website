@@ -1,0 +1,15 @@
+{% if collections["posts_" + locale] %}
+<ul class="postlist">
+  {% for item in collections["posts_" + locale] %}
+  <li class="postlist__item">
+    <h2 class="postlist__title"><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <div class="postlist__metadata">
+      <time datetime="{{ item.date }}">{{ item.date | localizedDate(locale) }}</time>
+    </div>
+    {% if item.data.description %}
+      {{ item.data.description | safe }}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}

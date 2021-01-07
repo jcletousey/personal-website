@@ -13,22 +13,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/images");
 
   // Collections
-  eleventyConfig.addCollection("all_fr", function (collection) {
-    return collection.getFilteredByGlob("./src/fr/pages/*.md");
-  });
-
-  eleventyConfig.addCollection("all_en", function (collection) {
-    return collection.getFilteredByGlob("./src/en/pages/*.md");
   for (const locale of locales) {
     eleventyConfig.addCollection("all_" + locale, function (collection) {
       return collection.getFilteredByGlob("./src/" + locale + "/pages/*.md");
   });
+
+    eleventyConfig.addCollection("posts_" + locale, function (collection) {
+      return collection.getFilteredByGlob("./src/" + locale + "/blog/*.md");
+    });
   }
 
   // Filters
   const mdRender = new markdownIt();
   eleventyConfig.addFilter("renderMarkdown", function (rawString) {
     return mdRender.render(rawString);
+  });
+
+  eleventyConfig.addFilter("localizedDate", function (date, locale) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(date).toLocaleDateString(locale, options);;
   });
 
   return {
