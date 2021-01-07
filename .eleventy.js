@@ -5,9 +5,11 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Assets management
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
 
   // Collections
   eleventyConfig.addCollection("all_fr", function (collection) {
