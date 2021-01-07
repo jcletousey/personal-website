@@ -14,7 +14,7 @@
     </ul>
 
     <div class="nav__languages">
-    {% for key, text in site.locales %}
+    {% for key in locales %}
       {% if key != locale %}
         {% set translationUrl = translationUrls[key] if translationUrls[key] else "/" + key + "/" %}
       <a href="{{ translationUrl | url }}" title="{{ text }}">{{ key | upper }}</a>
