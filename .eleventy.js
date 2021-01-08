@@ -27,12 +27,14 @@ module.exports = function (eleventyConfig) {
   // Filters
   const mdRender = new markdownIt();
   eleventyConfig.addFilter("renderMarkdown", function (rawString) {
+    if (rawString !== undefined) {
     return mdRender.render(rawString);
+    }
   });
 
   eleventyConfig.addFilter("localizedDate", function (date, locale) {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(date).toLocaleDateString(locale, options);;
+    return new Date(date).toLocaleDateString(locale, options);
   });
 
   return {

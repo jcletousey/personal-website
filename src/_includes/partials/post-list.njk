@@ -6,9 +6,7 @@
     <div class="postlist__metadata">
       <time datetime="{{ item.date }}">{{ item.date | localizedDate(locale) }}</time>
     </div>
-    {% if item.data.description %}
-      {{ item.data.description | safe }}
-    {% endif %}
+    {{ item.data.description | renderMarkdown | safe }}
   </li>
   {% endfor %}
 </ul>
