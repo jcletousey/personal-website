@@ -14,8 +14,7 @@
 
   <main id="main-content" tabindex="-1" role="main">
     <div class="container">
-      <h1>{{ title }}</h1>
-      {{ content | safe }}
+      {% block content %}{% endblock %}
     </div>
   </main>
 

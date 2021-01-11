@@ -1,8 +1,10 @@
----
-layout: base.njk
----
-<div class="page-header">
-  {{ content | safe }}
-</div>
+{% extends "layouts/base.njk" %}
 
-{% include "partials/post-list.njk" %}
+{% block content %}  
+  <div class="page-header">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+  </div>
+
+  {% include "partials/post-list.njk" %}
+{% endblock %}
