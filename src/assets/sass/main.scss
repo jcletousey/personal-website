@@ -23,7 +23,9 @@ body {
     background-color: var(--color-back);
     color: var(--color-text);
     font-family: "Didact Gothic", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
 }
 
 body::before {
@@ -52,6 +54,9 @@ main:focus {
 h1 {
     font-family: "Lobster", cursive;
     font-size: 4rem;
+}
+h2 {
+    margin: 4rem 0;
 }
 
 a {
