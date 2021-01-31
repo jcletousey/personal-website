@@ -1,5 +1,10 @@
 <footer>
-  <div class="container">
+  <div class="footer container">
     {{ footer[locale].eleventy | renderMarkdown | safe }}
+
+    <ul>
+      <li><a href="/{{ locale }}/feed.xml">RSS</a></li>
+      <li><a href="https://twitter.com/jcletousey">Twitter</a></li>
+    </ul>
   </div>
 </footer>
