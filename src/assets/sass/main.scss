@@ -38,17 +38,7 @@ body::before {
     position: fixed;
     width: 100vw;
     z-index: 2;
-    border: 10px solid var(--color-text);
-    border-image: repeating-linear-gradient(
-        135deg,
-        var(--color-primary),
-        var(--color-primary) 20px,
-        var(--color-text) 20px,
-        var(--color-text) 40px,
-        var(--color-secondary) 40px,
-        var(--color-secondary) 60px
-        )
-        10;
+    border: 7px solid var(--color-primary);
 }
 
 main:focus {
