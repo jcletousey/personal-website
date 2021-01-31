@@ -1,0 +1,16 @@
+.post {
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__title::before,
+    &__title::after {
+        content: "";
+        height: 3px;
+        width: 50%;
+        margin: 0 auto;
+        background-color: var(--color-text);
+        display: block;
+    }
+}
