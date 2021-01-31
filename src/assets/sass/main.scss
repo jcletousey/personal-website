@@ -6,6 +6,9 @@
 
     --color-4: #644545;
     --color-3: #44596b;
+
+    --font-base: "Nunito", sans-serif;
+    --font-accent: "Fjalla One", sans-serif;
 }
 
 html {
@@ -25,10 +28,10 @@ body {
     margin: 0;
     background-color: var(--color-back);
     color: var(--color-text);
-    font-family: "Didact Gothic", sans-serif;
+    font-family: var(--font-base);
     font-size: 1.4rem;
     line-height: 1.5;
-    letter-spacing: 0.05em;
+    letter-spacing: -0.01em;
 }
 
 body::before {
@@ -45,7 +48,7 @@ main:focus {
     outline: none;
 }
 h1 {
-    font-family: "Lobster", cursive;
+    font-family: var(--font-accent);
     font-size: 4rem;
 }
 h2 {
