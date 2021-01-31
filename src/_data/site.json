@@ -1,7 +1,18 @@
 {
     "name": "Jean-Charles Le Tousey",
+    "url": "https://jcletousey.dev/",
+    "author": {
+        "name": "Jean-Charles Le Tousey",
+        "email": "contact@jcletousey.dev"
+    },
     "locales": {
         "fr": "Accédez au site en français",
         "en": "Go to the English version"
+    },
+    "fr": {
+        "subtitle": "Le blog de Jean-Charles Le Tousey sur les technlogies web"
+    },
+    "en": {
+        "subtitle": "Jean-Charles Le Tousey's blog around web technologies"
     }
 }
