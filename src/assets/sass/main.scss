@@ -11,6 +11,8 @@
     --font-accent: "Fjalla One", sans-serif;
 }
 
+@import 'base/reset';
+
 html {
     box-sizing: border-box;
 }
@@ -44,15 +46,15 @@ body::before {
     border: 7px solid var(--color-primary);
 }
 
+main {
+    padding: 2rem 0;
+}
 main:focus {
     outline: none;
 }
 h1 {
     font-family: var(--font-accent);
     font-size: 4rem;
-}
-h2 {
-    margin: 4rem 0;
 }
 
 a {
