@@ -2,11 +2,19 @@
 <ul class="postlist">
   {% for item in collections["posts_" + locale] %}
   <li class="postlist__item">
-    <h2 class="postlist__title"><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+    <{{ headingLevel if headingLevel else 'h2' }} class="postlist__title">
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </{{ headingLevel if headingLevel else 'h2' }}>
+
     <div class="postlist__metadata">
       <time datetime="{{ item.date }}">{{ item.date | localizedDate(locale) }}</time>
     </div>
-    {{ item.data.description | renderMarkdown | safe }}
+
+    {% if item.data.description %}
+    <div class="postlist__description">
+      {{ item.data.description | renderMarkdown | safe }}
+    </div>
+    {% endif %}
   </li>
   {% endfor %}
 </ul>
