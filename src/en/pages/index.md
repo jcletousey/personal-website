@@ -1,6 +1,7 @@
 ---
 title: Hello, I'm Jean-Charles
 permalink: "/{{ locale }}/index.html"
+layout: home
 ---
 I'm a web developer from Caen in France.
 

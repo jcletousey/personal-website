@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}  
+  <div class="page-header">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+  </div>
+
+  <div class="page-content">
+    {%- set headingLevel = 'h3' -%}
+    <h2>{{ home[locale].latestWriting }}</h2>
+    {% include "partials/post-list.njk" %}
+  </div>
+{% endblock %}
