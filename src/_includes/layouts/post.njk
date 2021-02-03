@@ -3,7 +3,9 @@
 {% block content %}    
     <article class="post">
         <h1 class="post__title">{{ title }}</h1>
+        {%- if description -%}
         <div class="post__intro">{{ description | renderMarkdown | safe }}</div>
+        {%- endif -%}
         {{ content | safe }}
     </article>
 {% endblock %}
