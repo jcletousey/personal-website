@@ -49,11 +49,16 @@ body::before {
 main {
     padding: 2rem 0;
 }
+
 main:focus {
     outline: none;
 }
-h1 {
+
+h1, h2, h3 {
     font-family: var(--font-accent);
+}
+
+h1 {
     font-size: 4rem;
 }
 
