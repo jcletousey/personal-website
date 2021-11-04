@@ -1,15 +1,13 @@
 # My personal website
 
-This is the personal website of Jean-Charles Le Tousey.
+## Requirements
 
-## Dependencies
+- [NodeJs](https://nodejs.org/)
+- NPM (included with NodeJs)
 
-- [Eleventy](https://www.11ty.dev/)
+## Getting started
 
-## Install
-
-To install this project, run
-
-```bash
-npm install
-```
+- Clone this repository `git clone https://github.com/jcletousey/personal-website`
+- _cd_ into the project directory and run `npm install`
+- Once all the dependencies are installed run `npm start`
+- Open your browser at http://localhost:8080
