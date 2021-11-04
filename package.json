@@ -1,7 +1,7 @@
 {
-  "name": "jc-website",
+  "name": "jclt-website",
   "version": "1.0.0",
-  "description": "Jean-Charles Le Tousey website",
+  "description": "Jean-Charles Le Tousey's personal website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,9 @@
     "website"
   ],
   "author": "Jean-Charles Le Tousey",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcletousey/personal-website/issues"
+  },
+  "homepage": "https://github.com/jcletousey/personal-website#readme"
 }
