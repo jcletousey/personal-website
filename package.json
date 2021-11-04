@@ -1,0 +1,20 @@
+{
+  "name": "jc-website",
+  "version": "1.0.0",
+  "description": "Jean-Charles Le Tousey website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcletousey/personal-website"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "website"
+  ],
+  "author": "Jean-Charles Le Tousey",
+  "license": "ISC"
+}
