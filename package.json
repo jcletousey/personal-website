@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jcletousey/personal-website/issues"
   },
-  "homepage": "https://github.com/jcletousey/personal-website#readme"
+  "homepage": "https://github.com/jcletousey/personal-website#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }
