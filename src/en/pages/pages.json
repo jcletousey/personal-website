@@ -1,0 +1,4 @@
+{
+  "layout": "base",
+  "permalink": "/{{ locale }}/{{ page.fileSlug }}/index.html"
+}

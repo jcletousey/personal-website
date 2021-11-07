@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Salut, Je suis Jean-Charles
+permalink: "/fr/index.html"
 ---
 Je suis un développeur _web_ basé à Caen.
 
