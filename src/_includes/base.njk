@@ -10,7 +10,9 @@
   <a href="#main-content">{{ header[locale].skipLink }}</a>
 
   <header>
-    <h1>{{ title }}</h1>
+    <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
+      {{ site.name }}
+    </a>
   </header>
 
   <main id="main-content">
