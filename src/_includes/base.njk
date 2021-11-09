@@ -13,9 +13,24 @@
     <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
       {{ site.name }}
     </a>
+
+    {% set navPages = collections["pages_" + locale] | eleventyNavigation %}
+    {% if navPages.length > 0 %}
+    <nav>
+      <ul>
+      {% for entry in navPages %}
+        <li>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
   </header>
 
   <main id="main-content">
+    <h1>{{ title }}</h1>
+
     {{ content | safe }}
   </main>
 </body>
