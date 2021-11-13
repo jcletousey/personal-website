@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const locales = require("./src/_data/locales")();
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -8,13 +9,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/sass/");
 
   // Collections
-  eleventyConfig.addCollection("pages_fr", function (collection) {
-    return collection.getFilteredByGlob("./src/fr/pages/*.md");
-  });
-
-  eleventyConfig.addCollection("pages_en", function (collection) {
-    return collection.getFilteredByGlob("./src/en/pages/*.md");
-  });
+  for (const locale of locales) {
+    eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(`./src/${locale}/pages/*.md`);
+    });
+  }
 
   return {
     dir: {
