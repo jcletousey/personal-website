@@ -2,5 +2,5 @@
 node_modules
 
 # Build
-src/css
+src/assets/css
 dist

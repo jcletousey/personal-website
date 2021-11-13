@@ -5,8 +5,8 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  eleventyConfig.addPassthroughCopy("./src/css");
-  eleventyConfig.addWatchTarget("./src/sass/");
+  eleventyConfig.addPassthroughCopy("./src/assets/css");
+  eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Collections
   for (const locale of locales) {
