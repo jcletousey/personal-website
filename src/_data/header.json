@@ -1,10 +1,12 @@
 {
   "fr": {
     "skipLink": "Aller directement au contenu",
-    "homeLink": "Aller à la page d'accueil"
+    "homeLink": "Aller à la page d'accueil",
+    "changeLanguage": "Passer à la version française"
   },
   "en": {
     "skipLink": "Skip to content",
-    "homeLink": "Go to homepage"
+    "homeLink": "Go to homepage",
+    "changeLanguage": "Switch to english version"
   }
 }

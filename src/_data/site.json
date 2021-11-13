@@ -1,3 +1,7 @@
 {
-    "name": "Jean-Charles Le Tousey"
+    "name": "Jean-Charles Le Tousey",
+    "locales": {
+        "en": "English",
+        "fr": "Français"
+    }
 }

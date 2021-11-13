@@ -26,6 +26,12 @@
       </ul>
     </nav>
     {% endif %}
+
+    {% for key, text in site.locales %}
+      {% if key != locale %}
+      <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">{{ text }}</a>
+      {% endif %}
+    {% endfor %}
   </header>
 
   <main id="main-content">
