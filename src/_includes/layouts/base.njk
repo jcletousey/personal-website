@@ -9,30 +9,7 @@
 <body>
   <a href="#main-content">{{ header[locale].skipLink }}</a>
 
-  <header>
-    <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
-      {{ site.name }}
-    </a>
-
-    {% set navPages = collections["pages_" + locale] | eleventyNavigation %}
-    {% if navPages.length > 0 %}
-    <nav>
-      <ul>
-      {% for entry in navPages %}
-        <li>
-          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-        </li>
-      {% endfor %}
-      </ul>
-    </nav>
-    {% endif %}
-
-    {% for key, text in site.locales %}
-      {% if key != locale %}
-      <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">{{ text }}</a>
-      {% endif %}
-    {% endfor %}
-  </header>
+  {% include "partials/header.njk" %}
 
   <main id="main-content">
     <h1>{{ title }}</h1>
