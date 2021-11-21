@@ -1,0 +1,25 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+
+  {{ content | safe }}
+
+  {% set posts = collections["posts_" + locale] %}
+  {% if posts.length > 0 %}
+  <section>
+    {% for post in posts %}
+    <article>
+        <h2>{{ post.data.title }}</h2>
+        <div>
+          <p>{{ post.data.date }}</p>
+        </div>
+        <p>{{ post.data.summary }}</p>
+        <a href="">{{ blog[locale].continueReading }} "{{ post.data.title }}"</a>
+    </article>
+    {% endfor %}
+  </section>
+  {% else %}
+    <p>{{ blog[locale].noPost }}</p>
+  {% endif %}
+{% endblock %}

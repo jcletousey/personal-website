@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
       return collection.getFilteredByGlob(`./src/${locale}/pages/*.md`);
     });
+
+    eleventyConfig.addCollection(`posts_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(`./src/${locale}/blog/*.md`);
+    });
   }
 
   return {

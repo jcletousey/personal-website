@@ -1,5 +1,6 @@
 ---
 title: Blog
+layout: blog
 eleventyNavigation:
   key: Blog
 ---
