@@ -1,0 +1,8 @@
+{
+  "fr": {
+    "created": "Créé avec [Eleventy](https://www.11ty.dev/) et hébergé sur [Netlify](https://www.netlify.com/)."
+  },
+  "en": {
+    "created": "Created with [Eleventy](https://www.11ty.dev/) and hosted on [Netlify](https://www.netlify.com/)."
+  }
+}

@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const locales = require("./src/_data/locales")();
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
   // Plugins
@@ -7,6 +8,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
+
+  // Filters
+  const mdRender = new markdownIt();
+  eleventyConfig.addFilter("renderMarkdown", function (rawString) {
+    return mdRender.render(rawString);
+  });
 
   // Collections
   for (const locale of locales) {
