@@ -1,5 +1,4 @@
 ---
-layout: base.njk
 title: Hello, I'm Jean-Charles
 permalink: "/en/index.html"
 ---
