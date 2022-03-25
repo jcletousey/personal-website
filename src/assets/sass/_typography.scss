@@ -1,9 +1,18 @@
 body {
   font-size: 1.2rem;
   font-family: "Libre Franklin Thin", Arial, Helvetica, sans-serif;
+  color: var(--text);
 }
 
 h1 {
   font-family: Bevan;
   font-size: 2.75rem;
+}
+
+a {
+  color: var(--primary);
+
+  &:hover {
+    color: var(--text);
+  }
 }

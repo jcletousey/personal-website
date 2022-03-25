@@ -1,3 +1,14 @@
 @import "reset";
 @import "fonts";
 @import "typography";
+@import "layout";
+
+:root {
+  --background: #1f2e42;
+  --primary: #ff5a61;
+  --text: #fffce9;
+}
+
+body {
+  background-color: var(--background);
+}
