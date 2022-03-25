@@ -1,12 +1,17 @@
 @import "reset";
 @import "fonts";
 @import "typography";
+@import "utils";
 @import "layout";
 
 :root {
   --background: #1f2e42;
   --primary: #ff5a61;
   --text: #fffce9;
+
+:focus {
+  outline: 2px dashed var(--primary);
+  outline-offset: 0.25rem;
 }
 
 body {

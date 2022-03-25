@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-  <a href="#main-content">{{ header[locale].skipLink }}</a>
+  <a href="#main-content" class="skip-link">
+    {{ header[locale].skipLink }}
+  </a>
 
   {% include "partials/header.njk" %}
 
