@@ -9,6 +9,9 @@
   --background: #1f2e42;
   --primary: #ff5a61;
   --text: #fffce9;
+  --text-light: #b4bcbd;
+  --font-serif: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+}
 
 :focus {
   outline: 2px dashed var(--primary);
