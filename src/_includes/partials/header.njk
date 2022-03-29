@@ -1,24 +1,26 @@
-<header>
-  <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
-    {{ site.name }}
-  </a>
+<header class="header">
+  <div class="wrapper header__inner">
+    <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
+      {{ site.name }}
+    </a>
 
-  {% set navPages = collections["pages_" + locale] | eleventyNavigation %}
-  {% if navPages.length > 0 %}
-  <nav>
-    <ul>
-    {% for entry in navPages %}
-      <li>
-        <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-      </li>
-    {% endfor %}
-    </ul>
-  </nav>
-  {% endif %}
+    <nav>
+      {% set navPages = collections["pages_" + locale] | eleventyNavigation %}
+      {% if navPages.length > 0 %}
+      <ul role="list">
+      {% for entry in navPages %}
+        <li>
+          <a href="{{ entry.url | url }}">{{ entry.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+      {% endif %}
 
-  {% for key, text in site.locales %}
-    {% if key != locale %}
-    <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">{{ text }}</a>
-    {% endif %}
-  {% endfor %}
+      {% for key, text in site.locales %}
+        {% if key != locale %}
+        <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">{{ text }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
 </header>

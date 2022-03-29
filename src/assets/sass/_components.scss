@@ -1,3 +1,25 @@
+.header,
+.footer {
+  padding: 2rem 0;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  margin-inline-start: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-inline-end: 1rem;
+}
+
 .intro {
   margin-block-start: 3rem;
   margin-block-end: 5rem;
