@@ -15,6 +15,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("renderMarkdown", function (rawString) {
     return mdRender.render(rawString);
   });
+  eleventyConfig.addFilter("formatDate", function (str, locale) {
+    const date = new Date(str);
+    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+    return new Intl.DateTimeFormat(locale, options).format(date);
+  });
 
   // Collections
   for (const locale of locales) {
@@ -32,6 +37,6 @@ module.exports = function (eleventyConfig) {
       layouts: "_includes/layouts",
       input: "src",
       output: "dist",
-    },
+    }
   };
 };

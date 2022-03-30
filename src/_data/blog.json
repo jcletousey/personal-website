@@ -1,10 +1,14 @@
 {
-    "en": {
-        "noPost": "There is no article for the moment.",
-        "continueReading": "Continue reading"
-    },
-    "fr": {
-        "noPost": "Il n'y a pas d'article pour le moment.",
-        "continueReading": "Continuer la lecture de"
-    }
+  "en": {
+    "latestPosts": "Latest posts",
+    "posted": "Posted",
+    "noPost": "There is no article for the moment.",
+    "readArticle": "Read the article"
+  },
+  "fr": {
+    "latestPosts": "Dernières publications",
+    "posted": "Posté",
+    "noPost": "Il n'y a pas d'article pour le moment.",
+    "readArticle": "Lire l'article"
+  }
 }

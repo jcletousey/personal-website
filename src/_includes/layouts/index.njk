@@ -1,9 +1,14 @@
 {% extends "layouts/base.njk" %}
+{% import "partials/post_list.njk" as pl with context %}
 
 {% block content %}
-  <section class="wrapper flow intro">
+  <div class="wrapper flow intro">
     <h1>{{ title }}</h1>
 
     {{ content | safe }}
-  </section>
+  </div>
+
+  <div class="wrapper flow post-list">
+    {{ pl.postList() }}
+  </div>
 {% endblock %}
