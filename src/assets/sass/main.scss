@@ -3,7 +3,10 @@
 @import "typography";
 @import "utils";
 @import "layout";
-@import "components";
+@import "components/header";
+@import "components/intro";
+@import "components/post-list-item";
+@import "components/footer";
 
 :root {
   --background: #1f2e42;

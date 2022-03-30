@@ -1,0 +1,23 @@
+.header {
+  padding: 2rem 0;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-inline-start: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
