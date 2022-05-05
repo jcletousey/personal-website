@@ -9,10 +9,21 @@ h1 {
   font-size: 2.75rem;
 }
 
+h2 {
+  font-family: var(--font-serif);
+}
+
 a {
   color: var(--primary);
 
-  &:hover {
+  &:hover, &:focus {
     color: var(--text);
+  }
+}
+
+.footer a {
+  &:hover, &:focus {
+    color: var(--primary);
+    font-weight: 600;
   }
 }
