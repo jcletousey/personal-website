@@ -1,5 +1,5 @@
 body {
-  font-size: 1rem;
+  font-size: clamp(1.09rem, 1rem + .47vw, 1.3rem);
   font-family: "Libre Franklin Thin", Arial, Helvetica, sans-serif;
   color: var(--text);
 }
