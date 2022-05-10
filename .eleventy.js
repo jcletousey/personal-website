@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Filters
