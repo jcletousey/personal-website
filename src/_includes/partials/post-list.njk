@@ -1,16 +1,15 @@
 {% macro postList(number=3, headingLevel=2) %}
-  <h{{ headingLevel }}>{{ blog[locale].latestPosts }}</h{{ headingLevel }}>
   {% set postList = collections["posts_" + locale] | reverse %}
   {% for post in postList %}
-  <article class="post-list__item">
-    <h{{ headingLevel + 1 }}>{{ post.data.title }}</h{{ headingLevel + 1 }}>
-    <p class="meta">
+  <article class="post-list__item{% if not loop.last %} mbe-l{% endif %}">
+    <h{{ headingLevel }} class="mbe-0">{{ post.data.title }}</h{{ headingLevel }}>
+    <p class="meta mbe-3xs">
       {{ blog[locale].posted }} <time datetime="{{ post.data.date }}">{{ post.data.date | formatDate(locale) }}</time>
     </p>
     {% if post.data.summary %}
-    <p>{{ post.data.summary | renderMarkdown | safe }}</p>
+    {{ post.data.summary | renderMarkdown | safe }}
     {% endif %}
-    <a href="{{ post.url }}">
+    <a class="item__link mbs-3xs" href="{{ post.url }}">
       {{ blog[locale].readArticle }} <span class="visually-hidden">"{{ post.data.title }}"</span>
     </a>
   </article>

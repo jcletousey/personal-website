@@ -1,5 +1,5 @@
 {% extends "layouts/base.njk" %}
-{% import "partials/post_list.njk" as pl with context %}
+{% import "partials/post-list.njk" as pl with context %}
 
 {% block content %}
   <div class="wrapper flow intro mbe-xxl">
@@ -8,7 +8,8 @@
     {{ content | safe }}
   </div>
 
-  <div class="wrapper flow post-list">
-    {{ pl.postList() }}
+  <div class="wrapper post-list">
+    <h2 class="mbe-l">{{ blog[locale].latestPosts }}</h2>
+    {{ pl.postList(3, 3) }}
   </div>
 {% endblock %}

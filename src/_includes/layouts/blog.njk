@@ -1,27 +1,16 @@
 {% extends "layouts/base.njk" %}
+{% import "partials/post-list.njk" as pl with context %}
 
 {% block content %}
-  <div class="wrapper flow">
-    <h1>{{ title }}</h1>
+  <div class="wrapper blog">
+    <h1 class="mbe-m">{{ title }}</h1>
 
-    {{ content | safe }}
+    <div class="blog__content mbe-xl">
+      {{ content | safe }}
+    </div>
 
-    {% set posts = collections["posts_" + locale] %}
-    {% if posts.length > 0 %}
-    <section>
-      {% for post in posts %}
-      <article>
-          <h2>{{ post.data.title }}</h2>
-          <div>
-            <p>{{ post.data.date }}</p>
-          </div>
-          <p>{{ post.data.summary }}</p>
-          <a href="">{{ blog[locale].continueReading }} "{{ post.data.title }}"</a>
-      </article>
-      {% endfor %}
-    </section>
-    {% else %}
-      <p>{{ blog[locale].noPost }}</p>
-    {% endif %}
+    <div class="post-list pbs-xl">
+      {{ pl.postList(5) }}
+    </div>
   </div>
 {% endblock %}
