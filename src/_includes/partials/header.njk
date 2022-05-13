@@ -1,13 +1,13 @@
-<header class="header">
+<header class="header pb-s pi-0">
   <div class="wrapper header__inner">
     <a href="/{{ locale }}/" aria-label="{{ header[locale].goHomepage }}">
       {{ site.name }}
     </a>
 
-    <nav>
+    <nav class="header__navigation">
       {% set navPages = collections["pages_" + locale] | eleventyNavigation %}
       {% if navPages.length > 0 %}
-      <ul role="list">
+      <ul role="list" class="p-0">
       {% for entry in navPages %}
         <li>
           <a href="{{ entry.url | url }}">{{ entry.title }}</a>
@@ -16,11 +16,7 @@
       </ul>
       {% endif %}
 
-      {% for key, text in site.locales %}
-        {% if key != locale %}
-        <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">{{ text }}</a>
-        {% endif %}
-      {% endfor %}
+      {% include "partials/select-language.njk" %}
     </nav>
   </div>
 </header>

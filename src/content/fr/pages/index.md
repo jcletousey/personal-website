@@ -1,4 +1,5 @@
 ---
+idI18n: 1
 title: Salut, je suis Jean-Charles
 permalink: "/fr/index.html"
 layout: index

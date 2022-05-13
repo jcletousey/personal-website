@@ -32,9 +32,15 @@
 
 2. Create the corresponding directories in the `content` one  
 ```
-|- content  
-    |- en  
-    |- fr
+|- src
+   |- content
+      |- en
+         |- blog
+         |- pages
+      |- fr
+         |- blog
+         |- pages
+      |- ...
 ```
 
 1. To generate automatic links for the page translations, add the `idI18n` _front matter_ attribute in all the related pages.

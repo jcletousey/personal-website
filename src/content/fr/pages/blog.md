@@ -1,4 +1,5 @@
 ---
+idI18n: 2
 title: Blog
 layout: blog
 eleventyNavigation:

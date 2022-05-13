@@ -1,6 +1,6 @@
 ---
 idI18n: 3
-title: A propos
+title: About
 eleventyNavigation:
-  key: A propos
+  key: About
 ---
