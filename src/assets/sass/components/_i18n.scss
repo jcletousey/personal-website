@@ -1,0 +1,5 @@
+.i18n::before {
+  content: "|";
+  display: inline-block;
+  margin-inline-end: var(--space-xs-s);
+}
