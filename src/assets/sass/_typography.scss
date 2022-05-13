@@ -1,16 +1,17 @@
 body {
-  font-size: clamp(1.09rem, 1rem + .47vw, 1.3rem);
+  font-size: var(--s-0);
   font-family: "Libre Franklin Thin", Arial, Helvetica, sans-serif;
   color: var(--text);
 }
 
 h1 {
   font-family: Bevan;
-  font-size: 2.75rem;
+  font-size: var(--s-4);
 }
 
 h2 {
   font-family: var(--font-serif);
+  font-size: var(--s-2);
 }
 
 a {

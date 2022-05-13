@@ -1,22 +1,25 @@
 .header {
-  padding: 2rem 0;
-}
+  a {
+    text-decoration: none;
+  }
 
-.header__inner {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-s-m);
+    align-items: center;
+  }
 
-nav {
-  display: flex;
-  gap: 1rem;
-}
+  &__navigation {
+    display: flex;
+    gap: var(--space-xs-s);
 
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+    ul {
+      display: flex;
+      gap: var(--space-xs-s);
+      list-style: none;
+      padding: 0;
+    }
+  }
 }
