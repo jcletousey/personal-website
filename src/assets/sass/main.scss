@@ -3,18 +3,33 @@
 @import "typography";
 @import "utils";
 @import "layout";
-@import "components/header";
+@import "components/site-header";
 @import "components/intro";
 @import "components/post-list";
 @import "components/post-list-item";
-@import "components/footer";
+@import "components/site-footer";
 
 :root {
-  --background: #1f2e42;
-  --primary: #ff5a61;
-  --text: #fffce9;
-  --text-light: #b4bcbd;
+  --background: #fffce9;
+  --primary: #db0009;
+  --primary-light: #ff5e64;
+  --text: #1f2e42;
+  --text-light: #6f7475;
   --font-serif: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+
+@media (prefers-color-scheme: light) {
+  .footer {
+    --primary: var(--primary-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f2e42;
+    --primary: #ff5a61;
+    --text: #fffce9;
+    --text-light: #b4bcbd;
+  }
 }
 
 :focus {
