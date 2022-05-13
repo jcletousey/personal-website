@@ -17,6 +17,38 @@
   --text-light: #6f7475;
   --font-serif: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
 
+  --s--2: clamp(0.78rem, calc(0.76rem + 0.11vw), 0.84rem);
+  --s--1: clamp(0.94rem, calc(0.89rem + 0.22vw), 1.05rem);
+  --s-0: clamp(1.13rem, calc(1.05rem + 0.37vw), 1.31rem);
+  --s-1: clamp(1.35rem, calc(1.24rem + 0.57vw), 1.64rem);
+  --s-2: clamp(1.62rem, calc(1.45rem + 0.84vw), 2.05rem);
+  --s-3: clamp(1.94rem, calc(1.70rem + 1.21vw), 2.56rem);
+  --s-4: clamp(2.33rem, calc(1.99rem + 1.70vw), 3.20rem);
+  --s-5: clamp(2.80rem, calc(2.33rem + 2.35vw), 4.01rem);
+
+  --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
+  --space-2xs: clamp(0.56rem, calc(0.51rem + 0.24vw), 0.69rem);
+  --space-xs: clamp(0.88rem, calc(0.83rem + 0.24vw), 1.00rem);
+  --space-s: clamp(1.13rem, calc(1.05rem + 0.37vw), 1.31rem);
+  --space-m: clamp(1.69rem, calc(1.57rem + 0.61vw), 2.00rem);
+  --space-l: clamp(2.25rem, calc(2.10rem + 0.73vw), 2.63rem);
+  --space-xl: clamp(3.38rem, calc(3.16rem + 1.10vw), 3.94rem);
+  --space-2xl: clamp(4.50rem, calc(4.21rem + 1.46vw), 5.25rem);
+  --space-3xl: clamp(6.75rem, calc(6.31rem + 2.20vw), 7.88rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.31rem, calc(0.17rem + 0.73vw), 0.69rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.39rem + 0.85vw), 1.00rem);
+  --space-xs-s: clamp(0.88rem, calc(0.70rem + 0.85vw), 1.31rem);
+  --space-s-m: clamp(1.13rem, calc(0.78rem + 1.71vw), 2.00rem);
+  --space-m-l: clamp(1.69rem, calc(1.32rem + 1.83vw), 2.63rem);
+  --space-l-xl: clamp(2.25rem, calc(1.59rem + 3.29vw), 3.94rem);
+  --space-xl-2xl: clamp(3.38rem, calc(2.64rem + 3.66vw), 5.25rem);
+  --space-2xl-3xl: clamp(4.50rem, calc(3.18rem + 6.59vw), 7.88rem);
+
+  --gutter: var(--space-s-m);
+}
+
 @media (prefers-color-scheme: light) {
   .footer {
     --primary: var(--primary-light);

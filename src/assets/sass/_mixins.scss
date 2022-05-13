@@ -1,0 +1,7 @@
+@mixin spacing($class, $property, $types, $sizes) {
+  @for $i from 0 to length($sizes) {
+    .#{$class}-#{nth($types, $i + 1)} {
+      #{$property}: #{nth($sizes, $i + 1)};
+    }
+  }
+}
