@@ -1,13 +1,13 @@
 {% if translations %}
   {% for translation in translations %}
-    <a href="{{ translation.url }}" title="{{ header[translation.locale].changeLanguage }}">
+    <a lang="{{ translation.locale }}" href="{{ translation.url }}" hreflang="{{ translation.locale }}" title="{{ header[translation.locale].changeLanguage }}">
       {{ site.locales[translation.locale] }}
     </a>
   {% endfor %}
 {% else %}
   {% for key, text in site.locales %}
     {% if key != locale %}
-      <a href="/{{ key }}/" title="{{ header[key].changeLanguage }}">
+      <a lang="{{ key }}" href="/{{ key }}/" hreflang="{{ key }}" title="{{ header[key].changeLanguage }}">
         {{ text }}
       </a>
     {% endif %}
