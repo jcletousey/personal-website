@@ -1,18 +1,23 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Assets
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
 
+  // Markdown
+  const mdRender = new markdownIt({html: true}).use(markdownItAttrs);
+  eleventyConfig.setLibrary("md", mdRender);
+
   // Filters
-  const mdRender = new markdownIt();
   eleventyConfig.addFilter("renderMarkdown", function (rawString) {
     return mdRender.render(rawString);
   });
