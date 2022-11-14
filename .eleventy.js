@@ -13,10 +13,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/assets/documents");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Markdown
-  const mdRender = new markdownIt({html: true}).use(markdownItAttrs);
+  const mdRender = new markdownIt({ html: true }).use(markdownItAttrs);
   eleventyConfig.setLibrary("md", mdRender);
 
   // Filters
@@ -25,7 +26,12 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addFilter("formatDate", function (str, locale) {
     const date = new Date(str);
-    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
 
@@ -45,6 +51,6 @@ module.exports = function (eleventyConfig) {
       layouts: "_includes/layouts",
       input: "src",
       output: "dist",
-    }
+    },
   };
 };
