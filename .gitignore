@@ -3,6 +3,7 @@ node_modules
 
 # IDEs
 .history
+.vscode
 
 # Build
 src/assets/css
