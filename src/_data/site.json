@@ -1,7 +1,14 @@
 {
-  "name": "Jean-Charles Le Tousey",
+  "title": "Jean-Charles Le Tousey",
+  "url": "https://jcletousey.dev",
   "locales": {
     "en": "English",
     "fr": "Français"
+  },
+  "en": {
+    "description": "Hi. I'm Jean-Charles, a software engineer from Caen, France."
+  },
+  "fr": {
+    "description": "Salut. Je suis Jean-Charles, un ingénieur logiciel vivant à Caen."
   }
 }

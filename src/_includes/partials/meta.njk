@@ -1,0 +1,35 @@
+{# Content from https://github.com/maxboeck/mxb/blob/master/src/includes/seo.njk #}
+{%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(site.url) }}{%- endset -%}
+<meta name="description" content="{{ description or site[locale].description }}">
+
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description or site[locale].description }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
+
+{# General #}
+<meta name="author" content="{{ author.name }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ locale }}">
+<meta name="twitter:creator" content="@{{ author.social.twitter.name }}">
+
+<link rel="canonical" href="{{ absolutePageUrl }}">
+
+{# JSON LD #}
+<script type="application/ld+json">
+  {
+    "name":"{{ site.title }}",
+    "description":"{{ site[locale].description }}",
+    "author": {
+        "@type":"Person",
+        "name":"{{ author.name }}"
+    },
+    "@type":"WebSite",
+    "url":"{{ site.url }}/{{ locale }}/",
+    "headline":"{{ site.title }}",
+    "sameAs":[
+        "{{ author.social.twitter.url }}",
+        "{{ author.social.github.url }}"
+    ],
+    "@context":"http://schema.org"
+  }
+</script>
