@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/assets/sass:src/assets/css",
-    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:eleventy": "DEBUG=* npx @11ty/eleventy --serve",
     "build:sass": "sass --no-source-map src/assets/sass:src/assets/css",
     "build:eleventy": "npx @11ty/eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "markdown-it-attrs": "^4.1.4",
     "npm-run-all": "^4.1.5",
     "sass": "^1.43.4"

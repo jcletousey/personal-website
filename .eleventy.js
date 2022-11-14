@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const eleventyRssPlugin = require("@11ty/eleventy-plugin-rss");
 const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -6,6 +7,7 @@ const markdownItAttrs = require("markdown-it-attrs");
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyRssPlugin);
 
   // Assets
   eleventyConfig.addPassthroughCopy("./src/assets/css");
