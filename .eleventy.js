@@ -17,7 +17,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Markdown
-  const mdRender = new markdownIt({ html: true }).use(markdownItAttrs);
+  const mdRender = new markdownIt({ html: true })
+    .use(markdownItAttrs)
+    .use(require("markdown-it-container"), "alert");
   eleventyConfig.setLibrary("md", mdRender);
 
   // Filters

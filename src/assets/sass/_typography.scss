@@ -17,18 +17,25 @@ h2 {
 a {
   color: var(--primary);
   text-decoration-thickness: 0.2em;
-  text-underline-offset: 0.05em;
+  text-underline-offset: 0.3em;
   transition: color 300ms, text-underline-offset 300ms;
 
   &:hover,
   &:focus {
     color: var(--text);
-    text-underline-offset: 0.2em;
+    text-underline-offset: 0.4em;
   }
 }
 
 p {
   letter-spacing: 0.05rem;
+}
+
+code {
+  background-color: #435368;
+  border-radius: 0.25em;
+  padding: 0 0.4em;
+  font-size: 90%;
 }
 
 .footer a {
