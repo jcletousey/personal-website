@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site[locale].description }}</subtitle>
+  <link href="{{ permalink | absoluteUrl(site.url) }}" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}/{{ locale }}/" rel="alternate" type="text/html"/>
+  <updated>{{ collections["posts_" + locale] | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url }}/{{ locale }}/</id>
+  <author>
+    <name>{{ author.name }}</name>
+  </author>
+  {%- for post in collections["posts_" + locale] | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content xml:lang="{{ locale }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
