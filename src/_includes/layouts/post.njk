@@ -9,7 +9,9 @@
       {{ blog[locale].posted }} <time datetime="{{ date }}">{{ date | formatDate(locale) }}</time>
     </p>
     {% if summary %}
-    {{ summary | renderMarkdown | safe }}
+    <div class="mbe-l">
+      {{ summary | renderMarkdown | safe }}
+    </div>
     {% endif %}
   </header>
 
