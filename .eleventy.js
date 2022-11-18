@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/assets/documents");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
   eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Markdown
