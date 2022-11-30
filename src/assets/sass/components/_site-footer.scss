@@ -1,7 +1,16 @@
 .footer {
   margin-block-start: auto;
-  text-align: center;
   background-color: var(--text);
   color: var(--background);
   font-size: var(--s--1);
+}
+
+.footer-wrapper {
+  display: flex;
+  gap: var(--space-xs-s);
+  justify-content: space-between;
+}
+
+.footer__navigation {
+  text-align: end;
 }

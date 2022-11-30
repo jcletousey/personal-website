@@ -1,5 +1,12 @@
-<footer class="footer pb-xs pi-0">
-  <div class="wrapper">
-    {{ footer[locale].created | renderMarkdown | safe }}
+<footer class="footer pb-xs">
+  <div class="wrapper footer-wrapper">
+    <div>
+      {{ footer[locale].created | renderMarkdown | safe }}
+    </div>
+
+    <ul class="footer__navigation">
+      <li><a href="/{{ locale }}/feed.xml">RSS</a></li>
+      <li><a href="https://indieweb.social/@jcletousey" rel="me">Mastodon</a></li>
+    </ul>
   </div>
 </footer>
