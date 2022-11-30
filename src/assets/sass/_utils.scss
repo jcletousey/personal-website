@@ -15,16 +15,19 @@
 .skip-link {
   position: absolute;
   top: 0;
-  left: 50%;
   z-index: 99;
   display: inline-block;
   padding: 0.5rem 2rem;
-  background: var(--primary);
-  color: var(--text);
+  background: var(--text);
   border: 2px solid;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    color: var(--background);
+  }
 
   &:not(:focus) {
     @extend .visually-hidden;
