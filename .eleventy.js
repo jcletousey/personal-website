@@ -47,6 +47,10 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection(`posts_${locale}`, function (collection) {
       return collection.getFilteredByGlob(`./src/content/${locale}/blog/*.md`);
     });
+
+    eleventyConfig.addCollection(`all_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
+    });
   }
 
   return {
