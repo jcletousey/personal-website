@@ -4,13 +4,15 @@
     "posted": "Published",
     "updated": "Updated",
     "noPost": "There is no article for the moment.",
-    "readArticle": "Read the article"
+    "readArticle": "Read the article",
+    "timeToRead": "About {{ time }} to read"
   },
   "fr": {
     "latestPosts": "Dernières publications",
     "posted": "Publié",
     "updated": "Mis à jour",
     "noPost": "Il n'y a pas d'article pour le moment.",
-    "readArticle": "Lire l'article"
+    "readArticle": "Lire l'article",
+    "timeToRead": "Environ {{ time }} de lecture"
   }
 }

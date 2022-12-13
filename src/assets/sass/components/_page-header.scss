@@ -1,4 +1,9 @@
-.page-header p:not(.meta) {
+.meta {
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.page-header div:not(.meta) {
   font-family: var(--font-serif);
   color: var(--text-light);
 }

@@ -41,6 +41,19 @@ module.exports = function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+  eleventyConfig.addFilter("interpolate", function (str, variables) {
+    const regex = /{{(.*?)}}/g;
+    return str.replace(regex, (match, key) => {
+      key = key.trim();
+      const variable = variables[key];
+      if (variable === undefined) {
+        console.error(
+          `The key '${key}' does not exist in your variables to interpolate !`
+        );
+      }
+      return variable;
+    });
+  });
 
   // Collections
   for (const locale of locales) {
