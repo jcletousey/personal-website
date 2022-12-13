@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const eleventyRssPlugin = require("@11ty/eleventy-plugin-rss");
+const timeToReadPlugin = require("eleventy-plugin-time-to-read");
 const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
@@ -8,6 +9,9 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
+  eleventyConfig.addPlugin(timeToReadPlugin, {
+    speed: "250 words a minute",
+  });
 
   // Assets
   eleventyConfig.addPassthroughCopy("./src/assets/css");
