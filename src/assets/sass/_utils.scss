@@ -46,6 +46,11 @@
   margin-block-start: 2.5rem;
 }
 
+.icon {
+  block-size: var(--s-0);
+  inline-size: var(--s-0);
+}
+
 $types: "0", "3xs", "2xs", "xs", "s", "m", "l", "xl", "xxl";
 $sizes: "0", var(--space-3xs-2xs), var(--space-2xs-xs), var(--space-xs-s),
   var(--space-s-m), var(--space-m-l), var(--space-l-xl), var(--space-xl-2xl),
