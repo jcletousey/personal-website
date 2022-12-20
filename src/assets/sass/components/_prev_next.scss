@@ -1,0 +1,41 @@
+.prev-next {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2xs-xs);
+
+  &__item--last {
+    margin-inline-start: auto;
+    text-align: right;
+  }
+
+  &__item--last &__desc {
+    justify-content: flex-end;
+  }
+
+  &__desc {
+    display: flex;
+    font-size: var(--s--2);
+    gap: var(--space-3xs);
+  }
+
+  &__desc--last {
+    justify-content: flex-end;
+  }
+
+  &__link {
+    font-size: var(--s-1);
+  }
+
+  &__date {
+    display: block;
+    font-size: var(--s--2);
+    color: var(--text-light);
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .prev-next__item {
+    flex: 0 0 calc(50% - var(--space-2xs-xs));
+  }
+}

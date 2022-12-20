@@ -33,8 +33,10 @@
     {% endif %}
   </header>
 
-  <div class="flow page-content">
+  <div class="flow page-content mbe-l">
     {{ content | safe}}
   </div>
+
+  {% include "partials/prev_next.njk" %}
 </article>
 {% endblock %}
