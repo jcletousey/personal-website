@@ -1,0 +1,9 @@
+---
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+permalink: "{{ locale }}/feed.xml"
+eleventyExcludeFromCollections: true
+---
+{% include "../_includes/partials/feed.njk" %}
