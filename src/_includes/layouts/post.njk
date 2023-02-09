@@ -2,9 +2,9 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-<article class="wrapper">
+<article class="wrapper h-entry">
   <header class="page-header">
-    <h1>{{ title }}</h1>
+    <h1 class="p-name">{{ title }}</h1>
 
     <div class="meta mb-l">
       <p>
@@ -14,7 +14,7 @@
           <line x1="8" y1="2" x2="8" y2="6"></line>
           <line x1="3" y1="10" x2="21" y2="10"></line>
         </svg>
-        {{ blog[locale].posted }} <time datetime="{{ date }}">{{ date | formatDate(locale) }}</time>
+        <span>{{ blog[locale].posted }} <time datetime="{{ date }}" class="dt-published">{{ date | formatDate(locale) }}</time></span>
       </p>
       {% set ttr = content | timeToRead %}
       <p>
@@ -27,13 +27,13 @@
     </div>
     {%- if summary %}
 
-    <div class="mbe-l">
+    <div class="p-summary mbe-l">
       {{ summary | renderMarkdown | safe }}
     </div>
     {% endif %}
   </header>
 
-  <div class="flow page-content mbe-l">
+  <div class="e-content flow page-content mbe-l">
     {{ content | safe}}
   </div>
 
