@@ -41,6 +41,9 @@ module.exports = function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+  eleventyConfig.addFilter("dateToISO", function (date) {
+    return new Date(date).toISOString();
+  });
   eleventyConfig.addFilter("interpolate", function (str, variables) {
     const regex = /{{(.*?)}}/g;
     return str.replace(regex, (match, key) => {
