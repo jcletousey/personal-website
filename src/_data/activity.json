@@ -1,0 +1,187 @@
+[
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Zetafonts · the Italian type foundry",
+    "body": "Zetafonts is a independent type foundry established in 2001  by Francesco Canovaro, Debora Manetti and Cosimo Lorenzo Pancini. Powered by a team of branding and design veterans, Zetafonts offers a prolific portfolio of original typeface families, covering the world's major script systems and proposing a wide range of innovative and stylish typographical solutions for digital and print designers.",
+    "link": "https://www.zetafonts.com/",
+    "date": "2023-02-27T13:18:29.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Capitalics Warsaw Type Foundry",
+    "body": "Capitalics Warsaw Type Foundry is the very first foundry in Poland. With a passion for good typography, a group of writers from the capital city of Warsaw decided to join forces and create a unique library of typefaces. The ever-growing graphics market requires a special approach. Our offer is addressed to conscious designers seeking original and technologically advanced fonts.",
+    "link": "https://capitalics.wtf/en",
+    "date": "2023-02-27T13:17:41.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "DJR",
+    "body": "The type foundry of David Jonathan Ross (DJR), home of the Font of the Month Club. Making fonts such as Fit, Forma DJR, Gimlet, Manicotti, Input, Turnip, Condor, Trilby, Fern, and Output.",
+    "link": "https://djr.com/",
+    "date": "2023-02-27T13:14:19.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Debugging Node.js, The Right Way",
+    "body": "How to debug Node.js scripts like they are in the browser.",
+    "link": "https://www.builder.io/blog/debug-nodejs",
+    "date": "2023-02-27T09:38:05.000Z",
+    "tags": ["node", "debug"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "10 powerful ways to use CSS variables",
+    "body": "CSS custom properties are AMAZING. I'm going to attempt to name and roundup all the categories and strategies of custom props that I've come across.",
+    "link": "https://nerdy.dev/custom-prop-categories",
+    "date": "2023-02-27T09:26:27.000Z",
+    "tags": ["css"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Day 88: CSS Motion Path",
+    "body": "CSS Motion path allows you to position any graphical object and animate it along a specified path.",
+    "link": "https://www.matuzo.at/blog/2023/100daysof-day88/",
+    "date": "2023-02-24T15:23:16.000Z",
+    "tags": ["css", "svg", "animation"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Conditional CSS",
+    "body": "CSS is condtional in many ways. In this article, I will go over a few CSS features that we use every day, and show you how conditional they are.",
+    "link": "https://ishadeed.com/article/conditional-css/#header",
+    "date": "2023-02-13T07:58:29.000Z",
+    "tags": ["css"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Sibling Scopes in CSS, thanks to :has() and ~",
+    "body": "Leverage CSS :has() to select all siblings between two element boundaries.",
+    "link": "https://www.bram.us/2023/01/12/sibling-scopes-in-css-thanks-to-has/",
+    "date": "2023-02-13T07:51:12.000Z",
+    "tags": ["css"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "HvD Fonts",
+    "body": "We are HvD Fonts - a type foundry for high quality, original retail fonts as well as nice custom font solutions.",
+    "link": "https://www.hvdfonts.com/fonts",
+    "date": "2023-01-23T11:18:26.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "fr",
+    "title": "Mettre le web en page",
+    "body": "Un article intéressant sur le CSS pour le print",
+    "link": "https://www.24joursdeweb.fr/2022/mettre-le-web-en-pages/",
+    "date": "2023-01-20T13:12:39.000Z",
+    "tags": ["CSS"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Freres-Jones Type",
+    "body": "Frere-Jones Type is a type design practice in New York City.",
+    "link": "https://frerejones.com/",
+    "date": "2023-01-20T08:18:15.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "fr",
+    "title": "Mini-guide to add an image",
+    "body": "",
+    "link": "https://www.htmhell.dev/adventcalendar/2022/18/",
+    "date": "2023-01-18T08:34:51.000Z",
+    "tags": ["Guide", "HTML"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "HTML Head",
+    "body": "A simple guide to HTML <head> elements",
+    "link": "https://htmlhead.dev/",
+    "date": "2023-01-17T10:41:35.000Z",
+    "tags": ["HTML", "Documentation"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Simple Type Co.",
+    "body": "A tiny type foundry that makes letters and numbers (and goods with those letters and numbers on them). Founded by Dan Cederholm.",
+    "link": "https://simpletype.co/",
+    "date": "2023-01-16T13:14:54.000Z",
+    "tags": ["Fonts", "TypeFoundry"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Illustrations | unDraw",
+    "body": "The design project with open-source illustrations for any idea you can imagine and create. Create beautiful websites, products and applications with your color, for free.",
+    "link": "https://undraw.co/illustrations",
+    "date": "2023-01-13T14:42:12.000Z",
+    "tags": ["Tools", "Design", "UI", "Illustrations"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "fr",
+    "title": "Écrire pour le Web",
+    "body": "Plein de recommandations sur comment écrire pour le web\n- Pourquoi j'ai du mal à lire sur le Web\n- Rendre le texte facile à lire\n- Rendre le texte facile à naviguer\n- Rendre le texte facile à comprendre",
+    "link": "https://www.24joursdeweb.fr/2022/ecrire-pour-le-web/",
+    "date": "2023-01-12T07:51:02.000Z",
+    "tags": ["Guide", "Écriture", "Accessibilité", "UX", "UI"]
+  },
+  {
+    "type": "bookmark",
+    "locale": "en",
+    "title": "Terms of Service; Didn't Read",
+    "body": "I saw this a long time ago but I didn't bookmark it. Now, it is.",
+    "link": "https://tosdr.org/",
+    "date": "2023-01-11T09:12:51.000Z",
+    "tags": ["Privacy"]
+  },
+  {
+    "type": "article",
+    "title": {
+      "fr": "Optimisation de l'image Docker Ubuntu pour WSL",
+      "en": "Docker Ubuntu Image Optimization for WSL"
+    },
+    "body": {
+      "fr": "Faire le ménage sur son disque peut être intéressant, car on en apprend beaucoup sur ce qu'il peut contenir.",
+      "en": "Cleaning up your disk can be interesting, because we learn a lot about what it can contain."
+    },
+    "link": {
+      "fr": "/fr/blog/optimisation-de-l-image-docker-ubuntu-pour-wsl/",
+      "en": "/en/blog/docker-ubuntu-image-optimization-for-wsl/"
+    },
+    "date": "2022-07-19T09:34:32.000Z"
+  },
+  {
+    "type": "article",
+    "title": {
+      "fr": "Enfin !",
+      "en": "Finally!"
+    },
+    "body": {
+      "fr": "Cela fait plusieurs années que je travaille sur des versions commencées et non terminées de mon site. Cette fois, je me lance _(même s'il est très loin d'être terminé)_.",
+      "en": "I have been working on both started and unfinished versions of my website for several years. This time, I launch it _(even if it is very far from being finished)_."
+    },
+    "link": {
+      "fr": "/fr/blog/enfin/",
+      "en": "/en/blog/finally/"
+    },
+    "date": "2022-06-17T14:41:05.000Z"
+  }
+]
