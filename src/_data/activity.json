@@ -1,5 +1,21 @@
 [
   {
+    "type": "article",
+    "title": {
+      "fr": "C'est décidé, je reprends le contrôle de mes données",
+      "en": "It's decided, I take back control of my data"
+    },
+    "body": {
+      "fr": "La situation avec Twitter m'a vraiment fait réfléchir au fait de stocker toutes mes données sur mon site et ne plus passer par des services tiers en priorité. Libre à moi ensuite, de les partager où bon me semble.",
+      "en": "The situation with Twitter really made me think about storing all my data on my site and no longer going through third party services first. Then I'm free to share them wherever I want."
+    },
+    "link": {
+      "fr": "/fr/blog/c-est-decide-je-reprends-le-controle-de-mes-donnees/",
+      "en": "/en/blog/it-s-decided-i-take-back-control-of-my-data/"
+    },
+    "date": "2023-03-01T18:16:05.000Z"
+  },
+  {
     "type": "bookmark",
     "locale": "en",
     "title": "Zetafonts · the Italian type foundry",
