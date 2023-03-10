@@ -1,31 +1,34 @@
-{%- for item in pagination.items %}
-  <div class="activity-card" data-type="{{ item.type }}">
-    <header class="activity-card__header">
-      <h2 class="activity-card__header-title">{{ item.title[locale] if item.title[locale] else item.title }}</h2>
-      <span class="visually-hidden">{{ item.type }}</span>
-      <span class="activity-card__header-date">
-        <time datetime="{{ item.date }}">{{ item.date | formatDate(locale) }}</time>
-      </span>
-    </header>
+<div class="activity">
+  {%- for item in pagination.items %}
+    <div class="activity-card" data-type="{{ item.type }}"{% if locale !== item.locale %} lang="{{item.locale}}"{% endif %}>
+      <header class="activity-card__header">
+        <h2 class="activity-card__header-title">{{ item.title[locale] if item.title[locale] else item.title }}</h2>
+        <span class="visually-hidden">{{ item.type }}</span>
+        <span class="activity-card__header-date">
+          <time datetime="{{ item.date }}">{{ item.date | formatDate(locale) }}</time>
+        </span>
+      </header>
 
-    <div class="activity-card__content">
-      {{ item.body[locale] if item.body[locale] else item.body | renderMarkdown | safe }}
+      <div class="activity-card__content">
+        {{ item.body[locale] if item.body[locale] else item.body | renderMarkdown | safe }}
+      </div>
+
+      <footer class="activity-card__footer">
+        <a href="{{ item.link[locale] if item.link[locale] else item.link }}"{% if locale !== item.locale %}hreflang="{{item.locale}}"{% endif %}>
+          {% if item.type == "article" %}
+            Lire l'article
+          {% else %}
+            {{ item.link[locale] if item.link[locale] else item.link }}
+          {% endif %}
+        </a>
+        <p>
+        {% for tag in item.tags %}
+          <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+        </p>
+      </footer>
     </div>
+  {% endfor -%}
+</div>
 
-    <footer class="activity-card__footer">
-      <a href="{{ item.link[locale] if item.link[locale] else item.link }}"{% if locale !== item.locale %}hreflang="{{item.locale}}"{% endif %}>
-        {% if item.type == "article" %}
-          Lire l'article
-        {% else %}
-          {{ item.link[locale] if item.link[locale] else item.link }}
-        {% endif %}
-      </a>
-
-      <p>
-      {% for tag in item.tags %}
-        <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
-      {% endfor %}
-      </p>
-    </footer>
-  </div>
-{% endfor -%}
+{% include "partials/pagination.njk" %}

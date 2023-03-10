@@ -1,0 +1,30 @@
+.pagination {
+  [aria-current] {
+    padding: var(--space-3xs);
+    background-color: var(--primary);
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  &__content {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-2xs-xs);
+  }
+
+  &__content li::before {
+    /**
+     * Add zero-width space to fix VoiceOver list style none bug
+     * See: https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html
+     */
+    content: "\200B";
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .pagination [aria-current] {
+    color: var(--background);
+  }
+}

@@ -1,11 +1,15 @@
-[data-type="bookmark"] .activity-card__header::before {
-  background: url("../images/bookmark.svg") no-repeat center center
-    var(--primary);
+[data-type="bookmark"] {
+  --url: url("../images/bookmark.svg");
 }
-[data-type="article"] .activity-card__header::before {
-  background: url("../images/pen-tool.svg") no-repeat center center
-    var(--primary);
-  transform: rotate(-90deg);
+[data-type="article"] {
+  --url: url("../images/pen-tool.svg");
+}
+[data-type="like"] {
+  --url: url("../images/heart.svg");
+}
+
+.activity-card__header::before {
+  background: var(--url) no-repeat center center var(--primary);
 }
 
 .activity {
@@ -69,6 +73,10 @@
   }
 }
 
+.activity-card__footer {
+  word-break: break-word;
+}
+
 .tag {
   background-color: var(--text-light);
   color: var(--background);
@@ -76,4 +84,10 @@
   border-radius: 2px;
   padding: 0.25rem;
   font-size: var(--s--2);
+}
+
+@media (prefers-color-scheme: light) {
+  .activity-card__header::before {
+    background-color: transparent;
+  }
 }
