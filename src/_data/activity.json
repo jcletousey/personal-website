@@ -13,7 +13,26 @@
       "fr": "/fr/blog/c-est-decide-je-reprends-le-controle-de-mes-donnees/",
       "en": "/en/blog/it-s-decided-i-take-back-control-of-my-data/"
     },
-    "date": "2023-03-01T18:16:05.000Z"
+    "date": "2023-03-10T13:16:05.000Z",
+    "tags": ["IndieWeb", "PersonalWebsite"]
+  },
+  {
+    "type": "like",
+    "locale": "en",
+    "title": "Code for copying code: the Eleventy edition",
+    "body": "How to fix the position of the 'copy' button for the syntax highlighting plugin in horizontal scrolling code blocks.",
+    "link": "https://www.brycewray.com/posts/2023/02/code-copying-code-eleventy-edition/",
+    "date": "2023-03-07T12:55:11.000Z",
+    "tags": ["Eleventy"]
+  },
+  {
+    "type": "like",
+    "locale": "en",
+    "title": "Updating webmentions on a static site",
+    "body": "How to update webmentions with only the new ones.",
+    "link": "https://nicolas-hoizey.com/articles/2023/02/05/updating-webmentions-on-a-static-site/",
+    "date": "2023-03-07T12:44:51.000Z",
+    "tags": ["IndieWeb", "Webmentions", "Eleventy", "GitHub"]
   },
   {
     "type": "bookmark",

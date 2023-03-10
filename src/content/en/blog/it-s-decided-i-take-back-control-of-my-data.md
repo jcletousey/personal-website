@@ -1,11 +1,11 @@
 ---
 idI18n: 6
 title: It’s decided, I take back control of my data
-date: 2023-03-01
+date: 2023-03-10
 summary: "The situation with Twitter really made me think about storing all my data on my site and no longer going through third party services first. Then I’m free to share them wherever I want."
 tags:
   - IndieWeb
-  - MySite
+  - PersonalWebsite
 ---
 
 As stated in my [first article of this website](/en/blog/finally/), I want my data to belong to me and not depend on third party platforms.
@@ -22,7 +22,7 @@ I quote myself:
 
 This clearly referred to not use a platform to have a blog, but I didn’t think a situation would quickly echo this quote.
 
-With the _Twitter_ case and Elon Musk’s takeover, I figured even the content I share on social media should belong to me. In the end, the way he ran this company made me want to leave this service. So I looked for a way to recover my content, hoping that this would be possible.
+With the _Twitter_ case and Elon Musk’s takeover, I figured even the content I share on social media should belong to me. Indeed, the way he ran this company made me want to leave this service. So I looked for a way to recover my content, hoping that this would be possible.
 
 Fortunately, _Twitter_ itself has made available [a way to retrieve it](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive).
 
@@ -30,16 +30,14 @@ Since then, [I’ve migrated to Mastodon](https://indieweb.social/@jcletousey) b
 
 I saw [a _toot_](https://indieweb.social/@aral@mastodon.ar.al/109720685759002039){hreflang="en"} comparing the _Fediverse_ to email, which was also open in its early days and is now managed by only a few very large companies. Okay, this is extreme but it made me think.
 
-After this phase, I thought I had to take back control of my data. And what could be better than my site to gather them all, whatever they are. I like social media, but not the fact that I’m at their mercy.
+After this phase, I thought I had to take back control of my data. And what could be better than my website to gather them all, whatever they are.
 
-That’s why I decided that my site would become my social network. Okay, not really my social network but I want it to become a central part of my actions on the _Web_ in the future.
+To that end, I have been researching the _[IndieWeb](https://indieweb.org/)_. I started to implement the markup recommended in some of my content but I still have a lot left to get what I want.
 
-In order to gain even more freedom and make sure my data is mine, I’ve been learning about the _[IndieWeb](https://indieweb.org/){hreflang="en"}_. Moreover, I have already started to implement the recommended markup in some of my content. But with this _Twitter_ case, I want to speed things up.
+With the _Twitter_ case and my move to _Mastodon_, I want to speed things up. I like social media but not the fact that I am at their mercy. That’s why, I decided that my site would become my social network. Ok, not really my social network but I want it to become a central part of my actions on the _Web_ and the concept of _[POSSE (Publish (on your) Own Site, Syndicate Elsewhere)](https://indieweb.org/POSSE){hreflang="en"}_ that the _IndieWeb_ advocates seems to fit my expectations. I saw [the IndieKit](https://getindiekit.com/) which I think is pretty good for implementing all these concepts.
 
-During my research, looking at the sites around this concept, I came across the _[indiewebring](https://indieweb.org/indiewebring){hreflang="en"}_.
+As I searched, I also came across the _[indiewebring](https://indieweb.org/indiewebring){hreflang="en"}_. Many of the sites that are part of it have pages that share their _bookmarks_, their _likes_, their _checkins_, their photos, their reading tracking and many more. It gives me ideas and I really want to be inspired by them.
 
-Lot of the sites in it have pages, sharing their _bookmarks_, their _likes_, their _checkins_, their pictures, their reading tracking and many more. This made me think of the _timelines_ of social networks. Some of them, moreover, take the style of these _timelines_ in their site.
+The advantage of having a personal website is that you can make it evolve as you want, so I know what I have to do 😄.
 
-It gives me ideas and I really want to get inspired by them.
-
-It’s decided, 2023 will be the year when [I take back control of my data](/en/activity/).
+In any case, it’s decided, 2023 will be the year when [I take back control of my data](/en/activity/).
