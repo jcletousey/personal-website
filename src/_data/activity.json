@@ -1,6 +1,40 @@
 {
   "data": [
     {
+      "type": "like",
+      "locale": "en",
+      "title": "What to expect from your framework",
+      "body": "There's been a bit of a brouhaha these last weeks as parts of the Internet suddenly woke up to the realization that most Single Page Apps are slow and overcomplicated, and — shock horror — it turns out that Facebook, the lovable scamps that brought us React and QAnon, have conducted themselves badly! Refreshingly, rather than launching a thousand caustic subtweets, this little stormwind has caused the blog posts to start flying again. Thank you, Elon “Vain gobshite” Musk. I'm totally here for it.",
+      "link": "https://johan.hal.se/wrote/2023/02/17/what-to-expect-from-your-framework/",
+      "date": "2023-03-15T10:30:54.000Z"
+    },
+    {
+      "type": "like",
+      "locale": "en",
+      "title": "Thoughts on My Publishing Workflow",
+      "body": "Description of the many concerns when managing a site with a static site generator.",
+      "link": "https://darthmall.net/weblog/2023/thoughts-on-my-publishing-workflow/",
+      "date": "2023-03-14T15:44:01.000Z"
+    },
+    {
+      "type": "like",
+      "locale": "en",
+      "title": "Some simple ways to make content look good",
+      "body": "Description of the process to make a page \"look good\". From the foundations to the finishing touches.",
+      "link": "https://set.studio/some-simple-ways-to-make-content-look-good/",
+      "date": "2023-03-13T11:53:21.000Z",
+      "tags": ["HTML", "CSS", "Guide"]
+    },
+    {
+      "type": "bookmark",
+      "locale": "en",
+      "title": "How to Favicon in 2023: Six files that fit most needs",
+      "body": "It's time to rethink how we cook a set of favicons for modern browsers and stop the icon generator madness. Frontend developers currently have to deal with 20+ static PNG files just to display a tiny website logo in a browser tab or on a touchscreen. Read on to see how to take a smarter approach and adopt a minimal set of icons that fits most modern needs.",
+      "link": "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs",
+      "date": "2023-03-13T11:53:21.000Z",
+      "tags": ["HTML", "favicon", "Guide"]
+    },
+    {
       "type": "article",
       "title": {
         "fr": "C'est décidé, je reprends le contrôle de mes données",
@@ -78,7 +112,7 @@
       "body": "CSS custom properties are AMAZING. I'm going to attempt to name and roundup all the categories and strategies of custom props that I've come across.",
       "link": "https://nerdy.dev/custom-prop-categories",
       "date": "2023-02-27T09:26:27.000Z",
-      "tags": ["css"]
+      "tags": ["CSS"]
     },
     {
       "type": "like",
@@ -87,7 +121,7 @@
       "body": "CSS Motion path allows you to position any graphical object and animate it along a specified path.",
       "link": "https://www.matuzo.at/blog/2023/100daysof-day88/",
       "date": "2023-02-24T15:23:16.000Z",
-      "tags": ["css", "svg", "animation"]
+      "tags": ["CSS", "svg", "animation"]
     },
     {
       "type": "like",
@@ -96,7 +130,7 @@
       "body": "CSS is condtional in many ways. In this article, I will go over a few CSS features that we use every day, and show you how conditional they are.",
       "link": "https://ishadeed.com/article/conditional-css/#header",
       "date": "2023-02-13T07:58:29.000Z",
-      "tags": ["css"]
+      "tags": ["CSS"]
     },
     {
       "type": "like",
@@ -105,7 +139,7 @@
       "body": "Leverage CSS :has() to select all siblings between two element boundaries.",
       "link": "https://www.bram.us/2023/01/12/sibling-scopes-in-css-thanks-to-has/",
       "date": "2023-02-13T07:51:12.000Z",
-      "tags": ["css"]
+      "tags": ["CSS"]
     },
     {
       "type": "bookmark",
