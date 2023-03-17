@@ -1,0 +1,41 @@
+{
+  "lastFetched": "2023-03-16T14:22:15.890Z",
+  "webmentions": [
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "Eka",
+        "photo": "https://webmention.io/avatar/indieweb.social/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png",
+        "url": "https://indieweb.social/@ekafyi"
+      },
+      "url": "https://indieweb.social/@jcletousey/110016105277945282#favorited-by-109308691808121486",
+      "published": null,
+      "wm-received": "2023-03-13T20:09:01Z",
+      "wm-id": 1640148,
+      "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/109308691808121486",
+      "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "KewlCat",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/0b2f682d47acf2081a02948a6434638ff06e8ffce37a5b5bf4cabe3aff94dd6f.png",
+        "url": "https://mastodon.social/@KewlCat"
+      },
+      "url": "https://indieweb.social/@jcletousey/110016105277945282#favorited-by-31223",
+      "published": null,
+      "wm-received": "2023-03-14T22:16:51Z",
+      "wm-id": 1641091,
+      "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/31223",
+      "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-property": "like-of",
+      "wm-private": false
+    }
+  ]
+}

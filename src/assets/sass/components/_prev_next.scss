@@ -3,6 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--space-2xs-xs);
+  padding-block-start: var(--space-l-xl);
+  border-block-start: 1px solid var(--text-light);
 
   &__item--last {
     margin-inline-start: auto;

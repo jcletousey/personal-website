@@ -1,0 +1,37 @@
+.webmentions {
+  margin-block-start: var(--space-l-xl);
+  border-block-start: 1px solid var(--text-light);
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__header__about {
+    font-size: var(--s--1);
+  }
+}
+
+.reactions--like-of {
+  display: flex;
+  flex-wrap: wrap;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+
+  li:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+}
+
+.reaction__author__photo {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #040404;
+  color: var(--text);
+  height: 48px;
+  width: 48px;
+}

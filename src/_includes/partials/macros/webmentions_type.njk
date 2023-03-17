@@ -1,0 +1,20 @@
+{% macro mentions(mentions, type) %}
+<ol class="reactions__list reactions--{{ type }}">
+  {% for webmention in mentions %}
+  <li id="webmention-{{ webmention['wm-id'] }}" class="reactions__item">
+    <a class="u-url p-author h-card" href="{{ webmention.author.url }}">
+      <img
+        class="reaction__author__photo u-photo"
+        src="{{ webmention.author.photo }}"
+        width="48"
+        height="48"
+        alt="{{ webmention.author.name }} avatar"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
+      />
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}

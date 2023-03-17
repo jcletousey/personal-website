@@ -1,0 +1,21 @@
+{% import "partials/macros/webmentions_type.njk" as webmentions with context %}
+
+{% set allMentions = page.url | getWebmentionsForUrl %}
+{% set allMentionsSize = allMentions.length %}
+
+{% set likes = allMentions | webmentionsByType('like-of') %}
+{% set likesSize = likes.length %}
+
+<aside class="webmentions flow">
+  <header class="webmentions__header">
+    <h2>{{ allMentionsSize }} webmention{% if allMentionsSize > 1 %}s{% endif %}</h2>
+    <a href="https://indieweb.org/webmention.io" hreflang="en" class="webmentions__header__about">About webmentions</a>
+  </header>
+
+  {% if likesSize > 0 %}
+    <section class="webmentions__likes">
+      <h3>{{ likesSize }} like{% if likesSize > 1 %}s{% endif %}</h3>
+      {{ webmentions.mentions(likes, 'like-of') }}
+    </section>
+  {% endif %}
+</aside>

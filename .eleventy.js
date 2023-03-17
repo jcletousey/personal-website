@@ -5,6 +5,10 @@ const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 
+const { readFromCache } = require("./src/_utils/cache");
+
+const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
+
 module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -57,6 +61,25 @@ module.exports = function (eleventyConfig) {
       return variable;
     });
   });
+  // https://github.com/nhoizey/nicolas-hoizey.com/blob/main/src/_11ty/filters/webmention.js
+  eleventyConfig.addFilter("getWebmentionsForUrl", (url) => {
+    // TODO: for each URL, we loop through all webmentions, should be optimized
+    if (url === undefined) {
+      console.log("No URL for webmention matching");
+      return [];
+    }
+
+    const cached = readFromCache(WEBMENTION_CACHE_FILE);
+    return cached.webmentions.filter((entry) => {
+      return new URL(entry["wm-target"]).pathname === url;
+    });
+  });
+  eleventyConfig.addFilter(
+    "webmentionsByType",
+    function (mentions, mentionType) {
+      return mentions.filter((entry) => entry["wm-property"] === mentionType);
+    }
+  );
 
   // Collections
   for (const locale of locales) {
