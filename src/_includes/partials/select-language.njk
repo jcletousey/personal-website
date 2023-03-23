@@ -1,9 +1,7 @@
-{% if translations %}
-  {% for translation in translations %}
-    <a lang="{{ translation.locale }}" href="{{ translation.url }}" hreflang="{{ translation.locale }}" title="{{ header[translation.locale].changeLanguage }}">
-      {{ site.locales[translation.locale] }}
-    </a>
-  {% endfor %}
+{% for link in page.url | locale_links %}
+<a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+  {{ site.locales[link.lang] }}</a
+>
 {% else %}
   {% for key, text in site.locales %}
     {% if key != locale %}
@@ -12,4 +10,4 @@
       </a>
     {% endif %}
   {% endfor %}
-{% endif %}
+{% endfor %}
