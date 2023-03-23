@@ -4,6 +4,7 @@ const timeToReadPlugin = require("eleventy-plugin-time-to-read");
 const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 const { readFromCache } = require("./src/_utils/cache");
 
@@ -15,6 +16,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyRssPlugin);
   eleventyConfig.addPlugin(timeToReadPlugin, {
     speed: "250 words a minute",
+  });
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "en",
   });
 
   // Assets
