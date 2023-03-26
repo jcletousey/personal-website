@@ -1,5 +1,4 @@
 ---
-idI18n: 1
 title: Hello, I'm Jean‑Charles
 permalink: "/en/index.html"
 layout: index

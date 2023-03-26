@@ -1,5 +1,4 @@
 ---
-idI18n: 5
 title: Docker Ubuntu Image Optimization for WSL
 summary: Cleaning up your disk can be interesting, because we learn a lot about what it can contain.
 tags:

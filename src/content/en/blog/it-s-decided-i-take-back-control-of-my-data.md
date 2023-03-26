@@ -1,5 +1,4 @@
 ---
-idI18n: 6
 title: It’s decided, I take back control of my data
 date: 2023-03-10
 summary: "The situation with Twitter really made me think about storing all my data on my site and no longer going through third party services first. Then I’m free to share them wherever I want."

@@ -1,5 +1,4 @@
 ---
-idI18n: 6
 title: C'est décidé, je reprends le contrôle de mes données
 date: 2023-03-10
 summary: "La situation avec Twitter m'a vraiment fait réfléchir au fait de stocker toutes mes données sur mon site et ne plus passer par des services tiers en priorité. Libre à moi ensuite, de les partager où bon me semble."

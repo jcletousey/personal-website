@@ -1,5 +1,4 @@
 ---
-idI18n: 3
 title: A propos
 eleventyNavigation:
   key: A propos

@@ -1,5 +1,4 @@
 ---
-idI18n: 5
 title: Optimisation de l'image Docker Ubuntu pour WSL
 summary: Faire le ménage sur son disque peut être intéressant, car on en apprend beaucoup sur ce qu’il peut contenir.
 tags:

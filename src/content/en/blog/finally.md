@@ -1,5 +1,4 @@
 ---
-idI18n: 4
 title: Finally!
 summary: I have been working on both started and unfinished versions of my website for several years. This time, I launch it _(even if it is very far from being finished)_.
 date: 2022-06-17

@@ -1,5 +1,4 @@
 ---
-idI18n: 4
 title: Enfin!
 summary: Cela fait plusieurs années que je travaille sur des versions commencées et non terminées de mon site. Cette fois, je me lance _(même s'il est très loin d'être terminé)_.
 date: 2022-06-17
