@@ -21,13 +21,25 @@
 
 The internationalization is used to provide links to users in order for them to switch to another supported language.
 
-I implemented a function to generate links to translations directly from a page. See the following `3.`.
+This featuref is provided by the [Eleventy i18n plugin](https://www.11ty.dev/docs/plugins/i18n/).
 
 If you want to use it as is, you have to localize your data. It means that you have to write and organize your content accordingly to the languages you want to provide.
 
 What you have to do is to apply the following instructions:
 
+1. The default language is English but you can change it in the `.eleventy.js` file at the root of the project.
+
+```javascript
+module.exports = function (eleventyConfig) {
+  // Plugins
+  ...
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "en",
+  });
+```
+
 1. Declare your locales in `data/site.json`
+
 ```json
 {
   ...,
@@ -38,9 +50,9 @@ What you have to do is to apply the following instructions:
 }
 ```
 
-2. Create the corresponding directories in the `content` directory. For example, with an english and a french locales:  
+1. Create the corresponding directories in the `content` directory. For example, with an english and a french locales:
 
-```
+```text
 |- src
    |- content
       |- en
@@ -52,35 +64,26 @@ What you have to do is to apply the following instructions:
       |- ...
 ```
 
-3. To generate automatic links for the page translations, add the `idI18n` _front matter_ attribute in all the translation pages. It could be an `integer` or a `string`.
+1. Then, you have to create files with the same name across the locales folders to get automatic links for the translations.
 
-For example, in `content/en/pages/my-page.md`, add in the _front matter_:
+For example:
 
-```markdown
----
-idI18n: 1
-title: My page
-...
----
-
-My content
+```text
+|- src
+   |- content
+      |- en
+         |- blog
+            |- my-first-post.md
+            |- my-second-post.md
+            |- my-third-post.md # This won't have translation
+         |- pages
+            |- my-page.md
+      |- fr
+         |- blog
+            |- my-first-post.md
+            |- my-second-post.md
+            |- mon-article.md # This won't have translation
+         |- pages
+            |- my-page.md
+      |- ...
 ```
-
-and in the french translation page `content/fr/pages/ma-page.md`, declare the same `idI18n`:
-
-```markdown
----
-idI18n: 1
-title: Ma page
-...
----
-
-Mon contenu
-``` 
-
-It will use the _[Eleventy computed data](https://www.11ty.dev/docs/data-computed/)_ to populate the links in the front matter attribute `translations` at build time. In result, the variable `translations`, which is an array of links, indexed by the locale, will be available in the templates.
-
-Here, I used a page as an example but you could do the same with post items.
-
-> **NOTE:**
-> For each new page and its translation pages, you have to use a new unique `idI18n`
