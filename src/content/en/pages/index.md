@@ -1,7 +1,7 @@
 ---
 title: Hello, I'm Jean‑Charles
 permalink: "/en/index.html"
-layout: index
+layout: index.njk
 ---
 
 I'm a software engineer based in Caen, Normandy, France. I specialized in _Web_. I'm lucky because I have a passion job in which I have fun for more than fifteen years. On a daily basis, I have to work on different areas such as _back-end_, _front-end_, _DevOps_.

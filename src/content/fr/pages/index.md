@@ -1,7 +1,7 @@
 ---
 title: Salut, je suis Jean‑Charles
 permalink: "/fr/index.html"
-layout: index
+layout: index.njk
 ---
 
 Je suis un ingénieur logiciel basé à Caen. Je me suis spécialisé dans le _Web_. J'ai la chance de faire un métier passion dans lequel je m'éclate depuis une quinzaine d'années. Au quotidien, je suis amené à travailler sur différents domaines tels que, le _back-end_, le _front-end_, le _DevOps_.

@@ -1,4 +1,4 @@
 {
-  "layout": "page",
+  "layout": "page.njk",
   "permalink": "/{{ locale }}/{{ title | slugify }}/index.html"
 }
