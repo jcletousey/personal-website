@@ -9,7 +9,9 @@
 <aside class="webmentions flow">
   <header class="webmentions__header">
     <h2>{{ allMentionsSize }} webmention{% if allMentionsSize > 1 %}s{% endif %}</h2>
-    <a href="https://indieweb.org/webmention.io" hreflang="en" class="webmentions__header__about">About webmentions</a>
+    <a href="https://indieweb.org/webmention.io" hreflang="en" class="webmentions__header__about">
+      {{ blog[locale].aboutWebmentions }}
+    </a>
   </header>
 
   {% if likesSize > 0 %}
