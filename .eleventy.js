@@ -85,6 +85,10 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  eleventyConfig.addShortcode("my_age", function () {
+    return new Date().getFullYear() - 1982;
+  });
+
   // Collections
   for (const locale of locales) {
     eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
