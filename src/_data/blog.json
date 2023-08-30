@@ -5,7 +5,8 @@
     "updated": "Updated",
     "noPost": "There is no article for the moment.",
     "readArticle": "Read the article",
-    "timeToRead": "About {{ time }} to read"
+    "timeToRead": "About {{ time }} to read",
+    "aboutWebmentions": "About webmentions"
   },
   "fr": {
     "latestPosts": "Dernières publications",
@@ -13,6 +14,7 @@
     "updated": "Mis à jour",
     "noPost": "Il n'y a pas d'article pour le moment.",
     "readArticle": "Lire l'article",
-    "timeToRead": "Environ {{ time }} de lecture"
+    "timeToRead": "Environ {{ time }} de lecture",
+    "aboutWebmentions": "A propos des webmentions"
   }
 }
