@@ -73,6 +73,11 @@
   }
 }
 
+.activity-card__content,
+.activity-card__footer {
+  padding-inline-start: var(--space-xl);
+}
+
 .activity-card__footer {
   word-break: break-word;
 }

@@ -13,7 +13,7 @@
         {{ item.body[locale] if item.body[locale] else item.body | renderMarkdown | safe }}
       </div>
 
-      <footer class="activity-card__footer">
+      <footer class="activity-card__footer mbs-3xs">
         <a href="{{ item.link[locale] if item.link[locale] else item.link }}"{% if locale !== item.locale %}hreflang="{{item.locale}}"{% endif %}>
           {% if item.type == "article" %}
             Lire l'article
