@@ -12,6 +12,16 @@
   background: var(--url) no-repeat center center var(--primary);
 }
 
+.mine {
+  padding: var(--space-xs-s);
+  background-color: var(--background-light);
+  border: 6px double var(--text);
+
+  .activity-card__header::before {
+    left: var(--space-s);
+  }
+}
+
 .activity {
   border-inline-start: 2px solid;
   padding: var(--space-m) 0 var(--space-m) var(--space-m);

@@ -1,6 +1,6 @@
 <div class="activity">
   {%- for item in pagination.items %}
-    <div class="activity-card" data-type="{{ item.type }}"{% if locale !== item.locale %} lang="{{item.locale}}"{% endif %}>
+    <div class="activity-card{% if item.type == "article" or item.type == "note" %} mine{% endif %}" data-type="{{ item.type }}"{% if locale !== item.locale %} lang="{{item.locale}}"{% endif %}>
       <header class="activity-card__header">
         <h2 class="activity-card__header-title">{{ item.title[locale] if item.title[locale] else item.title }}</h2>
         <span class="visually-hidden">{{ item.type }}</span>

@@ -20,6 +20,7 @@
 
 :root {
   --background: #fffce9;
+  --background-light: white;
   --primary: #b20000;
   --primary-light: #ff9fa1;
   --text: #1f2e42;
@@ -67,6 +68,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #1f2e42;
+    --background-light: #293d57;
     --primary: #ff5a61;
     --text: #fffce9;
     --text-light: #b4bcbd;
