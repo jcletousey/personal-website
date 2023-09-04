@@ -1,5 +1,22 @@
 # JC's website changelog
 
+## 2023-09-04
+
+### Added
+
+- Style my own articles and notes in the activity list
+- Translation entry for the _about webmentions_ link
+
+### Changed
+
+- Display conditionnaly the previous and next post links in a post
+- Activity cards style
+
+## Fixed
+
+- Wrong post's reading time in the posts list
+- Wrong IndieWeb `dt-published` date in the post
+
 ## 2023-03-27
 
 ### Added
