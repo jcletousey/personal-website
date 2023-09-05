@@ -12,16 +12,6 @@
   background: var(--url) no-repeat center center var(--primary);
 }
 
-.mine {
-  padding: var(--space-xs-s);
-  background-color: var(--background-light);
-  border: 6px double var(--text);
-
-  .activity-card__header::before {
-    left: var(--space-s);
-  }
-}
-
 .activity {
   border-inline-start: 2px solid;
   padding: var(--space-m) 0 var(--space-m) var(--space-m);
@@ -90,6 +80,24 @@
 
 .activity-card__footer {
   word-break: break-word;
+}
+
+.mine {
+  padding: var(--space-xs-s);
+  background-color: var(--background-light);
+  border: 6px double var(--text);
+
+  &::before {
+    inset-inline-start: calc(var(--space-m) * -1 - var(--s--1) / 2 - 7px);
+  }
+
+  &::after {
+    inline-size: calc(var(--space-m) - 6px);
+  }
+
+  .activity-card__header::before {
+    left: var(--space-s);
+  }
 }
 
 .tag {
