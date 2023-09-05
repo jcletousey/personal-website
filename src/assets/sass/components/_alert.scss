@@ -1,13 +1,12 @@
 .alert {
   padding: 1rem;
   border-inline-start: 0.3rem solid currentColor;
-  background-color: #dddbcc;
+  background-color: var(--background-light);
   color: var(--text);
 }
 
 @media (prefers-color-scheme: dark) {
   .alert {
     color: var(--text);
-    background-color: #2d4360;
   }
 }
