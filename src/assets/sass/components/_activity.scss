@@ -8,10 +8,6 @@
   --url: url("../images/heart.svg");
 }
 
-.activity-card__header::before {
-  background: var(--url) no-repeat center center var(--primary);
-}
-
 .activity {
   border-inline-start: 2px solid;
   padding: var(--space-m) 0 var(--space-m) var(--space-m);
@@ -50,32 +46,38 @@
 }
 
 .activity-card__header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  margin-inline-start: var(--space-xl);
-  margin-block-end: var(--space-xs-s);
+  &-type {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2xs-xs);
+    text-transform: uppercase;
+    margin-block-end: var(--space-2xs-xs);
+  }
 
-  &::before {
+  &-type span {
+    color: var(--text-light);
+  }
+
+  &-type::before {
     content: "";
-    position: absolute;
+    display: inline-block;
     block-size: 3rem;
     inline-size: 3rem;
+    background: var(--url) no-repeat center center var(--primary);
     border-radius: 50%;
     border: 2px solid;
-    left: 0;
   }
 
   &-date {
     font-size: var(--s--2);
+    text-align: end;
     color: var(--text-light);
   }
-}
 
-.activity-card__content,
-.activity-card__footer {
-  padding-inline-start: var(--space-xl);
+  &-date_time::before {
+    content: " - ";
+  }
 }
 
 .activity-card__footer {
@@ -107,6 +109,40 @@
   border-radius: 2px;
   padding: 0.25rem;
   font-size: var(--s--2);
+}
+
+@media (min-width: 60rem) {
+  .activity-card__header {
+    display: flex;
+    align-items: self-start;
+    gap: var(--space-2xs-xs);
+    font-size: var(--s--1);
+
+    &-date {
+      min-inline-size: fit-content;
+      margin-inline-start: auto;
+    }
+
+    &-type {
+      margin-block-end: 0;
+    }
+
+    &-type span {
+      transform: rotate(90deg) translateX(3.5rem) translateY(-2.5rem);
+      transform-origin: top left;
+      position: absolute;
+    }
+
+    &-date_time::before {
+      content: "\a";
+      white-space: pre;
+    }
+  }
+
+  .activity-card__content,
+  .activity-card__footer {
+    margin-inline-start: 3.8rem;
+  }
 }
 
 @media (prefers-color-scheme: light) {

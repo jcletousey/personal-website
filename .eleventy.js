@@ -49,6 +49,15 @@ module.exports = function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+  eleventyConfig.addFilter("formatTime", function (str, locale) {
+    const date = new Date(str);
+    const options = {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+    return new Intl.DateTimeFormat(locale, options).format(date);
+  });
   eleventyConfig.addFilter("dateToISO", function (date) {
     return new Date(date).toISOString();
   });
