@@ -120,7 +120,7 @@
   font-size: var(--s--2);
 }
 
-@media (min-width: 60rem) {
+@media screen and (min-width: 60rem) {
   .activity-card__header {
     display: flex;
     align-items: self-start;

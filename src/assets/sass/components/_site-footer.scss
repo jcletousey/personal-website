@@ -11,6 +11,14 @@
   justify-content: space-between;
 }
 
+.footer__info {
+  display: flex;
+  justify-content: center;
+  margin-block-end: var(--space-xs-s);
+}
+
 .footer__navigation {
-  text-align: end;
+  display: flex;
+  gap: var(--space-xs-s);
+  justify-content: center;
 }

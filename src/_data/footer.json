@@ -1,8 +1,12 @@
 {
   "fr": {
-    "created": "Créé avec [Eleventy](https://www.11ty.dev/) et hébergé chez [Netlify](https://www.netlify.com/)."
+    "created": "Créé avec [Eleventy](https://www.11ty.dev/) et hébergé chez [Netlify](https://www.netlify.com/).",
+    "activity": "Activité",
+    "activity_url_parameter": "activite"
   },
   "en": {
-    "created": "Created with [Eleventy](https://www.11ty.dev/) and hosted on [Netlify](https://www.netlify.com/)."
+    "created": "Created with [Eleventy](https://www.11ty.dev/) and hosted on [Netlify](https://www.netlify.com/).",
+    "activity": "Activity",
+    "activity_url_parameter": "activity"
   }
 }
