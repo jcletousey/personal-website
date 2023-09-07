@@ -9,7 +9,16 @@
 }
 
 .activity {
-  border-inline-start: 2px solid;
+  border-width: 0 0 0 2px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--text-light) 1%,
+      var(--text-light) 99%,
+      transparent 100%
+    )
+    1;
   padding: var(--space-m) 0 var(--space-m) var(--space-m);
 
   > * + * {
