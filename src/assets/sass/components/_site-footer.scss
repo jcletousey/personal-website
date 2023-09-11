@@ -7,18 +7,23 @@
 
 .footer-wrapper {
   display: flex;
-  gap: var(--space-xs-s);
-  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: var(--space-l-xl);
+  justify-content: center;
 }
 
 .footer__info {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   margin-block-end: var(--space-xs-s);
 }
 
 .footer__navigation {
   display: flex;
   gap: var(--space-xs-s);
-  justify-content: center;
+}
+
+@media screen and (min-width: 43.3rem) {
+  .footer-wrapper {
+    justify-content: space-between;
+  }
 }
