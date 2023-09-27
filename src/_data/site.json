@@ -2,6 +2,7 @@
   "title": "Jean-Charles Le Tousey",
   "domain": "jcletousey.dev",
   "url": "https://jcletousey.dev",
+  "micropub_url": "http://indiekit.jcletousey.dev",
   "locales": {
     "en": "English",
     "fr": "Français"
