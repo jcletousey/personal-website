@@ -2,10 +2,13 @@
   --url: url("../images/bookmark.svg");
 }
 [data-type="article"] {
-  --url: url("../images/pen-tool.svg");
+  --url: url("../images/newspaper.svg");
 }
 [data-type="like"] {
   --url: url("../images/heart.svg");
+}
+[data-type="note"] {
+  --url: url("../images/pen-tool.svg");
 }
 
 .activity {
