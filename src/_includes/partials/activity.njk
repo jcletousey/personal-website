@@ -1,5 +1,5 @@
 <div class="activity">
-  {%- for item in pagination.items | reverse %}
+  {%- for item in pagination.items %}
     {% if item.data.type and item.data.type == "article" %}
       {% set content = item.data.summary %}
     {% else %}
