@@ -1,4 +1,5 @@
 {
   "layout": "post.njk",
-  "permalink": "/{{ locale }}/blog/{{ title | slugify }}/index.html"
+  "permalink": "/{{ locale }}/blog/{{ title | slugify }}/index.html",
+  "type": "article"
 }

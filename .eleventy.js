@@ -108,6 +108,15 @@ module.exports = function (eleventyConfig) {
       return collection.getFilteredByGlob(`./src/content/${locale}/blog/*.md`);
     });
 
+    eleventyConfig.addCollection(`activity_${locale}`, function (collection) {
+      return collection.getFilteredByGlob([
+        `./src/content/${locale}/blog/*.md`,
+        `./src/content/${locale}/notes/*.md`,
+        `./src/content/${locale}/bookmarks/*.md`,
+        `./src/content/${locale}/likes/*.md`,
+      ]);
+    });
+
     eleventyConfig.addCollection(`all_${locale}`, function (collection) {
       return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
     });

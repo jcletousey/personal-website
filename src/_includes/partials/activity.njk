@@ -1,30 +1,37 @@
 <div class="activity">
-  {%- for item in pagination.items %}
-    <div class="activity-card{% if item.type == "article" or item.type == "note" %} mine{% endif %}" data-type="{{ item.type }}"{% if locale !== item.locale %} lang="{{item.locale}}"{% endif %}>
+  {%- for item in pagination.items | reverse %}
+    {% if item.data.type and item.data.type == "article" %}
+      {% set content = item.data.summary %}
+    {% else %}
+      {% set content = item.content %}
+    {% endif %}
+    <div class="h-entry activity-card{% if item.data.type == "article" or item.data.type == "note" %} mine{% endif %}" data-type="{{ item.data.type }}"{% if locale !== item.data.lang and item.data.lang != null %} lang="{{ item.data.lang }}"{% endif %}>
       <header class="activity-card__header mbe-m">
         <div class="activity-card__header-type">
-          <span>{{ item.type }}</span>
+          <span>{{ item.data.type }}</span>
         </div>
-        <h2 class="activity-card__header-title">{{ item.title[locale] if item.title[locale] else item.title }}</h2>
+        <h2 class="activity-card__header-title">{{ item.data.title }}</h2>
+        {% if item.data.date %}
         <span class="activity-card__header-date">
-          <time datetime="{{ item.date }}"><span>{{ item.date | formatDate(locale) }}</span> <span class="activity-card__header-date_time">{{ item.date | formatTime(locale) }}</span></time>
+          <time datetime="{{ item.data.date }}"><span>{{ item.data.date | formatDate(locale) }}</span> <span class="activity-card__header-date_time">{{ item.data.date | formatTime(locale) }}</span></time>
         </span>
+        {% endif %}
       </header>
 
       <div class="activity-card__content">
-        {{ item.body[locale] if item.body[locale] else item.body | renderMarkdown | safe }}
+        {{ content | renderMarkdown | safe }}
       </div>
 
       <footer class="activity-card__footer mbs-3xs">
-        <a href="{{ item.link[locale] if item.link[locale] else item.link }}"{% if locale !== item.locale %}hreflang="{{item.locale}}"{% endif %}>
-          {% if item.type == "article" %}
+        <a href="{{ item.data.url }}" {% if locale !== item.data.lang %}hreflang="{{ item.data.lang }}"{% endif %}>
+          {% if item.data.type == "article" %}
             Lire l'article
           {% else %}
-            {{ item.link[locale] if item.link[locale] else item.link }}
+            {{ item.data.url }}
           {% endif %}
         </a>
         <p>
-        {% for tag in item.tags %}
+        {% for tag in item.data.tags %}
           <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
         {% endfor %}
         </p>
