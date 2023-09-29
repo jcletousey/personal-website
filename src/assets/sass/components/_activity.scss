@@ -30,6 +30,7 @@
 }
 
 .activity-card {
+  --flow-space: var(--space-m);
   position: relative;
 
   &::before {

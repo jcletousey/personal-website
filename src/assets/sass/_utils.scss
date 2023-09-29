@@ -43,7 +43,7 @@
 }
 
 .flow > * + * {
-  margin-block-start: 2.5rem;
+  margin-block-start: var(--flow-space, 2.5rem);
 }
 
 .icon {
