@@ -1,5 +1,18 @@
 # JC's website changelog
 
+## 2023-10-03
+
+### Added
+
+- Discover my IndieKit instance
+- Add the activity page link in the footer
+
+### Changed
+
+- Change my own activity cards
+- Change activity cards style accordingly to width
+- Manage activity entries in their own Markdown files instead of the JSON file
+
 ## 2023-09-04
 
 ### Added
@@ -12,7 +25,7 @@
 - Display conditionnaly the previous and next post links in a post
 - Activity cards style
 
-## Fixed
+### Fixed
 
 - Wrong post's reading time in the posts list
 - Wrong IndieWeb `dt-published` date in the post
