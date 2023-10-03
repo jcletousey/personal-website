@@ -9,6 +9,10 @@
 }
 [data-type="note"] {
   --url: url("../images/pen-tool.svg");
+
+  .activity-card__header-type::before {
+    rotate: -90deg;
+  }
 }
 
 .activity {
