@@ -2,8 +2,10 @@
   {%- for item in pagination.items %}
     {% if item.data.type and item.data.type == "article" %}
       {% set content = item.data.summary %}
+      {% set url = item.page.url %}
     {% else %}
       {% set content = item.content %}
+      {% set url = item.data.url %}
     {% endif %}
     <div class="h-entry activity-card{% if item.data.type == "article" or item.data.type == "note" %} mine{% endif %}" data-type="{{ item.data.type }}"{% if locale !== item.data.lang and item.data.lang != null %} lang="{{ item.data.lang }}"{% endif %}>
       <header class="activity-card__header mbe-m">
@@ -23,11 +25,11 @@
       </div>
 
       <footer class="activity-card__footer mbs-3xs">
-        <a href="{{ item.data.url }}" {% if locale !== item.data.lang %}hreflang="{{ item.data.lang }}"{% endif %}>
+        <a href="{{ url }}" {% if locale !== item.data.lang %}hreflang="{{ item.data.lang }}"{% endif %}>
           {% if item.data.type == "article" %}
             Lire l'article
           {% else %}
-            {{ item.data.url }}
+            {{ url }}
           {% endif %}
         </a>
         <p>
