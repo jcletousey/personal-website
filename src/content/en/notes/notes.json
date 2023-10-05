@@ -1,3 +1,4 @@
 {
-  "type": "note"
+  "type": "note",
+  "permalink": "/{{ locale }}/notes/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html"
 }

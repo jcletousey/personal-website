@@ -1,5 +1,5 @@
 {
   "layout": "post.njk",
-  "permalink": "/{{ locale }}/blog/{{ title | slugify }}/index.html",
+  "permalink": "/{{ locale }}/posts/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html",
   "type": "article"
 }
