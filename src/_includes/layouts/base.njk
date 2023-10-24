@@ -6,8 +6,14 @@
   <meta name="generator" content="{{ eleventy.generator }}">
   <title>{{ title }} | {{ site.title }}</title>
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
   {% include "partials/meta.njk" %}
+  
+  <script>
+      // if there's a theme id in localstorage, use it on the <html>
+      localStorage.getItem('theme') && 
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">
@@ -21,5 +27,6 @@
   </main>
 
   {% include "partials/footer.njk" %}
+  {% include "partials/js.njk" %}
 </body>
 </html>

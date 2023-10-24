@@ -22,6 +22,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Assets
+  eleventyConfig.addPassthroughCopy("./src/assets/js");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
@@ -94,6 +95,7 @@ module.exports = function (eleventyConfig) {
     }
   );
 
+  // Shortcodes
   eleventyConfig.addShortcode("my_age", function () {
     return new Date().getFullYear() - 1982;
   });

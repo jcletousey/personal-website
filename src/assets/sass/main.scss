@@ -16,6 +16,7 @@
 @import "components/prev_next";
 @import "components/activity";
 @import "components/pagination";
+@import "components/theme-selector";
 @import "components/webmentions";
 
 :root {
@@ -75,9 +76,31 @@
   }
 }
 
+[data-theme="light"] {
+  --background: #fffce9;
+  --background-light: #dddbcc;
+  --primary: #b20000;
+  --primary-light: #ff9292;
+  --text: #1f2e42;
+  --text-light: #51585a;
+
+  .footer {
+    --primary: var(--primary-light);
+  }
+}
+
+[data-theme="dark"] {
+  --background: #1f2e42;
+  --background-light: #293d57;
+  --primary: #ff5a61;
+  --text: #fffce9;
+  --text-light: #b4bcbd;
+}
+
 :focus {
-  outline: 2px dashed var(--primary);
-  outline-offset: 0.25rem;
+  outline: 3px dotted var(--primary);
+  outline-offset: 0.5rem;
+  border-radius: 1rem;
 }
 
 ::selection {

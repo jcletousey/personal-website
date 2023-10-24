@@ -1,0 +1,26 @@
+[
+  {
+    "id": "auto",
+    "name": {
+      "en": "System",
+      "fr": "Système"
+    },
+    "icon": "laptop"
+  },
+  {
+    "id": "light",
+    "name": {
+      "en": "Light",
+      "fr": "Clair"
+    },
+    "icon": "sun"
+  },
+  {
+    "id": "dark",
+    "name": {
+      "en": "Dark",
+      "fr": "Sombre"
+    },
+    "icon": "moon"
+  }
+]

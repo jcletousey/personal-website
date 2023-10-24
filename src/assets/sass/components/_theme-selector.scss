@@ -1,0 +1,48 @@
+.themes-list {
+  border-radius: 1rem;
+  display: inline-flex;
+  gap: var(--space-xs-s);
+  list-style: none;
+  padding: 0.5rem 0.75rem;
+
+  li {
+    position: relative;
+  }
+}
+
+.theme-selector {
+  display: inline-flex;
+  gap: var(--space-2xs);
+  align-items: center;
+  padding: var(--space-2xs);
+  background-color: var(--background-light);
+  border-radius: 1rem;
+
+  &-name {
+    font-size: 0.5rem;
+  }
+
+  &:focus + label {
+    outline: 3px dotted var(--primary);
+    outline-offset: 0.5rem;
+    border-radius: 1rem;
+    display: block;
+  }
+
+  svg {
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+  }
+}
+
+input[name="theme-selector"] {
+  cursor: pointer;
+  block-size: 100%;
+  inline-size: 100%;
+  position: absolute;
+  opacity: 0;
+
+  &:checked + label {
+    color: var(--primary);
+  }
+}
