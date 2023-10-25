@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2023-03-16T14:22:15.890Z",
+  "lastFetched": "2023-10-25T04:02:13.936Z",
   "webmentions": [
     {
       "type": "entry",
@@ -15,6 +15,7 @@
       "wm-id": 1640148,
       "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/109308691808121486",
       "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-protocol": "webmention",
       "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
       "wm-property": "like-of",
       "wm-private": false
@@ -33,8 +34,32 @@
       "wm-id": 1641091,
       "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/31223",
       "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-protocol": "webmention",
       "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
       "wm-property": "like-of",
+      "wm-private": false
+    },
+    {
+      "type": "entry",
+      "author": {
+        "type": "card",
+        "name": "KewlCat",
+        "photo": "https://webmention.io/avatar/cdn.masto.host/0b2f682d47acf2081a02948a6434638ff06e8ffce37a5b5bf4cabe3aff94dd6f.png",
+        "url": "https://mastodon.social/@KewlCat"
+      },
+      "url": "https://mastodon.social/@KewlCat/111173361817642320",
+      "published": "2023-10-03T22:07:57",
+      "wm-received": "2023-10-03T22:15:01Z",
+      "wm-id": 1723094,
+      "wm-source": "https://brid.gy/comment/mastodon/@jcletousey@indieweb.social/111172466142174277/111173361873490582",
+      "wm-target": "https://jcletousey.dev/fr/blog/un-an-a-peine-depasse/",
+      "wm-protocol": "webmention",
+      "content": {
+        "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@jcletousey\" class=\"u-url\">@<span>jcletousey</span></a></span> Soutien ????</p>",
+        "text": "@jcletousey Soutien ????"
+      },
+      "mention-of": "https://jcletousey.dev/fr/blog/un-an-a-peine-depasse/",
+      "wm-property": "mention-of",
       "wm-private": false
     }
   ]

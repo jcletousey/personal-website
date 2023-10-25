@@ -10,7 +10,7 @@ require("dotenv").config();
 // Define Cache Location and API Endpoint
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 const WEBMENTION_API = "https://webmention.io/api";
-const WEBMENTION_TOKEN = process.env.WEBMENTION_IO_TOKEN;
+const WEBMENTION_TOKEN = process.env.WEBMENTION_TOKEN;
 
 async function fetchWebmentions(since, perPage = 10000) {
   // If we dont have a domain name or token, abort
@@ -94,7 +94,10 @@ const updateWebmentions = async function () {
   if (newWebmentions) {
     const webmentions = {
       lastFetched: fetchedAt,
-      webmentions: mergeWebmentions(cached.webmentions, newWebmentions),
+      webmentions: mergeWebmentions(
+        cached.webmentions,
+        newWebmentions.children
+      ),
     };
 
     writeToCache(webmentions, WEBMENTION_CACHE_FILE);
@@ -102,31 +105,3 @@ const updateWebmentions = async function () {
 };
 
 updateWebmentions();
-
-/* module.exports = async function () {
-  console.log(">>> Reading webmentions from cache...");
-
-  const cache = readFromCache();
-
-  if (cache.children.length) {
-    console.log(`>>> ${cache.children.length} webmentions loaded from cache`);
-  }
-
-  // Only fetch new mentions in production
-  if (process.env.NODE_ENV === "production") {
-    console.log(">>> Checking for new webmentions...");
-    const feed = await fetchWebmentions(cache.lastFetched);
-    if (feed) {
-      const webmentions = {
-        lastFetched: new Date().toISOString(),
-        children: mergeWebmentions(cache, feed),
-      };
-
-      writeToCache(webmentions);
-
-      return webmentions;
-    }
-  }
-
-  return cache;
-}; */
