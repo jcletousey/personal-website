@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2023-10-25T04:02:13.936Z",
+  "lastFetched": "2023-10-31T22:30:49.182Z",
   "webmentions": [
     {
       "type": "entry",
@@ -14,9 +14,9 @@
       "wm-received": "2023-03-13T20:09:01Z",
       "wm-id": 1640148,
       "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/109308691808121486",
-      "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-target": "https://jcletousey.dev/en/posts/2023/03/10/it-s-decided-i-take-back-control-of-my-data/",
       "wm-protocol": "webmention",
-      "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "like-of": "https://jcletousey.dev/en/posts/2023/03/10/it-s-decided-i-take-back-control-of-my-data/",
       "wm-property": "like-of",
       "wm-private": false
     },
@@ -33,9 +33,9 @@
       "wm-received": "2023-03-14T22:16:51Z",
       "wm-id": 1641091,
       "wm-source": "https://brid.gy/like/mastodon/@jcletousey@indieweb.social/110016105277945282/31223",
-      "wm-target": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "wm-target": "https://jcletousey.dev/en/posts/2023/03/10/it-s-decided-i-take-back-control-of-my-data/",
       "wm-protocol": "webmention",
-      "like-of": "https://jcletousey.dev/en/blog/it-s-decided-i-take-back-control-of-my-data/",
+      "like-of": "https://jcletousey.dev/en/posts/2023/03/10/it-s-decided-i-take-back-control-of-my-data/",
       "wm-property": "like-of",
       "wm-private": false
     },
@@ -52,13 +52,13 @@
       "wm-received": "2023-10-03T22:15:01Z",
       "wm-id": 1723094,
       "wm-source": "https://brid.gy/comment/mastodon/@jcletousey@indieweb.social/111172466142174277/111173361873490582",
-      "wm-target": "https://jcletousey.dev/fr/blog/un-an-a-peine-depasse/",
+      "wm-target": "https://jcletousey.dev/fr/posts/2023/10/03/un-an-a-peine-depasse/",
       "wm-protocol": "webmention",
       "content": {
         "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@jcletousey\" class=\"u-url\">@<span>jcletousey</span></a></span> Soutien ????</p>",
         "text": "@jcletousey Soutien ????"
       },
-      "mention-of": "https://jcletousey.dev/fr/blog/un-an-a-peine-depasse/",
+      "mention-of": "https://jcletousey.dev/fr/posts/2023/10/03/un-an-a-peine-depasse/",
       "wm-property": "mention-of",
       "wm-private": false
     }
