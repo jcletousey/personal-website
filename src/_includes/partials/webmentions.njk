@@ -6,6 +6,9 @@
 {% set likes = allMentions | webmentionsByType('like-of') %}
 {% set likesSize = likes.length %}
 
+{% set mentions = allMentions | webmentionsByType('mention-of') %}
+{% set mentionsSize = mentions.length %}
+
 <aside class="webmentions flow">
   <header class="webmentions__header">
     <h2>{{ allMentionsSize }} webmention{% if allMentionsSize > 1 %}s{% endif %}</h2>

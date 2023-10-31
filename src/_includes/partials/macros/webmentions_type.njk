@@ -18,3 +18,32 @@
   {% endfor %}
 </ol>
 {% endmacro %}
+
+{% macro webmentions_mentions(mentions) %}
+<ol class="reactions__list reactions--{{ type }}">
+  {% for webmention in mentions %}
+  <li id="webmention-{{ webmention['wm-id'] }}" class="reactions__item">
+    <div class="reaction__meta">
+      <a class="u-url p-author h-card" href="{{ webmention.author.url }}">
+        <img
+          class="reaction__author__photo u-photo"
+          src="{{ webmention.author.photo }}"
+          width="48"
+          height="48"
+          alt="{{ webmention.author.name }} avatar"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
+        <span>{{ webmention.author.name }}</span>
+      </a>
+      <span aria-hidden="true" class="reaction__meta__divider">⋅</span>
+      <time datetime="{{ webmention.published }}">{{ webmention.published | formatShortDate }}</time>
+    </div>
+    <div class="reaction__content">
+      {{ webmention.content.html | safe }}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endmacro %}

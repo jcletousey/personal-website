@@ -50,6 +50,15 @@ module.exports = function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+  eleventyConfig.addFilter("formatShortDate", function (str, locale) {
+    const date = new Date(str);
+    const options = {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
+    return new Intl.DateTimeFormat(locale, options).format(date);
+  });
   eleventyConfig.addFilter("formatTime", function (str, locale) {
     const date = new Date(str);
     const options = {
