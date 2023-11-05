@@ -32,17 +32,13 @@ p {
 }
 
 code {
-  background-color: rgb(230, 227, 213);
+  background-color: var(--background-light);
   border-radius: 0.25em;
   padding: 0 0.4em;
   font-size: 90%;
 }
 
 @media (prefers-color-scheme: dark) {
-  code {
-    background-color: #435368;
-  }
-
   .footer a {
     color: #ea0000;
   }
