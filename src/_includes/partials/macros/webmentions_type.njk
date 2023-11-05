@@ -1,7 +1,7 @@
 {% macro mentions(mentions, type) %}
 <ol class="reactions__list reactions--{{ type }}">
   {% for webmention in mentions %}
-  <li id="webmention-{{ webmention['wm-id'] }}" class="reactions__item">
+  <li id="webmention-{{ webmention['wm-id'] }}">
     <a class="u-url p-author h-card" href="{{ webmention.author.url }}">
       <img
         class="reaction__author__photo u-photo"
