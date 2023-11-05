@@ -23,4 +23,11 @@
       {{ webmentions.mentions(likes, 'like-of') }}
     </section>
   {% endif %}
+
+  {% if mentionsSize > 0 %}
+    <section class="webmentions__mentions">
+      <h3>{{ mentionsSize }} mention{% if mentionsSize > 1 %}s{% endif %}</h3>
+      {{ webmentions.webmentions_mentions(mentions) }}
+    </section>
+  {% endif %}
 </aside>
