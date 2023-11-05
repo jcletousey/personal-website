@@ -1,5 +1,20 @@
 # JC's website changelog
 
+## 2023-11-05
+
+### Added
+
+- Add a theme selector
+- Manage the "mention" type in webmentions
+
+### Fixed
+
+- Wrong article url in activity cards
+
+## Changed
+
+- Change post url pattern
+
 ## 2023-10-03
 
 ### Added
@@ -20,15 +35,15 @@
 - Style my own articles and notes in the activity list
 - Translation entry for the _about webmentions_ link
 
-### Changed
-
-- Display conditionnaly the previous and next post links in a post
-- Activity cards style
-
 ### Fixed
 
 - Wrong post's reading time in the posts list
 - Wrong IndieWeb `dt-published` date in the post
+
+### Changed
+
+- Display conditionnaly the previous and next post links in a post
+- Activity cards style
 
 ## 2023-03-27
 
