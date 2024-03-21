@@ -1,7 +1,7 @@
 ---
 title: "How to Favicon in 2023: Six files that fit most needs"
 url: "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs"
-date: 2023-03-13T11:53:21.000Z
+date: "2023-03-13T11:53:21.000Z"
 tags: ["HTML", "favicon", "Guide"]
 ---
 

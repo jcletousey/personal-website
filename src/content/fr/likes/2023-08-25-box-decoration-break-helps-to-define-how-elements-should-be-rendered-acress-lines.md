@@ -1,8 +1,8 @@
 ---
 title: "box-decoration-break helps to define how elements should be rendered across lines"
 url: "https://www.stefanjudis.com/today-i-learned/box-decoration-break-helps-to-define-how-elements-should-be-rendered-across/"
-lang: en
-date: 2023-08-25T16:12:08.000Z
+lang: "en"
+date: "2023-08-25T16:12:08.000Z"
 tags: ["CSS"]
 ---
 

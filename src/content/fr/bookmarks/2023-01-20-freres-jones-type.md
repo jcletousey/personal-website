@@ -1,8 +1,8 @@
 ---
-title: Freres-Jones Type
-url: https://frerejones.com/
-lang: en
-date: 2023-01-20T08:18:15.000Z
+title: "Freres-Jones Type"
+url: "https://frerejones.com/"
+lang: "en"
+date: "2023-01-20T08:18:15.000Z"
 tags: ["Fonts", "TypeFoundry"]
 ---
 

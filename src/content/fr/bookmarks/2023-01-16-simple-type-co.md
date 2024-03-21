@@ -1,8 +1,8 @@
 ---
-title: Simple Type Co.
-url: https://simpletype.co/
-lang: en
-date: 2023-01-16T13:14:54.000Z
+title: "Simple Type Co."
+url: "https://simpletype.co/"
+lang: "en"
+date: "2023-01-16T13:14:54.000Z"
 tags: ["Fonts", "TypeFoundry"]
 ---
 

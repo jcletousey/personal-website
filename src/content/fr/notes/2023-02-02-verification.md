@@ -1,5 +1,5 @@
 ---
-date: 2023-02-02T12:03:51.000Z
+date: "2023-02-02T12:03:51.000Z"
 ---
 
 You can now add a Mastodon link to your GitHub account.

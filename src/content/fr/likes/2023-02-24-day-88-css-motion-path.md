@@ -1,8 +1,8 @@
 ---
 title: "Day 88: CSS Motion Path"
-url: https://www.matuzo.at/blog/2023/100daysof-day88/
-lang: en
-date: 2023-02-24T15:23:16.000Z
+url: "https://www.matuzo.at/blog/2023/100daysof-day88/"
+lang: "en"
+date: "2023-02-24T15:23:16.000Z"
 tags: ["CSS", "svg", "animation"]
 ---
 

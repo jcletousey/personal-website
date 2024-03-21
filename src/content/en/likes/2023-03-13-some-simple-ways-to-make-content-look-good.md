@@ -1,7 +1,8 @@
 ---
 title: "Some simple ways to make content look good"
 url: "https://set.studio/some-simple-ways-to-make-content-look-good/"
-date: 2023-03-13T11:53:21.000Z
+lang: "en"
+date: "2023-03-13T11:53:21.000Z"
 tags: ["HTML", "CSS", "Guide"]
 ---
 

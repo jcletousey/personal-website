@@ -1,7 +1,7 @@
 ---
-title: Conditional CSS
-url: https://ishadeed.com/article/conditional-css/#header
-date: 2023-02-13T07:58:29.000Z
+title: "Conditional CSS"
+url: "https://ishadeed.com/article/conditional-css/#header"
+date: "2023-02-13T07:58:29.000Z"
 tags: ["CSS"]
 ---
 

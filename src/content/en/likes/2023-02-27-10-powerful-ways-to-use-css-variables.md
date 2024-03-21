@@ -1,8 +1,8 @@
 ---
-title: 10 powerful ways to use CSS variables
-url: https://nerdy.dev/custom-prop-categories
-lang: en
-date: 2023-02-27T09:26:27.000Z
+title: "10 powerful ways to use CSS variables"
+url: "https://nerdy.dev/custom-prop-categories"
+lang: "en"
+date: "2023-02-27T09:26:27.000Z"
 tags: ["CSS"]
 ---
 
