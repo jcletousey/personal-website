@@ -12,6 +12,11 @@
 <meta property="og:locale" content="{{ locale }}">
 <meta name="twitter:creator" content="@{{ author.social.twitter.name }}">
 
+{# I18N #}
+{% for link in page.url | locale_links %}
+<link href="{{ link.url }}" rel="alternate" hreflang="{{ link.lang }}" />
+{% endfor %}
+
 {# Mastodon verification #}
 <link href="https://indieweb.social/@jcletousey" rel="me">
 <link href="https://github.com/jcletousey" rel="me">
