@@ -1,4 +1,5 @@
 {
   "type": "note",
-  "permalink": "/{{ locale }}/notes/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html"
+  "permalink": "/{{ locale }}/notes/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/index.html",
+  "layout": "page.njk"
 }
