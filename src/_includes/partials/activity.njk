@@ -15,7 +15,7 @@
         <h2 class="activity-card__header-title">{{ item.data.title }}</h2>
         {% if item.data.date %}
         <span class="activity-card__header-date">
-          <time datetime="{{ item.data.date }}"><span>{{ item.data.date | formatDate(locale) }}</span> <span class="activity-card__header-date_time">{{ item.data.date | formatTime(locale) }}</span></time>
+          <a href="{{ item.url }}"><time datetime="{{ item.data.date }}"><span>{{ item.data.date | formatDate(locale) }}</span> <span class="activity-card__header-date_time">{{ item.data.date | formatTime(locale) }}</span></time></a>
         </span>
         {% endif %}
       </header>
