@@ -1,4 +1,5 @@
 {
   "type": "bookmark",
-  "permalink": "/{{ locale }}/bookmarks/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html"
+  "permalink": "/{{ locale }}/bookmarks/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html",
+  "layout": "card.njk"
 }
