@@ -97,12 +97,18 @@ module.exports = function (eleventyConfig) {
       return new URL(entry["wm-target"]).pathname === url;
     });
   });
-  eleventyConfig.addFilter(
-    "webmentionsByType",
-    function (mentions, mentionType) {
+  eleventyConfig.addFilter("webmentionsByType", function (mentions, mentionType) {
       return mentions.filter((entry) => entry["wm-property"] === mentionType);
     }
   );
+  // Get the first n elements of a collection
+  eleventyConfig.addFilter('head', (array, n) => {
+    if (n < 0) {
+      return array.slice(n)
+    }
+
+    return array.slice(0, n)
+  });
 
   // Shortcodes
   eleventyConfig.addShortcode("my_age", function () {
