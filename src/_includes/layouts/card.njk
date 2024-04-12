@@ -5,7 +5,7 @@
 
 {% block content %}
 <article class="wrapper" data-pagefind-body>
-  <div class="card h-entry"{% if locale !== lang and lang != null %} lang="{{ lang }}"{% endif %}>
+  <div class="card h-entry"{% if locale != lang and lang != null %} lang="{{ lang }}"{% endif %}>
     <header class="card__header">
       {% if noteTitle %}
       <h1 class="card__title">{{ noteTitle }}</h1>

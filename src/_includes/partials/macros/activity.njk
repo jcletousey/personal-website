@@ -1,0 +1,45 @@
+{% macro feed(items) %}
+<div class="activity">
+    {%- for item in items %}
+      {% if item.data.type and item.data.type == "article" %}
+        {% set content = item.data.summary %}
+        {% set url = item.page.url %}
+      {% else %}
+        {% set content = item.content %}
+        {% set url = item.data.url %}
+      {% endif %}
+      <div class="h-entry activity-card{% if item.data.type in ["article", "note", "photo"] %} mine{% endif %}" data-type="{{ item.data.type }}"{% if locale !== item.data.lang and item.data.lang != null %} lang="{{ item.data.lang }}"{% endif %}>
+        <header class="activity-card__header mbe-m">
+          <div class="activity-card__header-type">
+            <span>{{ item.data.type }}</span>
+          </div>
+          <h2 class="activity-card__header-title">{{ item.data.title }}</h2>
+          {% if item.data.date %}
+          <span class="activity-card__header-date">
+            <a href="{{ item.url }}"><time datetime="{{ item.data.date }}"><span>{{ item.data.date | formatDate(locale) }}</span> <span class="activity-card__header-date_time">{{ item.data.date | formatTime(locale) }}</span></time></a>
+          </span>
+          {% endif %}
+        </header>
+  
+        <div class="activity-card__content flow">
+          {{ content | renderMarkdown | safe }}
+        </div>
+  
+        <footer class="activity-card__footer mbs-3xs">
+          <a href="{{ url }}" {% if locale !== item.data.lang %}hreflang="{{ item.data.lang }}"{% endif %}>
+            {% if item.data.type == "article" %}
+              Lire l'article
+            {% else %}
+              {{ url }}
+            {% endif %}
+          </a>
+          <p>
+          {% for tag in item.data.tags %}
+            <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+          </p>
+        </footer>
+      </div>
+    {% endfor -%}
+  </div>
+{% endmacro %}
