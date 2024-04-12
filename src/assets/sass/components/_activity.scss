@@ -14,6 +14,9 @@
     rotate: -90deg;
   }
 }
+[data-type="photo"] {
+  --url: url("../images/camera.svg");
+}
 
 .activity {
   border-width: 0 0 0 2px;

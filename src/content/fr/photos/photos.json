@@ -1,0 +1,5 @@
+{
+  "type": "photo",
+  "permalink": "/{{ locale }}/photos/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/index.html",
+  "layout": "card.njk"
+}

@@ -127,6 +127,7 @@ module.exports = function (eleventyConfig) {
         `./src/content/${locale}/notes/**/*.md`,
         `./src/content/${locale}/bookmarks/**/*.md`,
         `./src/content/${locale}/likes/**/*.md`,
+        `./src/content/${locale}/photos/**/*.md`,
       ]);
     });
 
