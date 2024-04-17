@@ -2,6 +2,7 @@
 title: About
 eleventyNavigation:
   key: About
+  order: 1
 ---
 
 I’m Jean-Charles, a software engineer based in Caen, France. I specialized in _web_ and am interested in _back-end_, _front-end_ and _devOps_.

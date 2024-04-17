@@ -118,7 +118,10 @@ module.exports = function (eleventyConfig) {
   // Collections
   for (const locale of locales) {
     eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
-      return collection.getFilteredByGlob(`./src/content/${locale}/pages/*.md`);
+      return collection.getFilteredByGlob([
+        `./src/content/${locale}/pages/*.md`,
+        `./src/content/${locale}/pages/*.njk`,
+      ]);
     });
 
     eleventyConfig.addCollection(`posts_${locale}`, function (collection) {

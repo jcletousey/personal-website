@@ -2,6 +2,7 @@
 title: A propos
 eleventyNavigation:
   key: A propos
+  order: 1
 ---
 
 Je suis Jean-Charles, un ingénieur logiciel basé à Caen. Je me suis spécialisé dans le _web_ et m'intéresse au _back-end_, au _front-end_ et aux _devOps_.
