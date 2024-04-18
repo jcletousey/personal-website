@@ -13,7 +13,6 @@ $avatarSize: 75px;
     }
 
     &__title {
-        margin-block-start: var(--space-s);
         margin-inline-start: calc(75px + var(--space-2xs-xs));
         line-height: 1.2;
     }
