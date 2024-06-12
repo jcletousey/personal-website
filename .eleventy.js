@@ -4,14 +4,13 @@ const timeToReadPlugin = require("eleventy-plugin-time-to-read");
 const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
-
 const { readFromCache } = require("./src/_utils/cache");
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
   // Plugins
+  const { EleventyI18nPlugin } = await import("@11ty/eleventy");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
   eleventyConfig.addPlugin(timeToReadPlugin, {
