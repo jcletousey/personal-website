@@ -1,5 +1,18 @@
 # JC's website changelog
 
+## 2024-04-23
+
+### Added
+
+- Add alternate link tags in head for other localized content
+- Dedicated pages for notes, bookmarks and likes
+- Manage IndieWeb photos type
+
+### Changed
+
+- Retrieve content from sub-folders and not only from main content folders
+- Move content into date directories to organize them
+
 ## 2023-11-05
 
 ### Added
