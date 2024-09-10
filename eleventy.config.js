@@ -5,6 +5,7 @@ const locales = require("./src/_data/locales")();
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const { readFromCache } = require("./src/_utils/cache");
+const { execSync } = require('child_process')
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 
@@ -114,7 +115,7 @@ module.exports = async function (eleventyConfig) {
     return new Date().getFullYear() - 1982;
   });
 
-  // Collections
+  // Collections per locale
   for (const locale of locales) {
     eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
       return collection.getFilteredByGlob([
@@ -126,6 +127,24 @@ module.exports = async function (eleventyConfig) {
     eleventyConfig.addCollection(`posts_${locale}`, function (collection) {
       return collection.getFilteredByGlob(
         `./src/content/${locale}/blog/**/*.md`
+      );
+    });
+
+    eleventyConfig.addCollection(`notes_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(
+        `./src/content/${locale}/notes/**/*.md`
+      );
+    });
+
+    eleventyConfig.addCollection(`bookmarks_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(
+        `./src/content/${locale}/bookmarks/**/*.md`
+      );
+    });
+
+    eleventyConfig.addCollection(`photos_${locale}`, function (collection) {
+      return collection.getFilteredByGlob(
+        `./src/content/${locale}/photos/**/*.md`
       );
     });
 
@@ -143,6 +162,10 @@ module.exports = async function (eleventyConfig) {
       return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
     });
   }
+
+  eleventyConfig.on('eleventy.after', () => {
+    execSync(`npx pagefind --site dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
+  });
 
   return {
     dir: {

@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/jcletousey/personal-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.16",
+    "@11ty/eleventy": "3.0.0-alpha.19",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "dotenv": "^16.0.3",
