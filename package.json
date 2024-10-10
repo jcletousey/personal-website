@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/assets/sass:src/assets/css",
-    "watch:eleventy": "DEBUG=* npx @11ty/eleventy --serve",
+    "watch:eleventy": "DEBUG=* npx @11ty/eleventy --serve --incremental",
     "build:sass": "sass --no-source-map src/assets/sass:src/assets/css",
     "build:eleventy": "NODE_ENV=production npx @11ty/eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/jcletousey/personal-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.19",
-    "@11ty/eleventy-navigation": "^0.3.2",
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "dotenv": "^16.0.3",
     "eleventy-plugin-time-to-read": "^1.3.0",

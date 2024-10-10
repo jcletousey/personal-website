@@ -1,5 +1,11 @@
 # JC's website changelog
 
+## 2024-10-??
+
+### Changed
+
+- Upgrade to Eleventy v3
+
 ## 2024-04-23
 
 ### Added
