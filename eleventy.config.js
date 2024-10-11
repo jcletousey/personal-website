@@ -1,15 +1,15 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const eleventyRssPlugin = require("@11ty/eleventy-plugin-rss");
-const timeToReadPlugin = require("eleventy-plugin-time-to-read");
-const locales = require("./src/_data/locales")();
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const { readFromCache } = require("./src/_utils/cache");
-const { execSync } = require('child_process')
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import eleventyRssPlugin from "@11ty/eleventy-plugin-rss";
+import timeToReadPlugin from "eleventy-plugin-time-to-read";
+import locales from "./src/_data/locales.js";
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+import markdownItContainer from "markdown-it-container";
+import readFromCache from "./src/_utils/cache.js";
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 
-module.exports = async function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // Plugins
   const { EleventyI18nPlugin } = await import("@11ty/eleventy");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -33,7 +33,7 @@ module.exports = async function (eleventyConfig) {
   // Markdown
   const mdRender = new markdownIt({ html: true, linkify: true })
     .use(markdownItAttrs)
-    .use(require("markdown-it-container"), "alert");
+    .use(markdownItContainer, "alert");
   eleventyConfig.setLibrary("md", mdRender);
 
   // Filters
@@ -162,10 +162,6 @@ module.exports = async function (eleventyConfig) {
       return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
     });
   }
-
-  eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --site dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
-  });
 
   return {
     dir: {

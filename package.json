@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Jean-Charles Le Tousey's personal website",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/assets/sass:src/assets/css",
     "watch:eleventy": "DEBUG=* npx @11ty/eleventy --serve --incremental",

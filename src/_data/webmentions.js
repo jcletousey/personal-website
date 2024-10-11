@@ -1,11 +1,11 @@
-// _data/webmentions.js
-const fs = require("fs");
-const fetch = require("node-fetch");
-const unionBy = require("lodash/unionBy");
-const domain = require("./site.json").domain;
+import fs from "fs";
+import fetch from "node-fetch";
+import unionBy from "lodash";
 
-// Load .env variables with dotenv
-require("dotenv").config();
+import "dotenv/config";
+
+const data = fs.readFileSync('./src/_data/site.json');
+const site = JSON.parse(data);
 
 // Define Cache Location and API Endpoint
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
@@ -14,12 +14,12 @@ const WEBMENTION_TOKEN = process.env.WEBMENTION_TOKEN;
 
 async function fetchWebmentions(since, perPage = 10000) {
   // If we dont have a domain name or token, abort
-  if (!domain || !WEBMENTION_TOKEN) {
+  if (!site.domain || !WEBMENTION_TOKEN) {
     console.warn(">>> unable to fetch webmentions: missing domain or token");
     return false;
   }
 
-  let url = `${WEBMENTION_API}/mentions.jf2?domain=${domain}&token=${WEBMENTION_TOKEN}&per-page=${perPage}`;
+  let url = `${WEBMENTION_API}/mentions.jf2?domain=${site.domain}&token=${WEBMENTION_TOKEN}&per-page=${perPage}`;
   if (since) {
     url += `&since=${since}`; // only fetch new mentions
   }

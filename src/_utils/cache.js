@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
 // save in cache file
 const writeToCache = (data, file) => {
@@ -26,7 +26,7 @@ const readFromCache = (file) => {
   return false;
 };
 
-module.exports = {
+export default {
   writeToCache,
   readFromCache,
 };
