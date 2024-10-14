@@ -6,6 +6,8 @@ import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItContainer from "markdown-it-container";
 import readFromCache from "./src/_utils/cache.js";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
+import {EleventyRenderPlugin} from "@11ty/eleventy";
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 
@@ -19,6 +21,10 @@ export default async function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: "en",
+  });
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(pluginWebc, {
+    components: "src/_includes/components/**/*.webc"
   });
 
   // Assets
@@ -113,6 +119,10 @@ export default async function (eleventyConfig) {
   // Shortcodes
   eleventyConfig.addShortcode("my_age", function () {
     return new Date().getFullYear() - 1982;
+  });
+
+  eleventyConfig.addPairedNunjucksAsyncShortcode("renderWebC", async function(content) {
+    return eleventyConfig.javascript.functions.renderTemplate.call(this, content, "webc", this.ctx);
   });
 
   // Collections per locale

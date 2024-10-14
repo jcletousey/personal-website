@@ -16,9 +16,11 @@
       </ul>
       {% endif %}
 
+      {% renderWebC %}
       <div class="i18n">
-        {% include "partials/select-language.njk" %}
+        <l10n-alternatives webc:nokeep :locales="locales" :locale="locale"></l10n-alternatives>
       </div>
+      {% endrenderWebC %}
 
       {% include "partials/components/theme_selector.njk" %}
     </nav>

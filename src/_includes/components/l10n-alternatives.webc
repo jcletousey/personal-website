@@ -1,0 +1,16 @@
+<script webc:type="js">
+	let links = locale_links($data.page.url);
+	const nbLocales = locales.length - 1;
+	const subPagesPattern = /\/[0-9]+\/$/;
+
+	// If there are more than one links per locale
+	// It is the case with paginated pages where locale_links return all the sub pages
+	// so we filter the sub pages to only return the main page of the paginated pages
+	if (links.length > nbLocales) {
+		links = links.filter((link) => link.lang !== locale).filter((link) => link.url.search(subPagesPattern) === -1);
+	}
+
+	for (link of links) {
+		`<a href="${link.url}" lang="${link.lang}" hreflang="${link.lang}">${link.label}</a>`;
+	}
+</script>
