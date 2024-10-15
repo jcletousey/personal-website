@@ -4,7 +4,7 @@
   {%- set absoluteUrl %}{{ page.url | url | absoluteUrl(site.url) }}{% endset %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
-    <lastmod>{{ page.date | rssDate }}</lastmod>
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
   </url>
 {%- endfor %}
 </urlset>
