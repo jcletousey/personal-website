@@ -1,0 +1,61 @@
+---
+layout: "base.webc"
+---
+<template webc:type="11ty" 11ty:type="njk">
+  {% set noteTitle = title %}
+  {% set title = notes[locale]["noteFrom"] + " " + date | formatDate(locale) + " " + date | formatTime(locale) %}
+
+  <article class="wrapper" data-pagefind-body>
+    <div class="card h-entry"{% if locale != lang and lang != null %} lang="{{ lang }}"{% endif %}>
+      <header class="card__header">
+        {% if noteTitle %}
+        <h1 class="card__title">{{ noteTitle }}</h1>
+        {% endif %}
+  
+        <div class="card__meta">
+          <p class="card__author h-card p-author">
+            <img class="card__avatar u-photo" src="/assets/images/avatar.png" width="75" alt="">
+            <strong class="card__author__name p-name">@jcletousey</strong>
+          </p>
+          <span class="card__meta__divider" aria-hidden="true">⋅</span>
+          {% if date %}
+          <time datetime="{{ date }}"><span>{{ date | formatDate(locale) }}</span> <span>{{ date | formatTime(locale) }}</span></time>
+          {% endif %}
+          {% if tags %}
+          <p class="card__meta__tags">
+            {% for tag in tags %}
+              <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+          </p>
+          {% endif %}
+        </div>
+      </header>
+  
+      <div class="card__content flow">
+        {{ content | renderMarkdown | safe }}
+  
+        {% if url %}
+        <p><a href="{{ url }}"{% if lang != locale %} hreflang="{{ lang }}"{% endif %}>{{ url }}</a></p>
+        {% endif %}
+      </div>
+  
+      <footer class="card__footer">
+        <ul class="card__stats">
+          <li>0 Mentions</li>
+          <li>0 Reposts</li>
+          <li>0 Likes</li>
+        </ul>
+        {% if syndication %}
+        <p class="card__syndications">
+          <a class="u-syndication" href="{{ syndication }}">
+            <svg fill="inherit" class="card__syndication-mastodon" height="24px" width="24px" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="comp_x5F_207-mastodon"><g><path d="M451.839,183.897c0-91.111-59.709-117.825-59.709-117.825c-58.584-26.902-214.185-26.622-272.206,0    c0,0-59.709,26.713-59.709,117.825c0,108.451-6.188,243.148,98.984,270.988c37.961,10.027,70.582,12.185,96.827,10.685    c47.617-2.624,74.331-16.967,74.331-16.967l-1.593-34.589c0,0-34.026,10.688-72.269,9.468    c-37.87-1.313-77.801-4.124-83.988-50.616c-0.563-4.124-0.843-8.436-0.843-13.029c80.237,19.589,148.661,8.531,167.504,6.28    c52.586-6.28,98.422-38.713,104.233-68.333C452.59,251.104,451.839,183.897,451.839,183.897L451.839,183.897z M381.443,300h-43.68    V194.207c0-46.586-59.992-48.367-59.992,6.468v58.584h-43.397v-58.584c0-54.835-59.991-53.054-59.991-6.468V300h-43.773    c0-114.449-4.874-137.382,17.247-162.784c24.277-27.09,74.801-28.87,97.297,5.718l10.873,18.278l10.873-18.278    c22.591-34.777,73.207-32.62,97.296-5.718C386.412,162.806,381.443,185.644,381.443,300L381.443,300z"/></g></g><g id="Layer_1"/>
+            </svg>
+            <span class="visually-hidden">Syndicated on Mastodon</span>
+          </a>
+        </p>
+        {% endif %}
+      </footer>
+    </div>
+  </article>
+</template>

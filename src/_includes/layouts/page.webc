@@ -1,0 +1,12 @@
+---
+layout: "base.webc"
+---
+<template webc:type="11ty" 11ty:type="njk">
+  <article class="wrapper">
+    <h1 class="mbe-xl">{{ title }}</h1>
+  
+    <div class="flow">
+      {{ content | safe }}
+    </div>
+  </article>
+</template>

@@ -1,0 +1,18 @@
+---
+layout: "base.webc"
+---
+
+<template webc:type="11ty" 11ty:type="njk">
+	{% import "partials/macros/post-list.njk" as pl with context %}
+	
+	<div class="wrapper flow intro mbe-xl">
+	<h1 class="mbe-xl">{{ title }}</h1>
+
+	{{ content | safe }}
+	</div>
+
+	<div class="wrapper post-list">
+	<h2 class="mbe-l">{{ blog[locale].latestPosts }}</h2>
+	{{ pl.postList(3, 3) }}
+	</div>
+</template>
