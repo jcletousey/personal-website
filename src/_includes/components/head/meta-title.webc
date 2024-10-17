@@ -1,0 +1,4 @@
+<script webc:type="js">
+	const titleStr = title + ($data.site.title ? ` | ${$data.site.title}` : '');
+	`<title>${titleStr}</title>`;
+</script>

@@ -8,11 +8,14 @@ import markdownItContainer from "markdown-it-container";
 import readFromCache from "./src/_utils/cache.js";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import {EleventyRenderPlugin} from "@11ty/eleventy";
+import fs from "fs";
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
 
 export default async function (eleventyConfig) {
+  //
   // Plugins
+  //
   const { EleventyI18nPlugin } = await import("@11ty/eleventy");
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(eleventyRssPlugin);
@@ -27,7 +30,9 @@ export default async function (eleventyConfig) {
     components: "src/_includes/components/**/*.webc"
   });
 
+  //
   // Assets
+  //
   eleventyConfig.addPassthroughCopy("./src/assets/js");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
@@ -42,10 +47,13 @@ export default async function (eleventyConfig) {
     .use(markdownItContainer, "alert");
   eleventyConfig.setLibrary("md", mdRender);
 
+  //
   // Filters
+  //
   eleventyConfig.addFilter("renderMarkdown", function (rawString) {
     return mdRender.render(rawString);
   });
+
   eleventyConfig.addFilter("formatDate", function (str, locale) {
     const date = new Date(str);
     const options = {
@@ -56,6 +64,7 @@ export default async function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+
   eleventyConfig.addFilter("formatShortDate", function (str, locale) {
     const date = new Date(str);
     const options = {
@@ -65,6 +74,7 @@ export default async function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+
   eleventyConfig.addFilter("formatTime", function (str, locale) {
     const date = new Date(str);
     const options = {
@@ -74,9 +84,11 @@ export default async function (eleventyConfig) {
     };
     return new Intl.DateTimeFormat(locale, options).format(date);
   });
+
   eleventyConfig.addFilter("dateToISO", function (date) {
     return new Date(date).toISOString();
   });
+
   eleventyConfig.addFilter("interpolate", function (str, variables) {
     const regex = /{{(.*?)}}/g;
     return str.replace(regex, (match, key) => {
@@ -90,6 +102,7 @@ export default async function (eleventyConfig) {
       return variable;
     });
   });
+
   // https://github.com/nhoizey/nicolas-hoizey.com/blob/main/src/_11ty/filters/webmention.js
   eleventyConfig.addFilter("getWebmentionsForUrl", (url) => {
     // TODO: for each URL, we loop through all webmentions, should be optimized
@@ -103,6 +116,7 @@ export default async function (eleventyConfig) {
       return new URL(entry["wm-target"]).pathname === url;
     });
   });
+
   eleventyConfig.addFilter("webmentionsByType", function (mentions, mentionType) {
       return mentions.filter((entry) => entry["wm-property"] === mentionType);
     }
@@ -116,7 +130,12 @@ export default async function (eleventyConfig) {
     return array.slice(0, n)
   });
 
+  eleventyConfig.addFilter("getSvgIconContent", (icon) => fs.readFileSync(`./src/assets/images/${icon}.svg`));
+  //
+
+  //
   // Shortcodes
+  //
   eleventyConfig.addShortcode("my_age", function () {
     return new Date().getFullYear() - 1982;
   });
@@ -125,7 +144,9 @@ export default async function (eleventyConfig) {
     return eleventyConfig.javascript.functions.renderTemplate.call(this, content, "webc", this.ctx);
   });
 
+  //
   // Collections per locale
+  //
   for (const locale of locales) {
     eleventyConfig.addCollection(`pages_${locale}`, function (collection) {
       return collection.getFilteredByGlob([

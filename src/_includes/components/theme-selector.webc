@@ -1,0 +1,12 @@
+<fieldset class="theme-selector">
+	<legend class="visually-hidden" @text="$data.header[$data.locale].changeTheme"></legend>
+
+	<ul class="themes-list">
+		<li webc:for="theme of $data.themes">
+			<input :id="theme.id" name="theme-selector" type="radio" :value="theme.id" class="theme-selector">
+			<label :for="theme.id">
+				<svg-icon :icon="theme.icon"></svg-icon>
+			</label>
+		</li>
+	</ul>
+</fieldset>

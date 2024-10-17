@@ -1,0 +1,3 @@
+<script webc:type="js">
+	getSvgIconContent(icon)
+</script>

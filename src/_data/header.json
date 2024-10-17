@@ -2,11 +2,13 @@
   "fr": {
     "skipLink": "Aller directement au contenu",
     "homeLink": "Aller à la page d'accueil",
-    "changeLanguage": "Passer à la version française"
+    "changeLanguage": "Passer à la version française",
+    "changeTheme": "Choisissez un thème de couleurs"
   },
   "en": {
     "skipLink": "Skip to content",
     "homeLink": "Go to homepage",
-    "changeLanguage": "Switch to the english version"
+    "changeLanguage": "Switch to the english version",
+    "changeTheme": "Choose a color theme"
   }
 }

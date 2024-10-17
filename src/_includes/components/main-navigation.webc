@@ -1,0 +1,5 @@
+<ul webc:if="source.length > 0" role="list" class="p-0">
+	<li webc:for="p of source">
+		<a :href="url(p.url)" @text="p.title"></a>
+	</li>
+</ul>

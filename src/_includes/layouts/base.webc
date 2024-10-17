@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html :lang="locale">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" :content="eleventy.generator">
+	<title webc:is="meta-title" :title="title"></title>
+	<link webc:is="alternatives" :locales="locales" :locale="locale">
+	<!--{% include "partials/meta.njk" %}-->
+	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+
+	<link webc:keep rel="stylesheet" type="text/css" href="/assets/css/main.css">
+	<script webc:keep>
+		// if there's a theme id in localstorage, use it on the <html> tag
+		localStorage.getItem('theme') && 
+		document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+	</script>
+</head>
+<body>
+	<a href="#main-content" class="skip-link" @text="header[locale].skipLink"></a>
+
+	<site-header :locales="locales" :locale="locale"></site-header>
+
+	<main id="main-content" class="mb-xl" @raw="content"></main>
+
+	<site-footer :locale="locale"></site-footer>
+
+	<script webc:keep type="application/javascript" src="/assets/js/theme.js"></script>
+</body>

@@ -1,0 +1,15 @@
+<header class="header pb-s pi-0">
+  <div class="wrapper header__inner">
+    <a :href="`/${locale}/`" class="h-card" rel="me" @text="$data.site.title"></a>
+
+    <nav class="header__navigation">
+      <main-navigation webc:nokeep :source="eleventyNavigation($data.collections[`pages_${locale}`])" :locale="locale"></main-navigation>
+  
+      <div class="i18n">
+        <language-selector webc:nokeep :locales="locales" :locale="locale"></language-selector>
+      </div>
+  
+      <theme-selector></theme-selector>
+    </nav>
+  </div>
+</header>

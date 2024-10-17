@@ -1,0 +1,10 @@
+<footer class="footer pb-xs">
+  <div class="wrapper footer-wrapper">
+    <div class="footer__info" @raw="renderMarkdown($data.footer[$data.locale].created)"></div>
+
+    <ul class="footer__navigation">
+      <li><a :href="`${$data.locale}/feed.xml`">RSS</a></li>
+      <li><a href="https://indieweb.social/@jcletousey" rel="me">Mastodon</a></li>
+    </ul>
+  </div>
+</footer>
