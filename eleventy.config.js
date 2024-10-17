@@ -5,7 +5,7 @@ import locales from "./src/_data/locales.js";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItContainer from "markdown-it-container";
-import readFromCache from "./src/_utils/cache.js";
+import cache from "./src/_utils/cache.js";
 import pluginWebc from "@11ty/eleventy-plugin-webc";
 import {EleventyRenderPlugin} from "@11ty/eleventy";
 import fs from "fs";
@@ -44,6 +44,7 @@ export default async function (eleventyConfig) {
   // Markdown
   const mdRender = new markdownIt({ html: true, linkify: true })
     .use(markdownItAttrs)
+    .use(markdownItContainer, "info")
     .use(markdownItContainer, "alert");
   eleventyConfig.setLibrary("md", mdRender);
 
@@ -111,7 +112,7 @@ export default async function (eleventyConfig) {
       return [];
     }
 
-    const cached = readFromCache(WEBMENTION_CACHE_FILE);
+    const cached = cache.readFromCache(WEBMENTION_CACHE_FILE);
     return cached.webmentions.filter((entry) => {
       return new URL(entry["wm-target"]).pathname === url;
     });
@@ -131,7 +132,6 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getSvgIconContent", (icon) => fs.readFileSync(`./src/assets/images/${icon}.svg`));
-  //
 
   //
   // Shortcodes
@@ -193,6 +193,10 @@ export default async function (eleventyConfig) {
       return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
     });
   }
+
+  //eleventyConfig.on('eleventy.after', () => {
+  //  execSync(`npx pagefind --site dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
+  //});
 
   return {
     dir: {

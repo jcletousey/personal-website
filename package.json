@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "watch:sass": "sass --no-source-map --watch src/assets/sass:src/assets/css",
-    "watch:eleventy": "DEBUG=* npx @11ty/eleventy --serve --incremental",
+    "watch:eleventy": "DEBUG=Eleventy:EleventyErrorHandler* npx @11ty/eleventy --serve",
     "build:sass": "sass --no-source-map src/assets/sass:src/assets/css",
     "build:eleventy": "NODE_ENV=production npx @11ty/eleventy",
     "start": "npm-run-all build:sass --parallel watch:*",
