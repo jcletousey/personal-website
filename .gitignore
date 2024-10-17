@@ -8,3 +8,5 @@ node_modules
 # Build
 src/assets/css
 dist
+
+.env
