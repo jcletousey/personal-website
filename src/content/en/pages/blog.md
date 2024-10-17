@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: blog.njk
+layout: blog.webc
 eleventyNavigation:
   key: Blog
   order: 2

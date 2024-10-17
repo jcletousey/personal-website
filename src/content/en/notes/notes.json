@@ -1,5 +1,5 @@
 {
   "type": "note",
   "permalink": "/{{ locale }}/notes/{{ page.date | date: '%Y/%m/%d' }}/{{ page.fileSlug }}/index.html",
-  "layout": "card.njk"
+  "layout": "card.webc"
 }

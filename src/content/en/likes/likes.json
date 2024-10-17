@@ -1,5 +1,5 @@
 {
   "type": "like",
   "permalink": "/{{ locale }}/likes/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slugify }}/index.html",
-  "layout": "card.njk"
+  "layout": "card.webc"
 }

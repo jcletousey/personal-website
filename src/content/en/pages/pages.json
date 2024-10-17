@@ -1,4 +1,4 @@
 {
-  "layout": "page.njk",
+  "layout": "page.webc",
   "permalink": "/{{ locale }}/{{ title | slugify }}/index.html"
 }
