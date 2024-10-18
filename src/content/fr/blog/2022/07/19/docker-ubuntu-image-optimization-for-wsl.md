@@ -13,7 +13,7 @@ Dans l’entreprise où je travaille, il m’a été fourni un ordinateur sous _
 
 L’autre jour, j’ai eu une alerte, car mon espace disque restant, était très faible. J’ai trouvé des endroits où faire le ménage, mais durant mes recherches, quelque chose a attiré mon attention. Dans le répertoire `MyUserFolder/AppData/Local/Docker/wsl/data/`, il y avait un fichier `ext4.vhdx` faisant plusieurs gigaoctets.
 
-::: alert
+::: info
 **NOTE:** VHDX signifie Virtual Hard Disk
 :::
 

@@ -13,7 +13,7 @@ In the company where I work, I was provided with a computer under _Windows 10_. 
 
 The other day, I got an alert because my remaining disk space was very low. I found places to clean, but during my research, something caught my eye. In the `MyUserFolder/AppData/Local/Docker/wsl/data/` directory, there was a `ext4.vhdx` file with several gigabytes.
 
-::: alert
+::: info
 **NOTE:** VHDX stands for Virtual Hard Disk
 :::
 

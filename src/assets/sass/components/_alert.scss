@@ -1,4 +1,4 @@
-.alert {
+.info {
   padding: 1rem;
   border-inline-start: 0.3rem solid currentColor;
   background-color: var(--background-light);
@@ -6,7 +6,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .alert {
+  .info {
     color: var(--text);
   }
 }
+
