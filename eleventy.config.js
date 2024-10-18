@@ -122,6 +122,7 @@ export default async function (eleventyConfig) {
       return mentions.filter((entry) => entry["wm-property"] === mentionType);
     }
   );
+
   // Get the first n elements of a collection
   eleventyConfig.addFilter('head', (array, n) => {
     if (n < 0) {
@@ -132,6 +133,21 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("getSvgIconContent", (icon) => fs.readFileSync(`./src/assets/images/${icon}.svg`));
+
+  eleventyConfig.addFilter("getDistinctLocaleLinks", (url, currentLocale) => {
+    let links = eleventyConfig.getFilter("locale_links")(url);
+    const nbLocales = locales.length - 1;
+    const subPagesPattern = /\/[0-9]+\/$/;
+  
+    // If there are more than one links per locale
+    // It is the case with paginated pages where locale_links return all the sub pages
+    // so we filter the sub pages to only return the main page of the paginated pages
+    if (links.length > nbLocales) {
+      links = links.filter((link) => link.lang !== currentLocale).filter((link) => link.url.search(subPagesPattern) === -1);
+    }
+
+    return links;
+  });
 
   //
   // Shortcodes

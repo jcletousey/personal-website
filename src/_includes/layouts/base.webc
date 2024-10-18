@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" :content="eleventy.generator">
 	<title webc:is="meta-title" :title="title"></title>
-	<link webc:is="alternatives" :locales="locales" :locale="locale">
+	<link webc:is="alternatives" :links="getDistinctLocaleLinks($data.page.url, locale)">
 	<!--{% include "partials/meta.njk" %}-->
 	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
 

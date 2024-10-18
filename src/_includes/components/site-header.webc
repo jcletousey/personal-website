@@ -6,7 +6,7 @@
       <main-navigation webc:nokeep :source="eleventyNavigation($data.collections[`pages_${locale}`])" :locale="locale"></main-navigation>
   
       <div class="i18n">
-        <language-selector webc:nokeep :locales="locales" :locale="locale"></language-selector>
+        <language-selector webc:nokeep :links="getDistinctLocaleLinks($data.page.url, locale)"></language-selector>
       </div>
   
       <theme-selector></theme-selector>
