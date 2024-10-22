@@ -25,7 +25,7 @@ With the _Twitter_ case and Elon Musk’s takeover, I figured even the content I
 
 Fortunately, _Twitter_ itself has made available [a way to retrieve it](https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive).
 
-Since then, [I’ve migrated to Mastodon](https://indieweb.social/@jcletousey) but that’s not enough for me. This is one part of the _[Fediverse](https://en.wikipedia.org/wiki/Fediverse)_. Its principle, the fact that everything is decentralized, is very interesting. But, who tells me that in the future, companies will not come to gangrenize this system (hello Elon 👋).
+Since then, [I’ve migrated to Mastodon](https://indieweb.social/@jcletousey) but that’s not enough for me. This is one part of the _[Fediverse](https://en.wikipedia.org/wiki/Fediverse)_. Its principle, the fact that everything is decentralized, is very interesting. But, who tells me that in the future, companies will not come to gangrenize this system (hello Elon <emoji emoji="👋" label="main faisant coucou"></emoji>).
 
 I saw [a _toot_](https://indieweb.social/@aral@mastodon.ar.al/109720685759002039){hreflang="en"} comparing the _Fediverse_ to email, which was also open in its early days and is now managed by only a few very large companies. Okay, this is extreme but it made me think.
 

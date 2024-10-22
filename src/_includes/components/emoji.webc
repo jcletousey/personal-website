@@ -1,0 +1,6 @@
+<template webc:if="label" webc:nokeep>
+  <span :aria-label="label" class="emoji" role="img" @raw="emoji"></span>
+</template>
+<template webc:else webc:nokeep>
+  <span aria-hidden="true" class="emoji" role="img" @raw="emoji"></span>
+</template>
