@@ -2,17 +2,14 @@
 layout: "base.webc"
 ---
 
-<template webc:type="11ty" 11ty:type="njk">
-	{% import "partials/macros/post-list.njk" as pl with context %}
-	<div class="wrapper blog">
-		<h1 class="mbe-m">{{ title }}</h1>
+<div class="wrapper blog">
+	<h1 class="mbe-m" @text="title"></h1>
 
-		<div class="blog__content mbe-xl">
-			{{ content | safe }}
-		</div>
+	<div class="blog__content mbe-xl" @raw="content"></div>
 
-		<div class="post-list pbs-xl">
-			{{ pl.postList(5) }}
-		</div>
+	<div class="post-list pbs-xl">
+		<post-list :posts="posts"></post-list>
+
+		<pagination :data="$data"></pagination>
 	</div>
-</template>
+</div>

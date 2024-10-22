@@ -1,0 +1,14 @@
+<nav webc:if="data.pagination && data.pagination.pages.length > 1" class="pagination" aria-labelledby="pagination">
+  <h2 id="pagination" class="visually-hidden">Pagination</h2>
+
+  <ol class="pagination__content">
+    <li webc:for="(item, index) of data.pagination.pages">
+      <template webc:if="data.page.url == data.pagination.hrefs[index]" webc:nokeep>
+        <a :href="data.pagination.hrefs[index]" aria-current="page" @text="`Page ${index + 1}`"></a>
+      </template>
+      <template webc:else webc:nokeep>
+        <a :href="data.pagination.hrefs[index]" @text="`Page ${index + 1}`"></a>
+      </template>
+    </li>
+  </ol>
+</nav>
