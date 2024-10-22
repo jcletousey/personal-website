@@ -1,7 +1,9 @@
+@use 'sass:list';
+
 @mixin spacing($class, $property, $types, $sizes) {
-  @for $i from 0 to length($sizes) {
-    .#{$class}-#{nth($types, $i + 1)} {
-      #{$property}: #{nth($sizes, $i + 1)};
+  @for $i from 0 to list.length($sizes) {
+    .#{$class}-#{list.nth($types, $i + 1)} {
+      #{$property}: #{list.nth($sizes, $i + 1)};
     }
   }
 }

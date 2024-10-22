@@ -1,4 +1,4 @@
-@import "mixins";
+@use "mixins";
 
 .visually-hidden {
   border: 0;
@@ -56,13 +56,13 @@ $sizes: "0", var(--space-3xs-2xs), var(--space-2xs-xs), var(--space-xs-s),
   var(--space-s-m), var(--space-m-l), var(--space-l-xl), var(--space-xl-2xl),
   var(--space-2xl-3xl);
 
-@include spacing("m", "margin", $types, $sizes);
-@include spacing("mi", "margin-inline", $types, $sizes);
-@include spacing("mb", "margin-block", $types, $sizes);
-@include spacing("mbs", "margin-block-start", $types, $sizes);
-@include spacing("mbe", "margin-block-end", $types, $sizes);
-@include spacing("p", "padding", $types, $sizes);
-@include spacing("pi", "padding-inline", $types, $sizes);
-@include spacing("pb", "padding-block", $types, $sizes);
-@include spacing("pbs", "padding-block-start", $types, $sizes);
-@include spacing("pbe", "padding-block-end", $types, $sizes);
+@include mixins.spacing("m", "margin", $types, $sizes);
+@include mixins.spacing("mi", "margin-inline", $types, $sizes);
+@include mixins.spacing("mb", "margin-block", $types, $sizes);
+@include mixins.spacing("mbs", "margin-block-start", $types, $sizes);
+@include mixins.spacing("mbe", "margin-block-end", $types, $sizes);
+@include mixins.spacing("p", "padding", $types, $sizes);
+@include mixins.spacing("pi", "padding-inline", $types, $sizes);
+@include mixins.spacing("pb", "padding-block", $types, $sizes);
+@include mixins.spacing("pbs", "padding-block-start", $types, $sizes);
+@include mixins.spacing("pbe", "padding-block-end", $types, $sizes);
