@@ -74,6 +74,7 @@
     --primary: #ff5a61;
     --text: #fffce9;
     --text-light: #b4bcbd;
+    --danger: var(--primary);
   }
 }
 
@@ -84,6 +85,8 @@
   --primary-light: #ff9292;
   --text: #1f2e42;
   --text-light: #51585a;
+
+  --danger: var(--primary);
 
   .footer {
     --primary: var(--primary-light);
@@ -96,6 +99,7 @@
   --primary: #ff5a61;
   --text: #fffce9;
   --text-light: #b4bcbd;
+  --danger: var(--primary);
 }
 
 :focus {

@@ -11,3 +11,20 @@
   }
 }
 
+.alert {
+  padding: 1rem;
+  border-inline-start: 0.3rem solid var(--danger);
+  background-color: var(--background-light);
+  color: var(--text);
+
+  strong {
+    color: var(--danger);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .alert {
+    color: var(--text);
+  }
+}
+
