@@ -1,6 +1,6 @@
 ---
 title: "What to expect from your framework"
-url: "https://johan.hal.se/wrote/2023/02/17/what-to-expect-from-your-framework/"
+link: "https://johan.hal.se/wrote/2023/02/17/what-to-expect-from-your-framework/"
 lang: "en"
 date: "2023-03-15T10:30:54.000Z"
 ---

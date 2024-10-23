@@ -2,7 +2,7 @@
 title: "8 top Docker tips tricks for 2024"
 date: "2024-03-20T08:40:32.817Z"
 lang: "en"
-url: "https://www.docker.com/blog/8-top-docker-tips-tricks-for-2024/"
+link: "https://www.docker.com/blog/8-top-docker-tips-tricks-for-2024/"
 tags: ["docker", "tips"]
 ---
 

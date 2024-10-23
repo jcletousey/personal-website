@@ -2,7 +2,7 @@
 title: "The gotcha of align-content with block elements"
 date: "2024-09-18T12:16:14.154Z"
 lang: "en"
-url: "https://css-tip.com/align-content-center/"
+link: "https://css-tip.com/align-content-center/"
 tags: ["css", "align", "gotchas"]
 ---
 

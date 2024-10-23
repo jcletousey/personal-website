@@ -1,6 +1,6 @@
 ---
 title: "Thoughts on My Publishing Workflow"
-url: "https://darthmall.net/weblog/2023/thoughts-on-my-publishing-workflow/"
+link: "https://darthmall.net/weblog/2023/thoughts-on-my-publishing-workflow/"
 lang: "en"
 date: "2023-03-14T15:44:01.000Z"
 tags: ["SSG", "11ty"]

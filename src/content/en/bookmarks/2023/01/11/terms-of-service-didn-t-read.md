@@ -1,6 +1,6 @@
 ---
 title: "Terms of Service; Didn't Read"
-url: "https://tosdr.org/"
+link: "https://tosdr.org/"
 lang: "en"
 date: "2023-01-11T09:12:51.000Z"
 tags: "Privacy"

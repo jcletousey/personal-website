@@ -1,6 +1,6 @@
 ---
 title: "Zetafonts · the Italian type foundry"
-url: "https://www.zetafonts.com/"
+link: "https://www.zetafonts.com/"
 lang: "en"
 date: "2023-02-27T13:18:29.000Z"
 tags: ["Fonts", "TypeFoundry"]

@@ -6,7 +6,7 @@
         {% set url = item.page.url %}
       {% else %}
         {% set content = item.content %}
-        {% set url = item.data.url %}
+        {% set url = item.data.link %}
       {% endif %}
       <div class="h-entry activity-card{% if item.data.type in ["article", "note", "photo"] %} mine{% endif %}" data-type="{{ item.data.type }}"{% if locale !== item.data.lang and item.data.lang != null %} lang="{{ item.data.lang }}"{% endif %}>
         <header class="activity-card__header mbe-m">

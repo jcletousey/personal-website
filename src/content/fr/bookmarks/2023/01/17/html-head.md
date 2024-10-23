@@ -2,7 +2,7 @@
 title: "HTML Head"
 date: "2023-01-17T10:41:35.000Z"
 lang: "en"
-url: "https://htmlhead.dev/"
+link: "https://htmlhead.dev/"
 tags: ["HTML", "Documentation"]
 ---
 

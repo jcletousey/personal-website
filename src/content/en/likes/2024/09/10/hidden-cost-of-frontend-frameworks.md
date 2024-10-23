@@ -1,6 +1,6 @@
 ---
 title: "Hidden cost of frontend frameworks"
-url: "https://manonbox.io/articles/hidden-cost-of-frontend-frameworks"
+link: "https://manonbox.io/articles/hidden-cost-of-frontend-frameworks"
 lang: "en"
 date: "2024-09-10T09:37:52.000Z"
 tags: ["javascript", "framework"]

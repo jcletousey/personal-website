@@ -1,6 +1,6 @@
 ---
 title: "DJR"
-url: "https://djr.com/"
+link: "https://djr.com/"
 lang: "en"
 date: "2023-02-27T13:14:19.000Z"
 tags: ["Fonts", "TypeFoundry"]

@@ -2,7 +2,7 @@
 title: "WebC Starter Kit"
 date: "2024-04-15T08:08:21.000Z"
 lang: "en"
-url: "https://github.com/solution-loisir/webc-starter-kit"
+link: "https://github.com/solution-loisir/webc-starter-kit"
 tags: ["11ty", "webc", "components"]
 ---
 

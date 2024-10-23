@@ -2,7 +2,7 @@
 title: "Modern CSS For Dynamic Component-Based Architecture"
 date: "2024-02-06T08:55:42.861Z"
 lang: "en"
-url: "https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/"
+link: "https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/"
 tags: ["CSS", "component"]
 ---
 

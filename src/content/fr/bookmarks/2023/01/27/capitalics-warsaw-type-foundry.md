@@ -1,6 +1,6 @@
 ---
 title: "Capitalics Warsaw Type Foundry"
-url: "https://capitalics.wtf/en"
+link: "https://capitalics.wtf/en"
 lang: "en"
 date: "2023-02-27T13:17:41.000Z"
 tags: ["Fonts", "TypeFoundry"]

@@ -2,7 +2,7 @@
 title: "Why are my live regions not working?"
 date: "2024-05-24T08:14:59.787Z"
 lang: "en"
-url: "https://tetralogical.com/blog/2024/05/01/why-are-my-live-regions-not-working/"
+link: "https://tetralogical.com/blog/2024/05/01/why-are-my-live-regions-not-working/"
 tags: ["accessibility", "live regions", "javascript"]
 ---
 

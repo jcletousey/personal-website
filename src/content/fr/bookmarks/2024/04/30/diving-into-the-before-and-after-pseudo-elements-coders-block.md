@@ -2,7 +2,7 @@
 title: "Diving into the ::before and ::after Pseudo-Elements / Coder's Block"
 date: "2024-04-30T14:54:20.498Z"
 lang: "en"
-url: "https://codersblock.com/blog/diving-into-the-before-and-after-pseudo-elements/"
+link: "https://codersblock.com/blog/diving-into-the-before-and-after-pseudo-elements/"
 tags: ["css", "accessibilité", "animation"]
 ---
 

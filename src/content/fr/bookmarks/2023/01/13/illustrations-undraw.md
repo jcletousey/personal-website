@@ -2,7 +2,7 @@
 title: "Illustrations | unDraw"
 date: "2023-01-13T14:42:12.000Z"
 lang: "en"
-url: "https://undraw.co/illustrations"
+link: "https://undraw.co/illustrations"
 tags: ["Tools", "Design", "UI", "Illustrations"]
 ---
 

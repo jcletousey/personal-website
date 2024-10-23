@@ -34,8 +34,8 @@ layout: "base.webc"
       <div class="card__content flow">
         {{ content | renderMarkdown | safe }}
   
-        {% if url %}
-        <p><a href="{{ url }}"{% if lang != locale %} hreflang="{{ lang }}"{% endif %}>{{ url }}</a></p>
+        {% if link %}
+        <p><a href="{{ link }}"{% if lang != locale %} hreflang="{{ lang }}"{% endif %}>{{ link }}</a></p>
         {% endif %}
       </div>
   
@@ -57,5 +57,7 @@ layout: "base.webc"
         {% endif %}
       </footer>
     </div>
+
+    {% include "partials/webmentions.njk" %}
   </article>
 </template>

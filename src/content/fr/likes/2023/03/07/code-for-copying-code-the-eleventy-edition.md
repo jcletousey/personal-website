@@ -1,6 +1,6 @@
 ---
 title: "Code for copying code: the Eleventy edition"
-url: "https://www.brycewray.com/posts/2023/02/code-copying-code-eleventy-edition/"
+link: "https://www.brycewray.com/posts/2023/02/code-copying-code-eleventy-edition/"
 lang: "en"
 date: "2023-03-07T12:55:11.000Z"
 tags: ["Eleventy"]

@@ -2,7 +2,7 @@
 title: "slash pages"
 date: "2024-05-23T09:49:02.939Z"
 lang: "en"
-url: "https://slashpages.net/"
+link: "https://slashpages.net/"
 tags: ["IndieWeb"]
 ---
 

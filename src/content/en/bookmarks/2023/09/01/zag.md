@@ -1,6 +1,6 @@
 ---
 title: "Zag"
-url: "https://zagjs.com/"
+link: "https://zagjs.com/"
 date: "2023-09-01T09:08:26.000Z"
 tags: ["WebComponents"]
 ---

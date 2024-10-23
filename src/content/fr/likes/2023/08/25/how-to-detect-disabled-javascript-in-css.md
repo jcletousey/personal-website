@@ -1,6 +1,6 @@
 ---
 title: "How to detect disabled javascript in css"
-url: "https://www.stefanjudis.com/blog/how-to-detect-disabled-javascript-in-css/"
+link: "https://www.stefanjudis.com/blog/how-to-detect-disabled-javascript-in-css/"
 lang: "en"
 date: "2023-08-25T14:20:31.000Z"
 tags: ["CSS", "Javascript"]

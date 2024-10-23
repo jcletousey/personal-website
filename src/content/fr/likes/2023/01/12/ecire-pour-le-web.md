@@ -2,7 +2,7 @@
 title: "Écrire pour le Web"
 date: "2023-01-12T07:51:02.000Z"
 lang: "fr"
-url: "https://www.24joursdeweb.fr/2022/ecrire-pour-le-web/"
+link: "https://www.24joursdeweb.fr/2022/ecrire-pour-le-web/"
 tags: ["Guide", "Écriture", "Accessibilité", "UX", "UI"]
 ---
 
