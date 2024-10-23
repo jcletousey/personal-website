@@ -1,48 +1,41 @@
 ---
 layout: "base.webc"
+description: summary
 ---
-<template webc:type="11ty" 11ty:type="njk">
-  {% set description = summary %}
+<article class="wrapper h-entry">
+  <header class="page-header">
+    <h1 class="p-name" @text="title"></h1>
 
-  <article class="wrapper h-entry">
-    <header class="page-header">
-      <h1 class="p-name">{{ title }}</h1>
-  
-      <div class="meta mb-l">
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-          <span>{{ blog[locale].posted }} <time datetime="{{ date | dateToISO }}" class="dt-published">{{ date | formatDate(locale) }}</time></span>
-        </p>
-        {% set ttr = content | timeToRead %}
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          {{ blog[locale].timeToRead | interpolate({time: ttr}) }}
-        </p>
-      </div>
-      {%- if summary %}
-  
-      <div class="p-summary mbe-l">
-        {{ summary | renderMarkdown | safe }}
-      </div>
-      {% endif %}
-    </header>
-  
-    <div class="e-content flow page-content mbe-l">
-      {{ content | safe}}
+    <div class="meta mb-l">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <span><template webc:nokeep @text="$data.blog[$data.locale].posted"></template> <time :datetime="dateToISO(date)" class="dt-published" @text="formatDate(date, $data.locale)"></time></span>
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span @text="interpolate($data.blog[$data.locale].timeToRead, {time: timeToRead(content)})"></span>
+      </p>
     </div>
+
+    <div webc:if="summary" class="p-summary mbe-l" @raw="renderMarkdown(summary)"></div>
+  </header>
+
+  <div class="e-content flow page-content mbe-l" @raw="content"></div>
   
+  <template webc:type="11ty" 11ty:type="njk">
     {% include "partials/prev_next.njk" %}
-  
+
     <div class="page-content">
       {% include "partials/webmentions.njk" %}
     </div>
-  </article>
-</template>
+  </template>
+</article>

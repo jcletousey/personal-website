@@ -18,7 +18,7 @@
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        <span @text="timeToRead(p.content)"></span>
+        <span @text="interpolate($data.blog[$data.locale].timeToRead, {time: timeToRead(p.content)})"></span>
       </p>
     </div>
 
