@@ -117,3 +117,13 @@ body {
   background-color: var(--background);
   line-height: 1.6;
 }
+
+.avatar {
+  float: right;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  shape-margin: 1rem;
+  inline-size: clamp(7rem, 20%, 20rem);
+  border: 5px solid var(--primary);
+  margin-inline-start: 1rem;
+}

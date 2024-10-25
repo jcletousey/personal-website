@@ -4,6 +4,7 @@ eleventyNavigation:
   key: About
   order: 1
 ---
+![Me with my beard, gently smiling and framed on my face, in black and white.](/assets/images/avatar.png){.avatar}
 
 I’m Jean-Charles, a software engineer based in Caen, France. I specialized in _web_ and am interested in _back-end_, _front-end_ and _devOps_.
 

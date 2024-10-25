@@ -4,6 +4,7 @@ eleventyNavigation:
   key: A propos
   order: 1
 ---
+![Moi avec ma barbe, lègèrement souriant, cardré sur mon visage, en noir et blanc.](/assets/images/avatar.png){.avatar}
 
 Je suis Jean-Charles, un ingénieur logiciel basé à Caen. Je me suis spécialisé dans le _web_ et m'intéresse au _back-end_, au _front-end_ et aux _devOps_.
 
