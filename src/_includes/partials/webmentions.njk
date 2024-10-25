@@ -7,7 +7,14 @@
 {% set likesSize = likes.length %}
 
 {% set mentions = allMentions | webmentionsByType('mention-of') %}
-{% set mentionsSize = mentions.length %}
+{% set replies = allMentions | webmentionsByType('in-reply-to') %}
+{% set mentionsSize = mentions.length + replies.length %}
+{% for reply in replies %}
+  {% set mentions = (mentions.push(reply), mentions) %}
+{% endfor %}
+
+{% set reposts = allMentions | webmentionsByType('repost-of') %}
+{% set repostsSize = reposts.length %}
 
 <aside class="webmentions flow">
   <header class="webmentions__header">
@@ -24,9 +31,16 @@
     </section>
   {% endif %}
 
+  {% if repostsSize > 0 %}
+    <section class="webmentions__likes">
+      <h3>{{ repostsSize }} repost{% if repostsSize > 1 %}s{% endif %}</h3>
+      {{ webmentions.mentions(reposts, 'repost-of') }}
+    </section>
+  {% endif %}
+
   {% if mentionsSize > 0 %}
     <section class="webmentions__mentions">
-      <h3>{{ mentionsSize }} mention{% if mentionsSize > 1 %}s{% endif %}</h3>
+      <h3>{{ mentionsSize }} {% if mentionsSize > 1 %}replies{% else %}reply{% endif %}</h3>
       {{ webmentions.webmentions_mentions(mentions) }}
     </section>
   {% endif %}

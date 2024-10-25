@@ -12,6 +12,10 @@
   &__header__about {
     font-size: var(--s--1);
   }
+
+  h3 {
+    font-size: var(--s--1);
+  }
 }
 
 .reactions__list {
@@ -21,8 +25,12 @@
 .reactions__item {
   display: flex;
   flex-direction: column;
-  padding: 1rem 0 1rem 60px;
+  padding: 1rem 0 1rem calc(60px + 1rem);
   position: relative;
+  border: 1px solid;
+  background-color: var(--background-light);
+  border-radius: 5px 0px 0px 5px;
+  border-inline-start: 10px solid;
 
   a {
     text-decoration: none;
@@ -40,11 +48,16 @@
 
   img {
     position: absolute;
-    inset-inline-start: 0;
+    inset-inline-start: 1rem;
   }
 }
 
-.reactions--like-of {
+.reaction__content img[src*="emojis"] {
+  inline-size: 20px;
+}
+
+.reactions--like-of,
+.reactions--repost-of {
   display: flex;
   flex-wrap: wrap;
   transition-duration: 0.2s;

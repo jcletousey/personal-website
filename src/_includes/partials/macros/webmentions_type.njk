@@ -22,7 +22,7 @@
 {% macro webmentions_mentions(mentions) %}
 <ol class="reactions__list reactions--{{ type }}">
   {% for webmention in mentions %}
-  <li id="webmention-{{ webmention['wm-id'] }}" class="reactions__item">
+  <li id="webmention-{{ webmention['wm-id'] }}" class="reactions__item{% if not loop.last %} mbe-xs{% endif %}">
     <div class="reaction__meta">
       <a class="u-url p-author h-card" href="{{ webmention.author.url }}">
         <img

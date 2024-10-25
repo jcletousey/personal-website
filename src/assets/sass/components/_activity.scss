@@ -36,6 +36,13 @@
   }
 }
 
+.activity-card__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--s--2);
+}
+
 .activity-card {
   --flow-space: var(--space-m);
   position: relative;
@@ -122,6 +129,11 @@
   }
 }
 
+.activity-card__stats {
+  display: flex;
+  gap: var(--space-2xs-xs);
+}
+
 .tag {
   background-color: var(--text-light);
   color: var(--background);
@@ -129,6 +141,10 @@
   border-radius: 2px;
   padding: 0.25rem;
   font-size: var(--s--2);
+}
+
+.u-photo {
+  border: 5px double;
 }
 
 @media screen and (min-width: 60rem) {

@@ -40,10 +40,27 @@ layout: "base.webc"
       </div>
   
       <footer class="card__footer">
+        {% if type in ["article", "note", "photo"] %}
+          {% set allMentions = page.url | getWebmentionsForUrl %}
+          {% set allMentionsSize = allMentions.length %}
+          
+          {% set likes = allMentions | webmentionsByType('like-of') %}
+          {% set likesSize = likes.length %}
+          
+          {% set mentions = allMentions | webmentionsByType('mention-of') %}
+          {% set replies = allMentions | webmentionsByType('in-reply-to') %}
+          {% set mentionsSize = mentions.length + replies.length %}
+          {% for reply in replies %}
+            {% set mentions = (mentions.push(reply), mentions) %}
+          {% endfor %}
+          
+          {% set reposts = allMentions | webmentionsByType('repost-of') %}
+          {% set repostsSize = reposts.length %}
+        {% endif %}
         <ul class="card__stats">
-          <li>0 Mentions</li>
-          <li>0 Reposts</li>
-          <li>0 Likes</li>
+          <li>{{ likesSize }} Likes</li>
+          <li>{{ repostsSize }} Reposts</li>
+          <li>{{ mentionsSize }} Mentions</li>
         </ul>
         {% if syndication %}
         <p class="card__syndications">
