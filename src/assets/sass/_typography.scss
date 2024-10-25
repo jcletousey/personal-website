@@ -19,6 +19,7 @@ a {
   text-decoration-thickness: 0.12em;
   text-underline-offset: 0.3em;
   transition: color 300ms, text-underline-offset 300ms;
+  box-decoration-break: clone;
 
   &:hover,
   &:focus {
