@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" :content="eleventy.generator">
 	<title webc:is="meta-title" :title="title"></title>
-	<link webc:is="alternatives" :links="getDistinctLocaleLinks($data.page.url, locale)">
-	<!--{% include "partials/meta.njk" %}-->
-	<link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-
-	<link webc:keep rel="stylesheet" type="text/css" href="/assets/css/main.css">
 	<script webc:keep>
 		// if there's a theme id in localstorage, use it on the <html> tag
 		localStorage.getItem('theme') && 
 		document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
 	</script>
+  <link webc:keep rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+  <meta name="generator" :content="eleventy.generator">
+  
+	<link webc:is="favicon">
+
+  <meta webc:is="og" :links="getDistinctLocaleLinks($data.page.url, locale)" :type="$data.type">
+
+  <meta name="color-scheme" content="dark light">
+  
+  <link webc:is="me">
+
+  <link webc:is="webmentions">
+
+	<link webc:is="alternatives" :links="getDistinctLocaleLinks($data.page.url, locale)">
 </head>
 <body>
 	<a href="#main-content" class="skip-link" @text="header[locale].skipLink"></a>

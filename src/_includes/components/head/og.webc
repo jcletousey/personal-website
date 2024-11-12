@@ -1,0 +1,13 @@
+<meta name="author" :content="$data.author.name">
+
+<meta property="og:author" :content="$data.author.name">
+<meta property="og:title" :content="$data.title + ($data.site.title ? ` | ${$data.site.title}` : '')">
+<meta property="og:description" :content="$data.description ? $data.description : ($data.site[$data.locale].description ? $data.site[$data.locale].description : '')">
+<!-- <meta property="og:url" :content="$data.page.url"> -->
+<meta property="og:site_name" :content="$data.site.title">
+<meta property="og:locale" :content="$data.locale">
+<meta webc:for="link of links" property="og:locale:alternate" :content="link.lang">
+<meta webc:if="type == 'article'" property="og:type" content="Article">
+<meta webc:else property="og:type" content="Website">
+
+<meta name="twitter:creator" :content="`@${$data.author.social.twitter.name}`">
