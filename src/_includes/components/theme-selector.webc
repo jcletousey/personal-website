@@ -5,6 +5,7 @@
 		<li webc:for="theme of $data.themes">
 			<input :id="theme.id" name="theme-selector" type="radio" :value="theme.id" class="theme-selector">
 			<label :for="theme.id">
+				<span class="visually-hidden" @text="`Theme ${theme.name[$data.locale]}`"></span>
 				<svg-icon :icon="theme.icon"></svg-icon>
 			</label>
 		</li>
