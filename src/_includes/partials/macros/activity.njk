@@ -47,13 +47,13 @@
           {% if not item.data.type in ["note", "photo"] %}
           <a href="{{ url }}" {% if locale !== item.data.lang %}hreflang="{{ item.data.lang }}"{% endif %}>
             {% if item.data.type in "article" %}
-              Lire l'article
+              {{ activity[locale].readArticle }} <span class="visually-hidden">{{ item.data.title }}</span>
             {% else %}
               {{ url }}
             {% endif %}
           </a>
           {% endif %}
-          {% if item.data.tags%}
+          {% if item.data.tags %}
           <p>
           {% for tag in item.data.tags %}
             <span class="tag">#{{ tag }}</span>{% if not loop.last %}, {% endif %}
