@@ -1,5 +1,6 @@
 # NPM dependencies
 node_modules
+.npmrc
 
 # IDEs
 .history
