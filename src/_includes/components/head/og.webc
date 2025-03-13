@@ -11,3 +11,4 @@
 <meta webc:else property="og:type" content="Website">
 
 <meta name="twitter:creator" :content="`@${$data.author.social.twitter.name}`">
+<meta webc:if="$data.author.social.mastodon" name="fediverse:creator" :content="$data.author.social.mastodon.name">

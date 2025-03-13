@@ -8,6 +8,10 @@
     "github": {
       "name": "jcletousey",
       "url": "https://github.com/jcletousey"
+    },
+    "mastodon": {
+      "name": "@indieweb.social@jcletousey",
+      "url": "https://indieweb.social/@jcletousey"
     }
   }
 }

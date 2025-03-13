@@ -1,6 +1,10 @@
 # JC's website changelog
 
-## 2025-03-12
+## 2025-03-13
+
+### Added
+
+- Mastodon author tag
 
 ### Changed
 
