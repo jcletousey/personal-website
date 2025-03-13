@@ -1,10 +1,14 @@
 # JC's website changelog
 
-## 2024-10-??
+## 2025-03-12
 
 ### Changed
 
 - Upgrade to Eleventy v3
+
+### Fixed
+
+- Fix my age calculation in the "About" page
 
 ## 2024-04-23
 
