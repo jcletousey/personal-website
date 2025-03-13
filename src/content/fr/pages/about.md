@@ -1,5 +1,6 @@
 ---
 title: A propos
+description: Je suis Jean-Charles, un ingénieur logiciel basé à Caen. Je me suis spécialisé dans le web et m'intéresse au back-end, au front-end et aux devOps.
 eleventyNavigation:
   key: A propos
   order: 1
@@ -26,7 +27,7 @@ Si vous voulez plus de détails sur ma carrière professionnelle, vous pouvez <a
 
 ## Personnellement
 
-J'ai {% my_age %} ans. Je suis un privilégié. Je suis un homme blanc cis-genre. Cela veut dire que je n'ai pas à faire face au racisme, à la misogynie, aux remarques sur mon orientation sexuelle.
+J'ai {% getAge "1982-09-20" %} ans. Je suis un privilégié. Je suis un homme blanc cis-genre. Cela veut dire que je n'ai pas à faire face au racisme, à la misogynie, aux remarques sur mon orientation sexuelle.
 
 J'ai des parents issus de la classe moyenne supérieure et je n'ai donc jamais connu la pauvreté. Ils ont toujours étaient là pour moi et le sont toujours.
 

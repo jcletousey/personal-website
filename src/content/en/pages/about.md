@@ -1,5 +1,6 @@
 ---
 title: About
+description: I'm Jean-Charles, a software engineer based in Caen, France. I specialized in web development and I'm interested in back-end, front-end and devOps.
 eleventyNavigation:
   key: About
   order: 1
@@ -26,7 +27,7 @@ If you want more details about my professional career, you can <a href="/assets/
 
 ## Personally
 
-I am {% my_age %} years old. I am privileged. I am a cis-gender white man. That means, I don’t have to deal with racism, misogyny, remarks about my sexual orientation.
+I am {% getAge "1982-09-20" %} years old. I am privileged. I am a cis-gender white man. That means, I don’t have to deal with racism, misogyny, remarks about my sexual orientation.
 
 I have parents from the upper middle class, so I have never experienced poverty. They were always there for me and always are.
 

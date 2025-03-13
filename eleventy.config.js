@@ -153,8 +153,21 @@ export default async function (eleventyConfig) {
   //
   // Shortcodes
   //
-  eleventyConfig.addShortcode("my_age", function () {
-    return new Date().getFullYear() - 1982;
+  eleventyConfig.addShortcode("getAge", function (birthdate) {
+    const currentDate = new Date();
+    const birthday = new Date(birthdate);
+
+    let years = currentDate.getFullYear() - birthday.getFullYear();
+    let months = currentDate.getMonth() - birthday.getMonth();
+    let days = currentDate.getDay() - birthday.getDay();
+
+    if (days < 0) {
+        months -= 1;
+    }
+    if (months < 0) {
+        years -= 1;
+    }
+    return years;
   });
 
   eleventyConfig.addPairedNunjucksAsyncShortcode("renderWebC", async function(content) {
