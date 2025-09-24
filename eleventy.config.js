@@ -219,6 +219,36 @@ export default async function (eleventyConfig) {
       ]);
     });
 
+    // https://joshtronic.com/2025/09/07/eleventy-category-tag-pages/
+    eleventyConfig.addCollection(`tags_${locale}`, function (collection) {
+      const tagList = { items: { tags: {} } };
+      const tags = new Set();
+      const content = collection.getFilteredByGlob([
+        `./src/content/${locale}/blog/**/*.md`,
+        `./src/content/${locale}/notes/**/*.md`,
+        `./src/content/${locale}/bookmarks/**/*.md`,
+        `./src/content/${locale}/likes/**/*.md`,
+        `./src/content/${locale}/photos/**/*.md`,
+      ]);
+      content.forEach((item) => {
+        if (item.data.tags) {
+          item.data.tags.forEach((tag) => {
+            tag = tag.toLowerCase()
+            if (!tagList.items.tags[tag]) {
+              tagList.items.tags[tag] = {};
+            }
+            if (item.data.type && !tagList.items.tags[tag][item.data.type]) {
+              tagList.items.tags[tag][item.data.type] = []
+            }
+            tags.add(tag);
+            tagList.items.tags[tag][item.data.type].push(item);
+          });
+        }
+      })
+      tagList.tags = [...tags].sort();
+      return tagList;
+    });
+
     eleventyConfig.addCollection(`all_${locale}`, function (collection) {
       return collection.getFilteredByGlob(`./src/content/${locale}/**/*.md`);
     });

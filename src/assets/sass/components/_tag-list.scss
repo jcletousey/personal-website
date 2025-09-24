@@ -1,0 +1,15 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--s-3);
+  row-gap: var(--s--2);
+}
+
+.tag-list li a {
+  display: flex;
+  gap: var(--space-3xs);
+
+  /** Override links style to underline icons **/
+  text-decoration: none;
+  border-block-end: 2px solid;
+}

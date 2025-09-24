@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.tags_fr.tags
+  size: 1
+  alias: tag
+permalink: fr/tag/{{ tag | slugify }}/
+eleventyComputed:
+  title: "{{global[locale].contentTagged}} \"{{tag}}\""
+---
+
+{%- for type, items in collections["tags_" + locale]["items"]["tags"][tag] -%}
+<h2>{{type}}</h2>
+
+<ul>
+  {%- for item in items -%}
+  <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
+{%- endfor -%}
+
+<p class="mbs-l">
+  <a href="/fr/tags/">{{ global[locale].allTags }}</a>
+</p>
