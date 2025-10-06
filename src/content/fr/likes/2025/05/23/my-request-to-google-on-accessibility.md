@@ -3,7 +3,7 @@ title: "My Request to Google on Accessibility"
 link: "https://adrianroselli.com/2025/05/my-request-to-google-on-accessibility.html"
 lang: "en"
 date: "2025-05-23T14:54:33.129Z"
-tags: ["accessibility", "Google", "standards", "usability"]
+tags: ["Accessibilité", "Google", "Standards", "Utilisabilité"]
 ---
 
 Adrian Roselli a une demande adressée à Google sur la façon dont ils traitent les nouvelles fonctionnalités de Chrome et leur accessibilité.
