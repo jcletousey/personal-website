@@ -28,6 +28,22 @@
   }
 }
 
+.christmas {
+  position: relative;
+
+  &::before {
+    content: "";
+    inline-size: 30px;
+    block-size: 30px;
+    background-size: cover;
+    position: absolute;
+    inset-inline-start: -10px;
+    background-image: url('../images/bonnet.png');
+    inset-block-start: -3px;
+  }
+}
+
+
 @media screen and (min-width: 44.7rem) {
   .header__inner {
     justify-content: space-between;
