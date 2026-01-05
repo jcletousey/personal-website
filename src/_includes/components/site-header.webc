@@ -1,6 +1,6 @@
 <header class="header pb-s pi-0">
   <div class="wrapper header__inner">
-    <a :href="`/${locale}/`" class="christmas h-card" rel="me" @text="$data.site.title"></a>
+    <a :href="`/${locale}/`" class="h-card" rel="me" @text="$data.site.title"></a>
 
     <nav class="header__navigation">
       <main-navigation webc:nokeep :source="eleventyNavigation($data.collections[`pages_${locale}`])" :locale="locale"></main-navigation>
