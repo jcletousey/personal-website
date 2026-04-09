@@ -1,10 +1,12 @@
 {
   "en": {
     "contentTagged": "Content tagged",
-    "allTags": "All tags"
+    "allTags": "All tags",
+    "cssNakedDay": "Why this page looks so strange: it is thanks to the <a href=\"https://css-naked-day.org/\">CSS Naked Day</a>!"
   },
   "fr": {
     "contentTagged": "Contenu taggué",
-    "allTags": "Tous les tags"
+    "allTags": "Tous les tags",
+    "cssNakedDay": "Pourquoi cette page a l'ai si bizarre: c'est grâce au <a hreflang=\"en\" href=\"https://css-naked-day.org/\">CSS Naked Day</a> !"
   }
 }
