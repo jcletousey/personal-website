@@ -12,7 +12,7 @@
 
   <meta name="generator" :content="eleventy.generator">
   
-	<link webc:is="favicon">
+  <link webc:is="favicon">
 
   <meta webc:is="og" :links="getDistinctLocaleLinks($data.page.url, locale)" :type="$data.type">
 
@@ -22,7 +22,8 @@
 
   <link webc:is="webmentions">
 
-	<link webc:is="alternatives" :links="getDistinctLocaleLinks($data.page.url, locale)">
+  <link webc:is="alternatives" :links="getDistinctLocaleLinks($data.page.url, locale)">
+  <link webc:keep rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 <body>
 	<a href="#main-content" class="skip-link" @text="header[locale].skipLink"></a>
