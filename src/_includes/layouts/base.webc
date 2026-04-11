@@ -28,8 +28,6 @@
 <body>
 	<a href="#main-content" class="skip-link" @text="header[locale].skipLink"></a>
 
-	<p @raw="global[locale].cssNakedDay"></p>
-
 	<site-header :locales="locales" :locale="locale"></site-header>
 
 	<main id="main-content" class="mb-xl" @raw="content"></main>
