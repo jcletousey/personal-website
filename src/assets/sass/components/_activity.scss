@@ -1,21 +1,21 @@
 [data-type="bookmark"] {
-  --url: url("../images/bookmark.svg");
+  --url: url("../icons/bookmark.svg");
 }
 [data-type="article"] {
-  --url: url("../images/newspaper.svg");
+  --url: url("../icons/newspaper.svg");
 }
 [data-type="like"] {
-  --url: url("../images/heart.svg");
+  --url: url("../icons/heart.svg");
 }
 [data-type="note"] {
-  --url: url("../images/pen-tool.svg");
+  --url: url("../icons/pen-tool.svg");
 
   .activity-card__header-type::before {
     rotate: -90deg;
   }
 }
 [data-type="photo"] {
-  --url: url("../images/camera.svg");
+  --url: url("../icons/camera.svg");
 }
 
 .activity {

@@ -36,7 +36,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/js");
   eleventyConfig.addPassthroughCopy("./src/assets/css");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/assets/icons");
   eleventyConfig.addPassthroughCopy("./src/assets/documents");
   eleventyConfig.addPassthroughCopy({"./src/assets/favicon": "./"});
   eleventyConfig.addPassthroughCopy("./src/_redirects");
@@ -133,7 +133,7 @@ export default async function (eleventyConfig) {
     return array.slice(0, n)
   });
 
-  eleventyConfig.addFilter("getSvgIconContent", (icon) => fs.readFileSync(`./src/assets/images/${icon}.svg`));
+  eleventyConfig.addFilter("getSvgIconContent", (icon) => fs.readFileSync(`./src/assets/icons/${icon}.svg`));
 
   eleventyConfig.addFilter("getDistinctLocaleLinks", (url, currentLocale) => {
     let links = eleventyConfig.getFilter("locale_links")(url);
