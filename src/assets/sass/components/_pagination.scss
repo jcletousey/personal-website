@@ -28,3 +28,6 @@
     color: var(--background);
   }
 }
+[data-theme="light"] .pagination [aria-current] {
+  color: var(--background);
+}
