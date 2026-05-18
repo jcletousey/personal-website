@@ -1,16 +1,20 @@
+import {EleventyRenderPlugin} from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import {eleventyImageTransformPlugin} from "@11ty/eleventy-img";
+import pluginWebc from "@11ty/eleventy-plugin-webc";
 import eleventyRssPlugin from "@11ty/eleventy-plugin-rss";
 import timeToReadPlugin from "eleventy-plugin-time-to-read";
-import locales from "./src/_data/locales.js";
+import fs from "fs";
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
 import markdownItContainer from "markdown-it-container";
+import path from 'node:path';
+import locales from "./src/_data/locales.js";
 import cache from "./src/_utils/cache.js";
-import pluginWebc from "@11ty/eleventy-plugin-webc";
-import {EleventyRenderPlugin} from "@11ty/eleventy";
-import fs from "fs";
 
 const WEBMENTION_CACHE_FILE = "_cache/webmentions.json";
+const IMAGES_URL_PATH = '/img/'
+const IMAGES_CACHE_DIR = '.cache/@11ty/img/'
 
 export default async function (eleventyConfig) {
   //
@@ -28,6 +32,17 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(pluginWebc, {
     components: "src/_includes/components/**/*.webc"
+  });
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    outputDir: IMAGES_CACHE_DIR,
+	  urlPath: IMAGES_URL_PATH,
+    widths: [320, 640, 960],
+    htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+    }
   });
 
   //
@@ -257,6 +272,17 @@ export default async function (eleventyConfig) {
   //eleventyConfig.on('eleventy.after', () => {
   //  execSync(`npx pagefind --site dist --glob \"**/*.html\"`, { encoding: 'utf-8' })
   //});
+  //https://kittygiraudel.com/2026/05/05/optimizing-images-with-11ty-on-netlify/
+  eleventyConfig.on('eleventy.after', () => {
+    if (process.env.ELEVENTY_RUN_MODE === 'serve') return
+    if (!fs.existsSync(IMAGES_CACHE_DIR)) return
+    const dest = path.join(
+      path.resolve(eleventyConfig.directories.output),
+      ...IMAGES_URL_PATH.split('/').filter(Boolean),
+    )
+    fs.mkdirSync(dest, { recursive: true })
+    fs.cpSync(IMAGES_CACHE_DIR, dest, { recursive: true })
+  })
 
   return {
     dir: {
