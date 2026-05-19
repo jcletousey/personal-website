@@ -1,1 +1,22 @@
-{"cachedAt":1779134674690,"type":"buffer","metadata":{"response":{"url":"https://s3-us-west-2.amazonaws.com/ca3db/cdn.masto.host/a4b27836350d6fd8219ba3ff832e0763e3d781bc9abbf6dc0422ca2f8a947265.png","status":200,"headers":{"accept-ranges":"bytes","content-length":"46317","content-type":"image/png","date":"Mon, 18 May 2026 20:04:35 GMT","etag":"\"76c8c0fdc686d9d2017e67731db7254f\"","last-modified":"Fri, 07 Apr 2023 21:14:39 GMT","server":"AmazonS3","x-amz-id-2":"lOOOPF/sPI35+93Z6tH9TC8br2e8Yk9Lu3y9j/kOM2u750EFeoS7Y44bEVBbB/+rUV5AMDdZvR4=","x-amz-request-id":"F12MR93ESA5MPX15","x-amz-server-side-encryption":"AES256"}}}}
+{
+  "cachedAt": 1779134674690,
+  "type": "buffer",
+  "metadata": {
+    "response": {
+      "url": "https://s3-us-west-2.amazonaws.com/ca3db/cdn.masto.host/a4b27836350d6fd8219ba3ff832e0763e3d781bc9abbf6dc0422ca2f8a947265.png",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "content-length": "46317",
+        "content-type": "image/png",
+        "date": "Mon, 18 May 2026 20:04:35 GMT",
+        "etag": "\"76c8c0fdc686d9d2017e67731db7254f\"",
+        "last-modified": "Fri, 07 Apr 2023 21:14:39 GMT",
+        "server": "AmazonS3",
+        "x-amz-id-2": "lOOOPF/sPI35+93Z6tH9TC8br2e8Yk9Lu3y9j/kOM2u750EFeoS7Y44bEVBbB/+rUV5AMDdZvR4=",
+        "x-amz-request-id": "F12MR93ESA5MPX15",
+        "x-amz-server-side-encryption": "AES256"
+      }
+    }
+  }
+}

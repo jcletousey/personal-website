@@ -1,1 +1,39 @@
-{"cachedAt":1779134672864,"type":"buffer","metadata":{"response":{"url":"https://cdn.masto.host/indiewebsocial/media_attachments/files/109/795/034/387/879/820/original/cd973e2b8016323b.png","status":200,"headers":{"accept-ranges":"bytes","access-control-allow-headers":"Server, x-goog-meta-frames, Content-Length, Content-Type, Range, X-Requested-With, If-Modified-Since, If-None-Match","access-control-allow-origin":"*","access-control-expose-headers":"Server, x-goog-meta-frames, Content-Length, Content-Type, Range, X-Requested-With, If-Modified-Since, If-None-Match","cache-control":"public, max-age=315576000, immutable","cdn-cache":"MISS","cdn-cachedat":"05/18/2026 20:04:32","cdn-edgestorageid":"1214","cdn-proxyver":"1.53","cdn-pullzone":"215912","cdn-requestcountrycode":"FR","cdn-requestid":"64356894c767d3912add29a198dbbf3b","cdn-requestpullcode":"206","cdn-requestpullsuccess":"True","cdn-requesttime":"0","cdn-status":"200","connection":"keep-alive","content-length":"1768","content-type":"image/png","date":"Mon, 18 May 2026 20:04:32 GMT","last-modified":"Thu, 02 Feb 2023 12:01:11 GMT","server":"BunnyCDN-FR1-1326","x-iplb-instance":"55974","x-iplb-request-id":"B95D02F3:BDD7_3626E64B:01BB_6A0B70D0_1F9208A5:27066B","x-openstack-request-id":"tx137f80a52e24491295078-006a0b70d0","x-timestamp":"1675339270.32396","x-trans-id":"tx137f80a52e24491295078-006a0b70d0"}}}}
+{
+  "cachedAt": 1779134672864,
+  "type": "buffer",
+  "metadata": {
+    "response": {
+      "url": "https://cdn.masto.host/indiewebsocial/media_attachments/files/109/795/034/387/879/820/original/cd973e2b8016323b.png",
+      "status": 200,
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-headers": "Server, x-goog-meta-frames, Content-Length, Content-Type, Range, X-Requested-With, If-Modified-Since, If-None-Match",
+        "access-control-allow-origin": "*",
+        "access-control-expose-headers": "Server, x-goog-meta-frames, Content-Length, Content-Type, Range, X-Requested-With, If-Modified-Since, If-None-Match",
+        "cache-control": "public, max-age=315576000, immutable",
+        "cdn-cache": "MISS",
+        "cdn-cachedat": "05/18/2026 20:04:32",
+        "cdn-edgestorageid": "1214",
+        "cdn-proxyver": "1.53",
+        "cdn-pullzone": "215912",
+        "cdn-requestcountrycode": "FR",
+        "cdn-requestid": "64356894c767d3912add29a198dbbf3b",
+        "cdn-requestpullcode": "206",
+        "cdn-requestpullsuccess": "True",
+        "cdn-requesttime": "0",
+        "cdn-status": "200",
+        "connection": "keep-alive",
+        "content-length": "1768",
+        "content-type": "image/png",
+        "date": "Mon, 18 May 2026 20:04:32 GMT",
+        "last-modified": "Thu, 02 Feb 2023 12:01:11 GMT",
+        "server": "BunnyCDN-FR1-1326",
+        "x-iplb-instance": "55974",
+        "x-iplb-request-id": "B95D02F3:BDD7_3626E64B:01BB_6A0B70D0_1F9208A5:27066B",
+        "x-openstack-request-id": "tx137f80a52e24491295078-006a0b70d0",
+        "x-timestamp": "1675339270.32396",
+        "x-trans-id": "tx137f80a52e24491295078-006a0b70d0"
+      }
+    }
+  }
+}
