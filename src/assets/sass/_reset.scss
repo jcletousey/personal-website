@@ -27,7 +27,7 @@ html {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-block-size: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -40,8 +40,9 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img, picture, video, canvas, svg {
-  max-width: 100%;
   display: block;
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 /* Inherit fonts for inputs and buttons */
